@@ -8,8 +8,15 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const User = require('./models/user'); 
 const port = 8080;
-const secretKey = "#Xr7!P8u@T%4vFy2";
-const mongourl='mongodb://127.0.0.1:27017/modelens'; // Your secret key for JWT
+
+require('dotenv').config();
+
+const mongourl = process.env.MONGO_URL;
+const secretKey = process.env.SECRET_KEY;
+
+
+// const mongourl='mongodb://127.0.0.1:27017/modelens'; // Your secret key for JWT
+
 
 app.use(cors()); // Enable CORS for all routes
 app.set("views", path.join(__dirname, "views"));
