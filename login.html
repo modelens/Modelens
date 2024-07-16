@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left a, .nav-right a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .nav-right a {
+            margin-left: 1rem;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        h2 {
+            margin-top: 120px; /* To create a gap between the navbar and the form */
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="services.html">Services</a>
+                <a href="./#work-gallery">Work Gallery</a>
+            </div>
+            <div class="logo">
+                <img src="images/Mm logo.jpeg" alt="Logo" />
+            </div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="signup-link" href="signup.html">Signup</a>
+                <a href="#" id="logout" style="display:none;">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <a href="signup.html">Signup</a>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:8080/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText);
+                }
+
+                const data = await response.json();
+                localStorage.setItem('token', data.token); // Store token in local storage
+
+                // Show a message or redirect user
+                console.log('Login successful:', data);
+                // Redirect to a protected page or show logged-in content
+                window.location.href = 'index.html';
+            } catch (error) {
+                console.error('Error:', error.message);
+                alert('Login failed: ' + error.message);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                document.getElementById('logout').style.display = 'block';
+            }
+        });
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('token'); // Remove token on logout
+            window.location.reload(); // Reload page to reflect logout
+        });
+    </script>
+</body>
+</html>

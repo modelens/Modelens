@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="contact.css">
 
 </head>
+
 <body>
 
     <header>
@@ -23,45 +25,58 @@
             <div class="nav-right">
                 <a href="#about">About</a>
                 <a href="contact.html">Contact Us</a>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="signup-link" href="signup.html">Signup</a>
+                <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
         </nav>
     </header>
 
-   <!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-content">
-        <h1>Welcome to Modelens</h1>
-        <p>Your One-Stop Destination for Ad Shoots</p>
-        <a href="#get-started" class="hero-button">Get Started</a>
-    </div>
-</section>
 
-   <!-- About Modelens Section -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">'
+            <!-- <div id="user-info" style="display: none;">
+                Placeholder for user information
+            </div> -->
+            <h1>Welcome to Modelens</h1>
+            <p>Your One-Stop Destination for Ad Shoots</p>
+            <a href="#get-started" class="hero-button">Get Started</a>
+        </div>
+    </section>
+
+
+    <!-- About Modelens Section -->
     <section class="about-modelens">
         <h2>About Modelens</h2>
+        <p>At Modelens, we specialize in creating captivating advertisements and photo shoots. Our team of professionals
+            works diligently to bring your vision to life, ensuring top-notch quality and creativity in every project.
+        </p>
         <div class="about-stats">
             <div class="stat">
-                <h4>250+</h4>
+                <h3>250+</h3>
                 <p>Worked with People</p>
             </div>
             <div class="stat">
-                <h4>15+</h4>
+                <h3>15+</h3>
                 <p>Team Members</p>
             </div>
             <div class="stat">
-                <h4>15+</h4>
+                <h3>15+</h3>
                 <p>Companies Worked</p>
             </div>
         </div>
         <div class="logos-container">
-             <img src="images/Company logos/Logos.png" alt="Company Logo" class="company-logo">
+            <img src="images/Company logos/Logos.png" alt="Company Logo" class="company-logo">
         </div>
     </section>
 
     <!-- Work Gallery Section -->
     <section class="section" id="work-gallery">
         <h2>Work Gallery</h2>
-        <p><h4>Explore our portfolio showcasing the finest work from our talented team. </h4></p>
+        <p>
+        <h4>Explore our portfolio showcasing the finest work from our talented team. </h4>
+        </p>
         <div class="gallery">
             <span style="--i:1">
                 <img src="images/group 1.JPG" alt="" />
@@ -91,133 +106,184 @@
     </section>
 
     <!-- The Process Section -->
-<section class="process-section">
-    <h2 class="process-title">The Process - Behind The Scenes</h2>
-    <div class="process-steps">
-        <div class="step">
-            <div class="step-number">1</div>
-            <h3 class="step-title">Discuss</h3>
-            <p class="step-description">Meet with clients to understand their needs and requirements.</p>
+    <section class="process-section">
+        <h2 class="process-title">The Process - Behind The Scenes</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Discuss</h3>
+                <p class="step-description">Meet with clients to understand their needs and requirements.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Plan</h3>
+                <p class="step-description">Create a detailed plan and storyboard for the shoot.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Shoot</h3>
+                <p class="step-description">Execute the photoshoot with our professional team and equipment.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3 class="step-title">Edit</h3>
+                <p class="step-description">Edit and refine the images to ensure top-notch quality.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3 class="step-title">Deliver</h3>
+                <p class="step-description">Deliver the final product to the client, ready for use.</p>
+            </div>
         </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <h3 class="step-title">Plan</h3>
-            <p class="step-description">Create a detailed plan and storyboard for the shoot.</p>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <h3 class="step-title">Shoot</h3>
-            <p class="step-description">Execute the photoshoot with our professional team and equipment.</p>
-        </div>
-        <div class="step">
-            <div class="step-number">4</div>
-            <h3 class="step-title">Edit</h3>
-            <p class="step-description">Edit and refine the images to ensure top-notch quality.</p>
-        </div>
-        <div class="step">
-            <div class="step-number">5</div>
-            <h3 class="step-title">Deliver</h3>
-            <p class="step-description">Deliver the final product to the client, ready for use.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="section testimonials">
         <h2>What Our Clients Say</h2>
         <div id="carouselContainer" class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/5.jpg" alt="Hardik"></div>
-                <div class="ContentHolder">
-                    <h3>Hardik</h3>
-                    <p>Great service and amazing results!</p>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/5.jpg" alt="Hardik"></div>
+                    <div class="ContentHolder">
+                        <h3>Hardik</h3>
+                        <p>Great service and amazing results!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/1.jpg" alt="Kashish"></div>
+                    <div class="ContentHolder">
+                        <h3>Kashish</h3>
+                        <p>Proffesional and creative team!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/4.jpg" alt="Lavanya"></div>
+                    <div class="ContentHolder">
+                        <h3>Lavanya</h3>
+                        <p>Great services and amazing staff!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/2.jpg" alt="Divya"></div>
+                    <div class="ContentHolder">
+                        <h3>Divya</h3>
+                        <p>Modelens have a great team!
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/3.jpg" alt="Darakshan"></div>
+                    <div class="ContentHolder">
+                        <h3>Marys Lobb</h3>
+                        <p>Always feels great to work with them!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ImgHolder"><img src="images/Testimonal DP/6.jpg" alt="Harry"></div>
+                    <div class="ContentHolder">
+                        <h3>Harry</h3>
+                        <p>Good Work</p>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/1.jpg" alt="Kashish"></div>
-                <div class="ContentHolder">
-                    <h3>Kashish</h3>
-                    <p>Proffesional and creative team!</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/4.jpg" alt="Lavanya"></div>
-                <div class="ContentHolder">
-                    <h3>Lavanya</h3>
-                    <p>Great services and amazing staff!</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/2.jpg" alt="Divya"></div>
-                <div class="ContentHolder">
-                    <h3>Divya</h3>
-                    <p>Modelens have a great team!
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/3.jpg" alt="Darakshan"></div>
-                <div class="ContentHolder">
-                    <h3>Marys Lobb</h3>
-                    <p>Always feels great to work with them!</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="ImgHolder"><img src="images/Testimonal DP/6.jpg" alt="Harry"></div>
-                <div class="ContentHolder">
-                    <h3>Harry</h3>
-                    <p>Good Work</p>
-                </div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
-    </div>    
     </section>
 
-<!-- Footer -->
-<footer>
-    <div class="footer2">
-        <div class="footlogo">
-            <div class="logoimg"></div>
-        </div>
-        <ul>
-            <p><a href="services.html">Services</a></p>
-            <a href="models.html">Models</a>
-            <a href="photographer.html">Photographer</a>
-            <a href="makeup-artists.html">Makeup Artists</a>
-        </ul>
-
-        <ul>
-            <p>Contact</p>
-            <a>New Delhi, Delhi</a>
-            <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
-            <div>
-                <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
+    <!-- Footer -->
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
             </div>
-        </ul>
+            <ul>
+                <p><a href="services.html">Services</a></p>
+                <a href="models.html">Models</a>
+                <a href="photographer.html">Photographer</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+            </ul>
 
-        <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
-        <div id="notification" class="notification">
-            Copied the mobile number!
+            <ul>
+                <p>Contact</p>
+                <a>New Delhi, Delhi</a>
+                <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
+                <div>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                </div>
+            </ul>
+
+            <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
+            <div id="notification" class="notification">
+                Copied the mobile number!
+            </div>
+
+            <ul>
+                <p>Policy</p>
+                <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
+                    target="_blank">Terms And Conditions</a>
+            </ul>
         </div>
-
-        <ul>
-            <p>Policy</p>
-            <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
-                target="_blank">Terms And Conditions</a>
-        </ul>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
     <script src="script.js"></script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const token = localStorage.getItem('token');
+            const logoutLink = document.getElementById('logout');
+            if (token) {
+                logoutLink.style.display = 'block'; // Show logout link
+                // Optionally, you can also hide login and signup links
+                document.getElementById('login-link').style.display = 'none';
+                document.getElementById('signup-link').style.display = 'none';
+            } else {
+                logoutLink.style.display = 'none'; // Hide logout link
+                // Show login and signup links if not logged in
+                document.getElementById('login-link').style.display = 'block';
+                document.getElementById('signup-link').style.display = 'block';
+            }
+            logoutLink.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default action of the link
+                localStorage.removeItem('token'); // Remove the token from localStorage
+                // Redirect or perform any additional logout actions if needed
+                window.location.href = 'index.html';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', async function () {
+            const token = localStorage.getItem('token');
+            if (token) {
+                try {
+                    const response = await fetch('http://localhost:8080/user', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    const data = await response.json();
+                    if (data && data.user) {
+                        // const userInfoDiv = document.getElementById('user-info');
+                        // userInfoDiv.style.display = 'block';
+                        // userInfoDiv.innerHTML = `Welcome, ${data.user.username}!`; // Display user information
+                        const username = data.user.username; // Retrieve username from response
+                        alert(`Welcome, ${username}!`);
+                    }
+                } catch (error) {
+                    console.error('Error fetching user data:', error);
+                }
+            }
+        });
+
+
+    </script>
+
 </body>
+
 </html>

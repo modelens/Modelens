@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left a, .nav-right a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .nav-right a {
+            margin-left: 1rem;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        h2 {
+            margin-top: 120px; /* To create a gap between the navbar and the form */
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="http://127.0.0.1:5500/services.html">Services</a>
+                <a href="http://127.0.0.1:5500/index.html#work-gallery">Work Gallery</a>
+            </div>
+            <div class="logo">
+                <img src="images/Mm logo.jpeg" alt="Logo" />
+            </div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="signup-link" href="signup.html">Signup</a>
+            </div>
+        </nav>
+    </header>
+    <h2>Signup</h2>
+    <form id="signup-form">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="number">Phone Number:</label>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Signup</button>
+    </form>
+    <a href="login.html">Login</a>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            const number = document.getElementById('number').value;
+
+            try {
+                const response = await fetch('http://localhost:8080/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ firstname, lastname, username, password, email, number })
+                });
+                const data = await response.json();
+                // Handle response (e.g., show a message, redirect, etc.)
+                console.log(data);
+                window.location.href = 'login.html';
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
