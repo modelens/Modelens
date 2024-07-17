@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,22 +23,25 @@
         }
 
         .services-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: end; /* Align grid items to the end */
+}
+
 
         .service-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
         }
 
         .service-card {
             width: 100%;
-            height: 400px; /* Adjust height as needed */
+            height: 400px;
             background-color: #1f1f1f;
             border: 1px solid #333;
             border-radius: 8px;
@@ -82,10 +86,9 @@
         }
 
         .star-rating {
-            color: #ffdf00; /* Star color */
-            font-size: 1.2em; /* Adjust size as needed */
+            color: #ffdf00;
+            font-size: 1.2em;
             display: flex;
-            align-items: center;
             justify-content: center;
         }
 
@@ -110,7 +113,7 @@
         }
 
         footer {
-            margin-top: 50px; /* Add some spacing above the footer */
+            margin-top: 50px;
         }
 
         .footer2 {
@@ -156,7 +159,9 @@
             margin: 5px;
         }
     </style>
+
 </head>
+
 <body>
     <header>
         <h1>Models</h1>
@@ -178,7 +183,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!-- Adjust based on feedback -->
+                    <i class="far fa-star"></i>
                 </div>
             </div>
             <div class="book-now-container">
@@ -186,6 +191,8 @@
             </div>
         </div>
 
+        <!-- Repeat similar structure for the next 3 containers -->
+        <!-- Container 2 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/sana.jpg" alt="Model 2">
@@ -208,6 +215,7 @@
             </div>
         </div>
 
+        <!-- Container 3 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/mansicover.jpg" alt="Model 3">
@@ -230,6 +238,7 @@
             </div>
         </div>
 
+        <!-- Container 4 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/ritucover.jpg" alt="Model 4">
@@ -252,6 +261,8 @@
             </div>
         </div>
 
+        <!-- Continue adding containers in sets of 4 -->
+        <!-- Container 5 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/deepti.JPG" alt="Model 5">
@@ -274,11 +285,12 @@
             </div>
         </div>
 
+        <!-- Container 6 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/Anshikacover.jpg" alt="Model 6">
                 <div class="feedback-overlay">
-                    <p>Her portfolio speaks for itself.<br>Consistently stunning work.</p>    
+                    <p>Her portfolio speaks for itself.<br>Consistently stunning work.</p>
                 </div>
             </div>
             <div class="service-details">
@@ -296,15 +308,16 @@
             </div>
         </div>
 
+        <!-- Container 7 -->
         <div class="service-wrapper">
             <div class="service-card">
-                <img src="images/kanikacover.jpg" alt="Model 6">
+                <img src="images/kanikacover.jpg" alt="Model 7">
                 <div class="feedback-overlay">
-                    <p>Her portfolio speaks for itself.<br>Consistently stunning work.</p>    
+                    <p>Kanika has a great sense of style.<br>Perfect for fashion shoots.</p>
                 </div>
             </div>
             <div class="service-details">
-                <h3>Kanika </h3>
+                <h3>Kanika</h3>
                 <div class="star-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -318,27 +331,99 @@
             </div>
         </div>
 
+        <!-- Container 8 -->
         <div class="service-wrapper">
             <div class="service-card">
-                <img src="images/laviecover.jpg" alt="Model 6">
+                <img src="images/laviecover.jpg" alt="Model 8">
                 <div class="feedback-overlay">
-                    <p>Her portfolio speaks for itself.<br>Consistently stunning work.</p>    
+                    <p>Lavie is versatile and professional.<br>Excellent for various projects.</p>
                 </div>
             </div>
             <div class="service-details">
-                <h3>Lavie </h3>
+                <h3> Lavie</h3>
                 <div class="star-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
                 </div>
             </div>
             <div class="book-now-container">
                 <button class="book-now">Book Now</button>
             </div>
         </div>
+
+        <!--container 9-->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/nikhil.jpg" alt="Model 9">
+                <div class="feedback-overlay">
+                    <p>Nikhil Bhagwani is versatile and professional.<br>Excellent for various projects.</p>
+                </div>
+            </div>
+            <div class="service-details">
+                <h3> Nikhil Bhagwani</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!--container 10-->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/saurabh.jpg" alt="Model 10">
+                <div class="feedback-overlay">
+                    <p> Saurabh is versatile and professional.<br>Excellent for various projects.</p>
+                </div>
+            </div>
+            <div class="service-details">
+                <h3> Saurabh Sharma</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        <!--container 11-->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/bharti.jpg" alt="Model 11">
+                <div class="feedback-overlay">
+                    <p>Bharti is versatile and professional.<br>Excellent for various projects.</p>
+                </div>
+            </div>
+            <div class="service-details">
+                <h3>  Bharti Dhaiya</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now">Book Now</button>
+            </div>
+        </div>
+
+        
     </section>
 
     <!-- Footer -->
