@@ -23,14 +23,15 @@
         }
 
         .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-content: end; /* Align grid items to the end */
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: end; /* Align grid items to the end */
+}
+
 
         .service-wrapper {
             width: 100%;
@@ -54,6 +55,8 @@
             object-fit: cover;
         }
 
+       
+
         .service-details {
             text-align: center;
             padding: 10px;
@@ -65,78 +68,31 @@
             color: #ffffff;
         }
 
-        .service-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .service-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #2a2a2a; /* DARK GREY */
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s; /* Animation */
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .service-wrapper:hover {
-            transform: scale(1.05); /* Scale up on hover */
-        }
-
-        .service-card img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #d24ff6; /* LIGHT PURPLE */
-        }
-
-        .service-details {
-            padding: 10px;
-            text-align: center;
-        }
-
-        .service-details h3 {
-            margin: 10px 0;
-            font-size: 24px;
-            color: #d24ff6; /* LIGHT PURPLE */
-        }
-
         .star-rating {
+            color: #ffdf00;
+            font-size: 1.2em;
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin: 10px 0;
-        }
-
-        .star-rating i {
-            color: gold;
-            margin-right: 5px;
-            font-size: 20px;
         }
 
         .book-now-container {
             text-align: center;
-            margin: 10px 0;
+            padding: 10px;
         }
 
         .book-now {
-            background-color: #6a0dad; /* DARK PURPLE */
-            color: #ffffff; /* WHITE */
+            background-color: #6200ea;
             border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
             border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.2s;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .book-now:hover {
-            background-color: #520a71;
+            background-color: #3700b3;
         }
 
         footer {
@@ -186,7 +142,6 @@
             margin: 5px;
         }
     </style>
-</head>
 
 </head>
 
@@ -196,173 +151,20 @@
     </header>
 
     <section class="services-container">
-            <div class="services">
-                <!-- Service Cards for Models -->
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/tarif.jpg" alt="Model 1">
-                    </div>
-                    <div class="service-details">
-                        <h3>Mohammad Tousif</h3>
-                        <div class="star-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i> 
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                  <a href="sana.html" class="service-link">
-            <div class="service-wrapper">
-                <div class="service-card">
-                    <img src="images/sana.jpg" alt="Model 2">
-                </div>
-                <div class="service-details">
-                    <h3>Sana</h3>
-                    <div class="star-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-                <div class="book-now-container">
-                    <button class="book-now" onclick="checkLoggedIn(event)">Book Now</button>
-                </div>
+        <!-- Service Cards for Models -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/tarif.jpg" alt="Model 1">
+                
             </div>
-        </a>
-
-
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/mansicover.jpg" alt="Model 3">
-                        
-                    </div>
-                    <div class="service-details">
-                        <h3>Mansi</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/ritucover.jpg" alt="Model 4">
-
-                    
-                    </div>
-                    <div class="service-details">
-                        <h3>Ritu</h3>
-                       
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/deepti.JPG" alt="Model 5">
-                       
-                    </div>
-                    <div class="service-details">
-                        <h3>Deepti</h3>
-                       
-                        <div class="star-rating">
-                            
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/Anshikacover.jpg" alt="Model 1">
-                        
-                    </div>
-                                    <div class="service-details">
-                        <h3>Anshika</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/kanikacover.jpg" alt="Model 2">
-                       
-                    </div>
-                    <div class="service-details">
-                        <h3>Kanika</h3>
-                        
-                        <div class="star-rating">
-                           
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/laviecover.jpg" alt="Model 3">
-                        
-                    </div>
-                    <div class="service-details">
-                        <h3>Lavie</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-                    </div>
-
+            <div class="service-details">
+                <h3>Mohammad Tousif</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
             </div>
             <div class="book-now-container">
@@ -591,11 +393,11 @@
             <div class="footlogo">
                 <div class="logoimg"></div>
             </div>
-             <ul>
+            <ul>
                 <p>Services</p>
                 <a href="models.html">Models</a>
                 <a href="photographer.html">Photographer</a>
-                <a href="makeup-artists.html">Makeup Artists</a>
+                <a href="makeup_artists.html">Makeup Artists</a>
             </ul>
 
             <ul>
