@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Booking Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* BLACK */
+            color: #ffffff; /* WHITE */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            background: #2a2a2a; /* DARK GREY */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 90%;
+            height: 90%;
+        }
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background: #1a1a1a;
+            width: 20%;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .image-section img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border: 1px solid #d24ff6; /* LIGHT PURPLE */
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .main-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            padding: 20px;
+        }
+        .main-image {
+            width: 500px;
+            height: 350px;
+            margin-bottom: 20px;
+            border: 1px solid #d24ff6; /* LIGHT PURPLE */
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .details-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 40%;
+            margin-top: 20px;
+        }
+        .details-section h2 {
+            margin-top: 0;
+            font-size: 32px;
+            color: #d24ff6; /* LIGHT PURPLE */
+        }
+        .details-section p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .star {
+            color: gold;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+        .empty-star {
+            color: lightgray;
+        }
+        .book-now-btn {
+            background-color: #6a0dad; /* DARK PURPLE */
+            color: #ffffff; /* WHITE */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .book-now-btn:hover {
+            background-color: #520a71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="images/sana1.jpg" alt="Person Image 1" class="thumbnail">
+            <img src="images/sana2.jpg" alt="Person Image 2" class="thumbnail">
+            <img src="images/sana3.jpg" alt="Person Image 3" class="thumbnail">
+            
+        </div>
+        <div class="main-image-container">
+            <img src="images/sana1.jpg" alt="Main Image" class="main-image" id="mainImage">
+        </div>
+        <div class="details-section">
+            <h2>Sana</h2>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star empty-star"></i>
+                <i class="fas fa-star empty-star"></i>
+            </div>
+            <p>She is an experienced fashion model known for his versatility and dynamic presence on the runway. With over five years in the industry, John has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. His strong features, confident demeanor, and ability to adapt to different looks make him a sought-after model in the industry.</p>
+            <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+    </div>
+</body>
+</html>
