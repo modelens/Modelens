@@ -258,28 +258,30 @@
             });
         });
         document.addEventListener('DOMContentLoaded', async function () {
-            const token = localStorage.getItem('token');
-            if (token) {
-                try {
-                    const response = await fetch('http://localhost:8080/user', {
-                        method: 'GET',
-                        headers: {
-                            'Authorization': `Bearer ${token}`
-                        }
-                    });
-                    const data = await response.json();
-                    if (data && data.user) {
-                        // const userInfoDiv = document.getElementById('user-info');
-                        // userInfoDiv.style.display = 'block';
-                        // userInfoDiv.innerHTML = `Welcome, ${data.user.username}!`; // Display user information
-                        const username = data.user.username; // Retrieve username from response
-                        alert(`Welcome, ${username}!`);
+    const token = localStorage.getItem('token');
+    if (token) {
+        const alertShown = localStorage.getItem('alertShown');
+        if (!alertShown) {
+            try {
+                const response = await fetch('http://localhost:8080/user', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
                     }
-                } catch (error) {
-                    console.error('Error fetching user data:', error);
+                });
+                const data = await response.json();
+                if (data && data.user) {
+                    const username = data.user.username;
+                    alert(`Welcome, ${username}!`);
+                    localStorage.setItem('alertShown', true); // Set flag in localStorage
                 }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
             }
-        });
+        }
+    }
+});
+
 
 
     </script>
