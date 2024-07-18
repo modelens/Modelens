@@ -1,4 +1,8 @@
 /* Reset default margin and padding */
+
+/* Testimonials Section */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -482,9 +486,6 @@ nav {
 .book-now-button:hover {
     background-color: #b03ac9; /* Hover color */
 }
-
-/* Testimonials Section */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 .testimonials {
   

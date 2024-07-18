@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,45 +14,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        header {
-            width: 100%;
-            background-color: #333;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .nav-left, .nav-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-left a, .nav-right a {
-            color: white;
-            text-decoration: none;
-            margin-right: 1rem;
-            font-weight: bold;
-        }
-
-        .nav-right a {
-            margin-left: 1rem;
-        }
-
-        .nav-left a:hover, .nav-right a:hover {
-            text-decoration: underline;
         }
 
         .logo img {
@@ -101,13 +63,13 @@
             background-color: #555;
         }
 
-        a {
+        .anchorr {
             color: #333;
             text-decoration: none;
             margin-top: 1rem;
         }
 
-        a:hover {
+        .anchorr:hover {
             text-decoration: underline;
         }
     </style>
@@ -140,7 +102,7 @@
         <input type="password" id="password" name="password" required>
         <button type="submit">Login</button>
     </form>
-    <a href="signup.html">Signup</a>
+    <a href="signup.html" class="anchorr">Signup</a>
 
     <script>
         document.getElementById('login-form').addEventListener('submit', async function(event) {
