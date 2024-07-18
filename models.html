@@ -23,15 +23,14 @@
         }
 
         .services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: end; /* Align grid items to the end */
-}
-
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: end; /* Align grid items to the end */
+        }
 
         .service-wrapper {
             width: 100%;
@@ -55,8 +54,6 @@
             object-fit: cover;
         }
 
-       
-
         .service-details {
             text-align: center;
             padding: 10px;
@@ -68,86 +65,79 @@
             color: #ffffff;
         }
 
-        /* Ensures the whole container is clickable */
-.service-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
+        .service-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
-/* The service wrapper style */
-.service-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #2a2a2a; /* DARK GREY */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* Animation */
-    cursor: pointer;
-    margin: 10px;
-}
+        .service-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2a2a2a; /* DARK GREY */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s; /* Animation */
+            cursor: pointer;
+            margin: 10px;
+        }
 
-.service-wrapper:hover {
-    transform: scale(1.05); /* Scale up on hover */
-}
+        .service-wrapper:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
 
-.service-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #d24ff6; /* LIGHT PURPLE */
-}
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #d24ff6; /* LIGHT PURPLE */
+        }
 
-.service-details {
-    padding: 10px;
-    text-align: center;
-}
+        .service-details {
+            padding: 10px;
+            text-align: center;
+        }
 
-.service-details h3 {
-    margin: 10px 0;
-    font-size: 24px;
-    color: #d24ff6; /* LIGHT PURPLE */
-}
+        .service-details h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #d24ff6; /* LIGHT PURPLE */
+        }
 
-.star-rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
 
-.star-rating i {
-    color: gold;
-    margin-right: 5px;
-    font-size: 20px;
-}
+        .star-rating i {
+            color: gold;
+            margin-right: 5px;
+            font-size: 20px;
+        }
 
-.book-now-container {
-    text-align: center;
-    margin: 10px 0;
-}
+        .book-now-container {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-.book-now {
-    background-color: #6a0dad; /* DARK PURPLE */
-    color: #ffffff; /* WHITE */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
+        .book-now {
+            background-color: #6a0dad; /* DARK PURPLE */
+            color: #ffffff; /* WHITE */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
 
-.book-now:hover {
-    background-color: #520a71;
-}
-
-/* Prevent button click from propagating to the link */
-.book-now-container button {
-    pointer-events: auto;
-}
+        .book-now:hover {
+            background-color: #520a71;
+        }
 
         footer {
             margin-top: 50px;
@@ -196,6 +186,7 @@
             margin: 5px;
         }
     </style>
+</head>
 
 </head>
 
@@ -230,25 +221,28 @@
                     </div>
                 </div>
 
-                 <a href="sana.html" class="service-link">
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/sana.jpg" alt="Model 2">
-                    </div>
-                    <div class="service-details">
-                        <h3>Sana</h3>
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now" onclick="checkLoggedIn(event)">Book Now</button>
+                  <section class="services-container">
+        <a href="sana.html" class="service-link">
+            <div class="service-wrapper">
+                <div class="service-card">
+                    <img src="images/sana.jpg" alt="Model 2">
+                </div>
+                <div class="service-details">
+                    <h3>Sana</h3>
+                    <div class="star-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
                     </div>
                 </div>
-            </a>
+                <div class="book-now-container">
+                    <button class="book-now" onclick="checkLoggedIn(event)">Book Now</button>
+                </div>
+            </div>
+        </a>
+    </section>
+
 
 
                 <div class="service-wrapper">
