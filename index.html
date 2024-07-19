@@ -36,7 +36,6 @@
 <section class="hero-section">
     <video autoplay muted loop class="background-video">
         <source src="images/BG video/2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
     <div class="hero-content">
         <h1>Welcome to Modelens</h1>
@@ -276,63 +275,6 @@
     <script src="contact.js"></script>
     <script src="script.js"></script>
     <script src="config.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const token = localStorage.getItem('token');
-            const logoutLink = document.getElementById('logout');
-            if (token) {
-                logoutLink.style.display = 'block'; // Show logout link
-                // Optionally, you can also hide login and signup links
-                document.getElementById('login-link').style.display = 'none';
-                document.getElementById('signup-link').style.display = 'none';
-            } else {
-                logoutLink.style.display = 'none'; // Hide logout link
-                // Show login and signup links if not logged in
-                document.getElementById('login-link').style.display = 'block';
-                document.getElementById('signup-link').style.display = 'block';
-            }
-            logoutLink.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent the default action of the link
-                localStorage.removeItem('token'); // Remove the token from localStorage
-                // Redirect or perform any additional logout actions if needed
-                window.location.href = 'index.html';
-            });
-        });
-        document.addEventListener('DOMContentLoaded', async function () {
-            const token = localStorage.getItem('token');
-            const loginTimestamp = localStorage.getItem('loginTimestamp');
-
-            if (token && loginTimestamp) {
-                const currentTime = Date.now();
-                const loginTime = parseInt(loginTimestamp, 10);
-
-                // Show alert if logged in recently (e.g., within the last 10 minutes)
-                if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
-                    const response = await fetch(API_URL + '/user', {
-                        method: 'GET',
-                        headers: {
-                            'Authorization': `Bearer ${token}`
-                        }
-                    });
-
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data && data.user && data.user.username) {
-                            const username = data.user.username;
-                            alert(`Welcome back, ${username}!`);
-                        } else {
-                            console.error('User data not found in API response');
-                        }
-                    } else {
-                        console.error('Error fetching user data');
-                    }
-
-                    // Clear the login timestamp after showing the alert
-                    localStorage.removeItem('loginTimestamp');
-                }
-            }
-        });
-    </script>
 
 </body>
 
