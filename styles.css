@@ -1,16 +1,14 @@
-/* Reset default margin and padding */
 
 /* Testimonials Section */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
-* {
+/* Reset default margin and padding */
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
-
 
 .hero-button:hover {
     background-color: #b03ac9;
@@ -156,51 +154,6 @@ nav {
     }
 }
 
-/* About Modelens Section */
-.about-modelens {
-    background-color: #000000;
-    padding: 50px 20px;
-    text-align: center;
-    color: #ffffff; 
-}
-
-.about-modelens h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.about-modelens p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.about-stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.stat {
-    text-align: center;
-}
-.stat h4 {
-    font-size: 3em;
-    color: #d24ff6;
-}
-.stat p {
-    font-size: 1.2em;
-}
-
-/* Media Queries for About Section */
-@media (min-width: 600px) {
-    .about-stats {
-        flex-direction: row;
-        gap: 40px;
-    }
-}
-
-
 /* Header Styles */
 header {
     background-color: #000000; /* Black color */
@@ -235,22 +188,6 @@ nav {
 
 .logo img {
     height: 40px;
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #000000; 
-    color: #ffffff; /* White text */
-    text-align: center;
-    padding: 100px 20px 50px;
-}
-
-.cta-button {
-    background-color: #6a0dad; /* Dark purple color */
-    color: #ffffff; /* White text */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
 }
 
 /* About Modelens Section */
