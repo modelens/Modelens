@@ -7,12 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #000000, #434343);
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         .logo img {
@@ -20,42 +22,58 @@
         }
 
         h2 {
-            margin-top: 120px; /* To create a gap between the navbar and the form */
             text-align: center;
-            color: #333;
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            width: 380px;
         }
 
         label {
             margin-bottom: 0.5rem;
-            color: #555;
-        }
-
-        input[type="text"], input[type="password"], input[type="email"] {
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            color: #333;
+            font-weight: bold;
+            text-align: left;
             width: 100%;
         }
 
+        input[type="text"], input[type="password"], input[type="email"] {
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+        }
+
+        input::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+
         button {
-            padding: 0.5rem 1rem;
+            padding: 0.8rem;
             background-color: #333;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            font-weight: bold;
         }
 
         button:hover {
@@ -63,9 +81,10 @@
         }
 
         .anchorr {
-            color: #333;
+            color: #d3d3d3;
             text-decoration: none;
             margin-top: 1rem;
+            font-size: 0.9rem;
         }
 
         .anchorr:hover {
@@ -82,7 +101,9 @@
                 <a href="./#work-gallery">Work Gallery</a>
             </div>
             <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
+                <a href="index.html">
+                    <img src="images/Mm logo.jpeg" alt="Logo" />
+                  </a>                  
             </div>
             <div class="nav-right">
                 <a href="./team.html">Our Team</a>
@@ -95,20 +116,20 @@
     <h2>Signup</h2>
     <form id="signup-form">
         <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required>
+        <input type="text" id="firstname" name="firstname" placeholder="John" required>
         <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="johndoe123" required>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="********" required>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
         <label for="number">Phone Number:</label>
-        <input type="text" id="number" name="number" required>
+        <input type="text" id="number" name="number" placeholder="+91" required>
         <button type="submit">Signup</button>
     </form>
-    <a href="login.html" class="anchorr">Login</a>
+    <a href="login.html" class="anchorr">Already have an account? Login</a>
     <script src="config.js"></script>
     <script>
         document.getElementById('signup-form').addEventListener('submit', async function(event) {
@@ -128,12 +149,18 @@
                     },
                     body: JSON.stringify({ firstname, lastname, username, password, email, number })
                 });
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText);
+                }
+                
                 const data = await response.json();
-                // Handle response (e.g., show a message, redirect, etc.)
-                console.log(data);
-                window.location.href = 'login.html';
+                console.log('Signup successful:', data);
+                window.location.href = 'login.html'; // Redirect to login page after signup
             } catch (error) {
-                console.error('Error:', error);
+                console.error('Error:', error.message);
+                alert('Signup failed: ' + error.message);
             }
         });
     </script>
