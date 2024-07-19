@@ -277,6 +277,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
     <script src="script.js"></script>
+    <script src="config.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const token = localStorage.getItem('token');
@@ -309,7 +310,7 @@
 
                 // Show alert if logged in recently (e.g., within the last 10 minutes)
                 if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
-                    const response = await fetch('http://localhost:8080/user', {
+                    const response = await fetch(API_URL + '/user', {
                         method: 'GET',
                         headers: {
                             'Authorization': `Bearer ${token}`

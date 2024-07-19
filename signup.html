@@ -109,7 +109,7 @@
         <button type="submit">Signup</button>
     </form>
     <a href="login.html" class="anchorr">Login</a>
-
+    <script src="config.js"></script>
     <script>
         document.getElementById('signup-form').addEventListener('submit', async function(event) {
             event.preventDefault();
@@ -121,7 +121,7 @@
             const number = document.getElementById('number').value;
 
             try {
-                const response = await fetch('http://localhost:8080/signup', {
+                const response = await fetch(`${API_URL}/signup`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
