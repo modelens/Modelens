@@ -8,15 +8,13 @@
 }
 
 main {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #6a0dad;
-}
 
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +155,6 @@ textarea::-webkit-scrollbar-thumb {
 .messagecont .message h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: black;
 }
 
 .messagecont .message p {
@@ -169,12 +166,6 @@ textarea::-webkit-scrollbar-thumb {
     color: white;
     font-size: 16px;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-.messagecont .message a:hover {
-    color: black;
-}
 
 footer {
     margin-top: 15px;
