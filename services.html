@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        .service-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .service-link {
+            width: 350px;
+            height: 450px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            overflow: hidden; /* To keep image within container */
+            position: relative;
+        }
+
+        .service-link:hover {
+            background-color: #a86db4;
+        }
+
+        .service-link img {
+            width: 100%;
+            height: 100%; /* Adjust image size */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+        }
+
+        .service-link:hover img {
+            opacity: 0.7; /* Reduce opacity on hover */
+        }
+
+        .service-link span {
+            padding: 10px;
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        footer {
+            margin-top: 50px; /* Add some spacing above the footer */
+        }
+
+        .footer2 {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footlogo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoimg {
+            width: 100px;
+            height: 100px;
+            background: url('logo.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        .footer2 ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer2 p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .footer2 a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block;
+        }
+
+        .footer2 a img {
+            width: 24px;
+            height: 24px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <div class="service-links">
+        <a href="models.html" class="service-link">
+            <img src="images/modelfront.jpg" alt="Models">
+            <span>Models</span>
+        </a>
+        <a href="photographer.html" class="service-link">
+            <img src="images/photofront.jpg" alt="Photographers">
+            <span>Photographers</span>
+        </a>
+        <a href="makeup-artists.html" class="service-link">
+            <img src="images/makeupfront.jpg" alt="Makeup Artists">
+            <span>Makeup Artists</span>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
+            </div>
+            <ul>
+                <p>Services</p>
+                <a href="models.html">Models</a>
+                <a href="photographers.html">Photographers</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+            </ul>
+            <ul>
+                <p>Contact</p>
+                <a>New Delhi, Delhi</a>
+                <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
+                <div>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </ul>
+            <ul>
+                <p>Policy</p>
+                <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a>
+            </ul>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>

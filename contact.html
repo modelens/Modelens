@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Contact Us Form</h1>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="mobile" placeholder="Mobile" required>
+            <h4>Type Your Message Here...</h4>
+            <textarea required></textarea>
+            <input type="submit" value="Send" id="button">
+        </form>
+    </div>
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
+            </div>
+            <ul>
+                <p><a href="services.html">Services</a></p>
+                <a href="models.html">Models</a>
+                <a href="photographer.html">Photographer</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+            </ul>
+
+            <ul>
+                <p>Contact</p>
+                <a>New Delhi,Delhi</a>
+                <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
+
+                <div>
+                    </a>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                </div>
+
+            </ul>
+
+            <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
+            <div id="notification" class="notification">
+                Copied the mobile number!
+            </div>
+
+            <ul>
+                <p>Policy</p>
+                <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
+                    target="_blank">Terms And
+                    Conditions</a>
+
+
+            </ul>
+        </div>
+
+    </footer>
+    <script src="contact.js"></script>
+</body>
+
+</html>
