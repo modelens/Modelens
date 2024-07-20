@@ -50,35 +50,58 @@ nav {
     }
 }
 
-/* Hero section */
-.hero-section {
+/* Ensure the video covers the entire container */
+.video-container {
     position: relative;
-    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 20px;
-    box-sizing: border-box;
+    height: auto;
     overflow: hidden;
 }
 
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.video-container video {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
+/* Style the overlay text */
+.video-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Adjust the text color as needed */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: add a dark overlay to improve text readability */
+}
+
+.video-container .overlay h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+.video-container .overlay p {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+}
+
+.video-container .overlay button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4081; /* Adjust button color as needed */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.video-container .overlay button:hover {
+    background-color: #ff79a8; /* Adjust button hover color as needed */
 }
 
 /* About Modelens Section */

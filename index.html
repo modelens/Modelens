@@ -29,14 +29,18 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <video autoplay muted loop class="background-video">
-            <source src="images\BG video\2.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1>Welcome to Modelens</h1>
-            <p>Your One-Stop Destination for Ad Shoots</p>
-            <a href="#get-started" class="hero-button">Get Started</a>
+    <section class="welcome-section">
+        <!-- Remove the current background image if applied via inline style or class -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="images/BG video/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <h1>Welcome to Modelens</h1>
+                <p>Your One-Stop Destination for Ad Shoots</p>
+                <button>Get Started</button>
+            </div>
         </div>
     </section>
 
