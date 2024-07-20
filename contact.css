@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+<<<<<<< HEAD
 .container {
     min-height: 100vh;
     background: #08071d;
@@ -20,15 +21,45 @@
     height: 400px;
     display: flex;
     justify-content: center;
+=======
+main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container form {
+    width: 700px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> origin/main
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+<<<<<<< HEAD
     flex-wrap: wrap;
+=======
+>>>>>>> origin/main
 }
 
 .container form h1 {
     color: #fff;
+<<<<<<< HEAD
     font-weight: 500;
     margin-top: 20px;
     width: 500px;
@@ -37,20 +68,42 @@
 
 .container form input {
     width: 290px;
+=======
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.container form input[type="text"],
+.container form input[type="email"],
+.container form input[type="url"] {
+    width: calc(50% - 20px);
+>>>>>>> origin/main
     height: 40px;
     padding-left: 10px;
     outline: none;
     border: none;
     font-size: 15px;
+<<<<<<< HEAD
     margin-bottom: 10px;
     background: none;
     border-bottom: 2px solid #fff;
+=======
+    margin-bottom: 20px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    margin-right: 20px;
+>>>>>>> origin/main
 }
 
 .container form input::placeholder {
     color: #ddd;
 }
 
+<<<<<<< HEAD
 .container form #lastName,
 .container form #mobile {
     margin-left: 20px;
@@ -63,6 +116,40 @@
     margin-top: 20px;
 }
 
+=======
+.container form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.check {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.check div {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.check input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.check label {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+>>>>>>> origin/main
 .container form textarea {
     background: none;
     border: none;
@@ -72,10 +159,16 @@
     font-size: 15px;
     padding: 10px;
     outline: none;
+<<<<<<< HEAD
     min-width: 600px;
     max-width: 600px;
     min-height: 80px;
     max-height: 80px;
+=======
+    width: calc(100% - 20px);
+    height: 80px;
+    margin-top: 20px;
+>>>>>>> origin/main
 }
 
 textarea::-webkit-scrollbar {
@@ -95,9 +188,14 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 20px;
     color: #333;
     width: 100px;
+<<<<<<< HEAD
     padding: 0;
     margin-right: 500px;
     margin-bottom: 30px;
+=======
+    height: 40px;
+    cursor: pointer;
+>>>>>>> origin/main
     transition: 0.3s;
 }
 
@@ -105,6 +203,65 @@ textarea::-webkit-scrollbar-thumb {
     opacity: 0.7;
 }
 
+<<<<<<< HEAD
+=======
+.messagecont {
+    width: 700px;
+    padding: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.messagecont .message {
+    color: #fff;
+}
+
+.messagecont .message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.messagecont .message p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.messagecont .message a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.messagecont .message a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.messagecont .message a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+>>>>>>> origin/main
 footer {
     margin-top: 15px;
 }
@@ -116,6 +273,10 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 ul a {
     display: block;
     font-size: 0.85rem;
@@ -145,8 +306,14 @@ ul div {
     height: 30px;
 
 }
+<<<<<<< HEAD
 ul div a img {
     height:auto;
+=======
+
+ul div a img {
+    height: auto;
+>>>>>>> origin/main
     width: 25px;
     margin-top: 10px;
 }

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+function checkLoggedIn() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('Please login to book this service.');
+        window.location.href = 'login.html'; 
+    } else {
+        // Implement your booking logic here
+        alert('Booking functionality to be implemented.'); // Replace with your actual booking logic
+    }
+}
+>>>>>>> origin/main
 document.addEventListener("DOMContentLoaded", function() {
     const leftBtn = document.getElementById('leftBtn');
     const rightBtn = document.getElementById('rightBtn');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makeup-artists</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+>>>>>>> origin/main
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +34,7 @@
         }
 
         .services-container {
+<<<<<<< HEAD
             position: relative;
             overflow: hidden; /* Hide the overflow to create the infinite scroll effect */
             white-space: nowrap;
@@ -44,10 +56,21 @@
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-20% ); }
+=======
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: end;
+            /* Align grid items to the end */
+>>>>>>> origin/main
         }
 
 
         .service-wrapper {
+<<<<<<< HEAD
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,11 +80,24 @@
         .service-card {
             min-width: 300px;
             height: 400px; /* Adjust height as needed */
+=======
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            width: 100%;
+            height: 400px;
+>>>>>>> origin/main
             background-color: #1f1f1f;
             border: 1px solid #333;
             border-radius: 8px;
             overflow: hidden;
+<<<<<<< HEAD
             flex: 0 0 auto;
+=======
+>>>>>>> origin/main
             position: relative;
         }
 
@@ -71,6 +107,7 @@
             object-fit: cover;
         }
 
+<<<<<<< HEAD
         .feedback-overlay {
             display: none;
             position: absolute;
@@ -89,6 +126,9 @@
         .service-card:hover .feedback-overlay {
             display: flex;
         }
+=======
+
+>>>>>>> origin/main
 
         .service-details {
             text-align: center;
@@ -102,8 +142,15 @@
         }
 
         .star-rating {
+<<<<<<< HEAD
             color: #ffdf00; /* Star color */
             font-size: 1.2em; /* Adjust size as needed */
+=======
+            color: #ffdf00;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+>>>>>>> origin/main
         }
 
         .book-now-container {
@@ -127,7 +174,11 @@
         }
 
         footer {
+<<<<<<< HEAD
             margin-top: 50px; /* Add some spacing above the footer */
+=======
+            margin-top: 50px;
+>>>>>>> origin/main
         }
 
         .footer2 {
@@ -172,15 +223,23 @@
             height: 24px;
             margin: 5px;
         }
+<<<<<<< HEAD
         
     </style>
 </head>
+=======
+    </style>
+
+</head>
+
+>>>>>>> origin/main
 <body>
     <header>
         <h1>Makeup-Artists</h1>
     </header>
 
     <section class="services-container">
+<<<<<<< HEAD
         <!-- Horizontal Scrollable Container for Service Cards -->
         <div class="services-scroll">
             <div class="services">
@@ -301,6 +360,116 @@
                 </div>
             </div>
         </div>
+=======
+        <!-- Service Cards for Models -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/anshikamua.JPG" alt="mua 1">
+
+            </div>
+            <div class="service-details">
+                <h3>Anshika</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Container 2 -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/saijal.jpg" alt="mua 2">
+
+            </div>
+            <div class="service-details">
+                <h3>Saijal Hans</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Container 3 -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/makeupfront.jpg" alt="mua 3">
+
+            </div>
+            <div class="service-details">
+                <h3> Yashika</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Container 4 -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/makeupfront.jpg" alt="mua 4">
+
+            </div>
+            <div class="service-details">
+                <h3>Ritu Kumari</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+            </div>
+        </div>
+
+
+        <!-- Container 5 -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/makeupfront.jpg" alt="mua 5">
+
+            </div>
+            <div class="service-details">
+                <h3>Deepti Verma</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="book-now-container">
+                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+            </div>
+        </div>
+
+
+
+>>>>>>> origin/main
     </section>
 
     <!-- Footer -->
@@ -311,9 +480,15 @@
             </div>
             <ul>
                 <p>Services</p>
+<<<<<<< HEAD
                 <a>Models</a>
                 <a>Photographer</a>
                 <a>Makeup Artists</a>
+=======
+                <a href="models.html">Models</a>
+                <a href="photographer.html">Photographer</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+>>>>>>> origin/main
             </ul>
 
             <ul>
@@ -321,12 +496,25 @@
                 <a>New Delhi,Delhi</a>
                 <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
                 <div>
+<<<<<<< HEAD
                     <a href="https://www.instagram.com/modelens.in/" target="_blank">  
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
                     </a>
                     <a href="https://www.linkedin.com/company/modelens/" target="_blank"> 
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
                     </a>
+=======
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="mailto:modelensofficial@gmail.com" target="_blank"><img src="images/image.png"
+                            alt="Gmail"></a>
+>>>>>>> origin/main
                 </div>
             </ul>
 
@@ -344,8 +532,18 @@
         </div>
     </footer>
 
+<<<<<<< HEAD
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU" crossorigin="anonymous"></script>
     <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
     <script src="services.js"></script>
 </body>
+=======
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU"
+        crossorigin="anonymous"></script>
+    <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
+    <script src="services.js"></script>
+</body>
+
+>>>>>>> origin/main
 </html>
