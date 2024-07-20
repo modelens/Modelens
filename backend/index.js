@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const User = require('./models/user'); 
+const Session = require('./models/session');
 const port = 8080;
 
 require('dotenv').config();
@@ -37,7 +38,8 @@ async function main() {
     await mongoose.connect(mongourl);
 }
 
-const verifyToken = (req, res, next) => {
+const verifyToken = async (req, res, next) => {
+    console.log('Verify Token Middleware Called'); // Log middleware execution
     const token = req.headers.authorization;
 
     if (!token) {
@@ -46,12 +48,17 @@ const verifyToken = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token.split(' ')[1], secretKey);
+        const session = await Session.findOne({ userId: decoded.id, token: token.split(' ')[1] });
+        if (!session) {
+            return res.status(401).json({ message: 'Token expired or invalid' });
+        }
         req.user = decoded;
         next();
     } catch (err) {
         return res.status(401).json({ message: 'Token expired or invalid' });
     }
 };
+
 
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
@@ -66,7 +73,8 @@ app.post('/login', async (req, res) => {
             return res.status(400).json({ error: 'Invalid credentials' });
         }
 
-        const token = jwt.sign({ id: user._id }, secretKey);
+        const token = jwt.sign({ id: user._id, username: user.username }, secretKey);
+        await Session.create({ userId: user._id, username: user.username, token });
         console.log('Logged in user token:', token);
         res.json({ token });
     } catch (err) {
@@ -105,6 +113,38 @@ app.post('/signup', async (req, res) => {
         res.status(500).json({ error: 'Server Error' });
     }
 });
+
+app.post('/logout', verifyToken, async (req, res) => {
+    try {
+        console.log('Logout route hit'); // Confirm route hit
+        const token = req.headers.authorization.split(' ')[1];
+        console.log('Token received:', token); // Log received token
+
+        // Find session and delete it
+        const session = await Session.findOneAndDelete({ userId: req.user.id, token });
+        console.log('Session delete result:', session); // Log result of deletion
+
+        if (session) {
+            // Find user based on userId
+            const user = await User.findById(req.user.id).select('username');
+            if (user) {
+                res.json({ message: 'Logged out successfully', username: user.username });
+            } else {
+                res.status(404).json({ message: 'User not found' });
+            }
+        } else {
+            res.status(404).json({ message: 'Session not found' });
+        }
+    } catch (err) {
+        console.error('Logout error:', err.message);
+        res.status(500).json({ error: 'Server Error' });
+    }
+});
+
+
+
+
+
 
 app.get('/user', verifyToken, async (req, res) => {
     try {
