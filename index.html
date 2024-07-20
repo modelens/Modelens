@@ -32,25 +32,28 @@
         </nav>
     </header>
 
-  <!-- Hero Section -->
-<section class="hero-section">
-    <video autoplay muted loop class="background-video">
-        <source src="images/BG video/2.mp4" type="video/mp4">
-    </video>
-    <div class="hero-content">
-        <h1>Welcome to Modelens</h1>
-        <p>Your One-Stop Destination for Ad Shoots</p>
-        <a href="#get-started" class="hero-button">Get Started</a>
-    </div>
-</section>
-    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <!-- <div id="user-info" style="display: none;">
+                Placeholder for user information
+            </div> -->
+            <h1>Welcome to Modelens</h1>
+            <p>Your One-Stop Destination for Ad Shoots</p>
+            <a href="#get-started" class="hero-button">Get Started</a>
+        </div>
+    </section>
+
     <!-- About Modelens Section -->
     <section class="about-modelens">
-        <h2>Modelens has worked with</h2>
+        <h2>About Modelens</h2>
+        <p>At Modelens, we specialize in creating captivating advertisements and photo shoots. Our team of professionals
+            works diligently to bring your vision to life, ensuring top-notch quality and creativity in every project.
+        </p>
         <div class="about-stats">
             <div class="stat">
                 <h3>250+</h3>
-                <p>People</p>
+                <p>Worked with People</p>
             </div>
             <div class="stat">
                 <h3>15+</h3>
@@ -275,6 +278,83 @@
     <script src="contact.js"></script>
     <script src="script.js"></script>
     <script src="config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const token = localStorage.getItem('token');
+            const logoutLink = document.getElementById('logout');
+            const loginLink = document.getElementById('login-link');
+            const signupLink = document.getElementById('signup-link');
+
+            if (token) {
+                logoutLink.style.display = 'block';
+                loginLink.style.display = 'none';
+                signupLink.style.display = 'none';
+            } else {
+                logoutLink.style.display = 'none';
+                loginLink.style.display = 'block';
+                signupLink.style.display = 'block';
+            }
+
+            logoutLink.addEventListener('click', async function (e) {
+                e.preventDefault();
+
+                try {
+                    const response = await fetch(`${API_URL}/logout`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        localStorage.removeItem('token');
+                        window.location.href = 'index.html';
+                    } else {
+                        console.error('Logout failed');
+                        alert('Logout failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred during logout.');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', async function () {
+            const token = localStorage.getItem('token');
+            const loginTimestamp = localStorage.getItem('loginTimestamp');
+
+            if (token && loginTimestamp) {
+                const currentTime = Date.now();
+                const loginTime = parseInt(loginTimestamp, 10);
+
+                // Show alert if logged in recently (e.g., within the last 10 minutes)
+                if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
+                    const response = await fetch(API_URL + '/user', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data && data.user && data.user.username) {
+                            const username = data.user.username;
+                            alert(`Welcome back, ${username}!`);
+                        } else {
+                            console.error('User data not found in API response');
+                        }
+                    } else {
+                        console.error('Error fetching user data');
+                    }
+
+                    // Clear the login timestamp after showing the alert
+                    localStorage.removeItem('loginTimestamp');
+                }
+            }
+        });
+    </script>
 
 </body>
 
