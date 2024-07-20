@@ -282,22 +282,42 @@
         document.addEventListener('DOMContentLoaded', function () {
             const token = localStorage.getItem('token');
             const logoutLink = document.getElementById('logout');
+            const loginLink = document.getElementById('login-link');
+            const signupLink = document.getElementById('signup-link');
+
             if (token) {
-                logoutLink.style.display = 'block'; // Show logout link
-                // Optionally, you can also hide login and signup links
-                document.getElementById('login-link').style.display = 'none';
-                document.getElementById('signup-link').style.display = 'none';
+                logoutLink.style.display = 'block';
+                loginLink.style.display = 'none';
+                signupLink.style.display = 'none';
             } else {
-                logoutLink.style.display = 'none'; // Hide logout link
-                // Show login and signup links if not logged in
-                document.getElementById('login-link').style.display = 'block';
-                document.getElementById('signup-link').style.display = 'block';
+                logoutLink.style.display = 'none';
+                loginLink.style.display = 'block';
+                signupLink.style.display = 'block';
             }
-            logoutLink.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent the default action of the link
-                localStorage.removeItem('token'); // Remove the token from localStorage
-                // Redirect or perform any additional logout actions if needed
-                window.location.href = 'index.html';
+
+            logoutLink.addEventListener('click', async function (e) {
+                e.preventDefault();
+
+                try {
+                    const response = await fetch(`${API_URL}/logout`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        localStorage.removeItem('token');
+                        window.location.href = 'index.html';
+                    } else {
+                        console.error('Logout failed');
+                        alert('Logout failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred during logout.');
+                }
             });
         });
         document.addEventListener('DOMContentLoaded', async function () {

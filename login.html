@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,8 @@
             font-weight: bold;
         }
 
-        input[type="email"], input[type="password"] {
+        input[type="email"],
+        input[type="password"] {
             padding: 0.8rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
@@ -97,6 +98,7 @@
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -107,7 +109,7 @@
             <div class="logo">
                 <a href="index.html">
                     <img src="images/Mm logo.jpeg" alt="Logo" />
-                  </a>   
+                </a>
             </div>
             <div class="nav-right">
                 <a href="./team.html">Our Team</a>
@@ -130,12 +132,12 @@
     <a href="signup.html" class="anchorr">Don't have an account? Sign Up</a>
     <script src="config.js"></script>
     <script>
-        document.getElementById('login-form').addEventListener('submit', async function(event) {
+        document.getElementById('login-form').addEventListener('submit', async function (event) {
             event.preventDefault(); // Prevent default form submission
-    
+
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-    
+
             try {
                 const response = await fetch(`${API_URL}/login`, {
                     method: 'POST',
@@ -144,16 +146,16 @@
                     },
                     body: JSON.stringify({ email, password })
                 });
-    
+
                 if (!response.ok) {
                     const errorText = await response.text();
                     throw new Error(errorText);
                 }
-    
+
                 const data = await response.json();
                 localStorage.setItem('token', data.token); // Store token in local storage
                 localStorage.setItem('loginTimestamp', Date.now()); // Set login timestamp
-    
+
                 console.log('Login successful:', data);
                 window.location.href = 'index.html'; // Redirect to a page after login
             } catch (error) {
@@ -161,20 +163,42 @@
                 alert('Login failed: ' + error.message);
             }
         });
-    
-        document.addEventListener('DOMContentLoaded', function() {
+
+        document.addEventListener('DOMContentLoaded', function () {
             const token = localStorage.getItem('token');
             if (token) {
                 document.getElementById('logout').style.display = 'block';
             }
         });
-    
-        document.getElementById('logout').addEventListener('click', function() {
-            localStorage.removeItem('token'); // Remove token on logout
-            localStorage.removeItem('loginTimestamp'); // Clear login timestamp
-            window.location.href = 'login.html'; // Redirect to login page
+
+        document.getElementById('logout').addEventListener('click', async function () {
+            const token = localStorage.getItem('token');
+            try {
+                const response = await fetch(`${API_URL}/logout`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(errorText);
+                }
+
+                localStorage.removeItem('token'); // Remove token on logout
+                localStorage.removeItem('loginTimestamp'); // Clear login timestamp
+                window.location.href = 'login.html'; // Redirect to login page
+            } catch (error) {
+                console.error('Error:', error.message);
+                alert('Logout failed: ' + error.message);
+            }
         });
+
+
     </script>
-    
+
 </body>
+
 </html>
