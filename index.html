@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <
+=======
+>>>>>>> origin/main
 <!DOCTYPE html>
 <html lang="en">
 
@@ -233,7 +236,11 @@
     </div>    
     </section>
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/main
 <!-- Footer -->
 <footer>
     <div class="footer2">
@@ -253,6 +260,7 @@
             <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
             <div>
                 <a href="https://www.instagram.com/modelens.in/" target="_blank">
+<<<<<<< HEAD
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
                 </a>
                 <a href="https://www.linkedin.com/company/modelens/" target="_blank">
@@ -260,6 +268,14 @@
                 </a>
                 <a href="modelensofficial@gmail.com" target="_blank">
                     <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail">
+=======
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                        alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                        alt="LinkedIn">
+>>>>>>> origin/main
                 </a>
             </div>
         </ul>
@@ -276,6 +292,7 @@
         </ul>
     </div>
 </footer>
+<<<<<<< HEAD
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
@@ -283,3 +300,88 @@
     
 </body>
 </html>
+=======
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+    <script src="config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const token = localStorage.getItem('token');
+            const logoutLink = document.getElementById('logout');
+            const loginLink = document.getElementById('login-link');
+            const signupLink = document.getElementById('signup-link');
+
+            if (token) {
+                logoutLink.style.display = 'block';
+                loginLink.style.display = 'none';
+                signupLink.style.display = 'none';
+            } else {
+                logoutLink.style.display = 'none';
+                loginLink.style.display = 'block';
+                signupLink.style.display = 'block';
+            }
+
+            logoutLink.addEventListener('click', async function (e) {
+                e.preventDefault();
+
+                try {
+                    const response = await fetch(`${API_URL}/logout`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        localStorage.removeItem('token');
+                        window.location.href = 'index.html';
+                    } else {
+                        console.error('Logout failed');
+                        alert('Logout failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred during logout.');
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', async function () {
+            const token = localStorage.getItem('token');
+            const loginTimestamp = localStorage.getItem('loginTimestamp');
+
+            if (token && loginTimestamp) {
+                const currentTime = Date.now();
+                const loginTime = parseInt(loginTimestamp, 10);
+
+                // Show alert if logged in recently (e.g., within the last 10 minutes)
+                if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
+                    const response = await fetch(API_URL + '/user', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data && data.user && data.user.username) {
+                            const username = data.user.username;
+                            alert(`Welcome back, ${username}!`);
+                        } else {
+                            console.error('User data not found in API response');
+                        }
+                    } else {
+                        console.error('Error fetching user data');
+                    }
+
+                    // Clear the login timestamp after showing the alert
+                    localStorage.removeItem('loginTimestamp');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+>>>>>>> origin/main

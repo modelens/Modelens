@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function checkLoggedIn() {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -10,7 +8,6 @@ function checkLoggedIn() {
         alert('Booking functionality to be implemented.'); // Replace with your actual booking logic
     }
 }
->>>>>>> origin/main
 document.addEventListener("DOMContentLoaded", function() {
     const leftBtn = document.getElementById('leftBtn');
     const rightBtn = document.getElementById('rightBtn');
