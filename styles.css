@@ -413,50 +413,51 @@ nav ul li a {
     z-index: 1;
 }
 
-/* Event Section */
+/* Events Section */
 #events {
   text-align: center;
   padding: 50px 20px;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+#events header h2 {
+  color: #6a0dad; /* Purple color for the header */
+  margin-bottom: 40px;
+}
+
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  color: #000;
 }
 
-#events .event {
-  background: #f4f4f4;
-  border-radius: 10px;
+.event {
+  background-color: #ffffff; /* White background for event cards */
+  color: #000000; /* Black text for event details */
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1 1 calc(50% - 40px);
+  max-width: calc(50% - 40px);
 }
 
-#events .event:hover {
-  transform: translateY(-10px);
+.event h3 {
+  color: #6a0dad; /* Purple color for event titles */
 }
 
-#events .event h2 {
-  color: #333;
-}
-
-#events .event p {
-  color: #666;
-}
-
-#events .placeholder {
-  background: #e0e0e0;
-  text-align: center;
-  color: #888;
+.event p {
+  margin: 10px 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  #events {
-    grid-template-columns: 1fr;
+  .event {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
-
 
 
 /* Testimonials Section */
