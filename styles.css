@@ -369,6 +369,53 @@ nav ul li a {
     gap: 20px;
 }
 
+
+/* Event Section */
+#events {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  color: #000;
+}
+
+#events .event {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#events .event:hover {
+  transform: translateY(-10px);
+}
+
+#events .event h2 {
+  color: #333;
+}
+
+#events .event p {
+  color: #666;
+}
+
+#events .placeholder {
+  background: #e0e0e0;
+  text-align: center;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #events {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 /* Testimonials Section */
 .testimonials {
   
