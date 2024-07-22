@@ -6,7 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
-
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
 /* Header Styles */
 #main-header {
     background-color: #000000; /* Black color */
@@ -268,27 +274,6 @@
     z-index: 1;
 }
 
-/* Event Section Header Styles */
-#event-header {
-    background-color: #000000; /* Black background */
-    color: #8A2BE2; /* Bright purple text */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#event-header h1 {
-    font-size: 2.5em;
-    color: #8A2BE2; /* Bright purple text */
-}
-
-/* General Body Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-}
-
 /* The Process Section */
 .process-section {
     background-color: #d24ff6;
@@ -339,7 +324,21 @@ body {
     font-size: 16px;
 }
 
+
+
 /* Events Section */
+#event-header {
+    background-color: #000000; /* Black background */
+    color: #8A2BE2; /* Bright purple text */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#event-header h1 {
+    font-size: 2.5em;
+    color: #8A2BE2; /* Bright purple text */
+}
+
 #events {
     text-align: center;
     padding: 100px 20px; /* Increased padding for more space */
