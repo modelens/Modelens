@@ -412,7 +412,6 @@ nav ul li a {
     z-index: 1;
 }
 
-
 /* Events Section */
 #events {
   text-align: center;
@@ -441,6 +440,12 @@ nav ul li a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   flex: 1 1 calc(50% - 40px);
   max-width: calc(50% - 40px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .event h3 {
@@ -453,6 +458,22 @@ nav ul li a {
 
 .event strong {
   color: #9370DB; /* Light purple for strong text */
+}
+
+.register-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #8A2BE2; /* Bright purple for the button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #9370DB; /* Light purple for the button on hover */
 }
 
 /* Responsive Design */
