@@ -325,6 +325,14 @@ body {
 }
 
 
+/* General Section Style */
+section {
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: #000000;
+    padding: 50px 0; /* Add padding for spacing between sections */
+}
 
 /* Events Section */
 #event-header {
@@ -341,7 +349,7 @@ body {
 
 #events {
     text-align: center;
-    padding: 100px 20px; /* Increased padding for more space */
+    padding: 50px 20px; /* Adjusted padding */
     background-color: #000000; /* Black background */
     color: #ffffff; /* White text */
 }
@@ -405,28 +413,13 @@ body {
 
 /* Testimonials Section */
 .testimonials {
-  
-    color: #6a0dad; /* White text */
+    color: #6a0dad; /* Purple text */
     text-align: center;
     padding: 50px 20px;
 }
 
 .testimonial {
     margin: 20px;
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-section {
-    display: grid;
-    place-items: center;
-    position: relative;
-    height: 100vh;
-    background-color: #000000;
-
 }
 
 .swiper-container {
@@ -449,9 +442,9 @@ section {
     flex-direction: column;
     padding: 0px;
     font-family: Nunito;
-    background-color:black ;
-
+    background-color: black;
 }
+
 .ImgHolder {
     background-color:  #6a0dad;
     display: flex;
@@ -460,8 +453,8 @@ section {
     height: auto;
     padding: 30px;
     border-bottom-left-radius: 20px;
-
 }
+
 .ContentHolder::before {
     background-color: black;
     content: '';
@@ -474,8 +467,8 @@ section {
 .ContentHolder {
     position: relative;
     padding: 10px;
-    background-color:black ;
-    color:white;
+    background-color: black;
+    color: white;
     border-top-right-radius: 20px;
     text-align: center;
 }
@@ -516,19 +509,19 @@ section {
     text-align: center;
 }
 
-@media (max-width:638px) {
+@media (max-width: 638px) {
     .swiper-container {
         width: 100%;
     }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     .swiper-container {
         width: 70vw;
     }
 }
 
-@media (max-width:300px) {
+@media (max-width: 300px) {
     .swiper-container {
         width: 100%;
     }
@@ -545,6 +538,7 @@ section {
         border-radius: 0px;
     }
 }
+
 
 /* Footer Styles */
 footer {
