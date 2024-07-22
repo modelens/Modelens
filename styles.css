@@ -412,34 +412,35 @@ nav ul li a {
     z-index: 1;
 }
 
+
 /* Events Section */
 #events {
   text-align: center;
-  padding: 50px 20px;
+  padding: 100px 20px; /* Increased padding for more space */
   background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
 }
 
 #events header h2 {
   color: #8A2BE2; /* Bright purple for the header */
-  margin-bottom: 40px;
+  margin-bottom: 60px; /* Increased margin for more space below header */
 }
 
 .event-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* Increased gap between event cards */
 }
 
 .event {
   background-color: #1c1c1c; /* Dark grey background for event cards */
   color: #ffffff; /* White text for event details */
-  padding: 20px;
+  padding: 30px; /* Increased padding for event cards */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  flex: 1 1 calc(50% - 40px);
-  max-width: calc(50% - 40px);
+  flex: 1 1 calc(45% - 40px);
+  max-width: calc(45% - 40px);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -462,7 +463,7 @@ nav ul li a {
 
 .register-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px; /* Increased padding for button */
   margin-top: 20px;
   background-color: #8A2BE2; /* Bright purple for the button */
   color: #ffffff; /* White text */
