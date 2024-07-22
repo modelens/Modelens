@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +8,6 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,53 +23,17 @@
         }
 
         .services-container {
-<<<<<<< HEAD
-            position: relative;
-            overflow: hidden; /* Hide the overflow to create the infinite scroll effect */
-            white-space: nowrap;
-            padding-bottom: 40px; /* Ensure space for scrollbar */
-            padding-left: 20px; /* Space from left border */
-            padding-right: 20px; /* Space from right border */
-        }
-
-        .services {
-            display: flex;
-            gap: 20px;
-            
-            width: calc(100% + (300px * 20) + (20px * 15)); /* Adjust width based on number of containers */
-            animation: scroll 50s linear infinite; /* Adjust animation duration as per your preference */
-            
-            
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-20% ); }
-=======
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-content: end;
-            /* Align grid items to the end */
->>>>>>> origin/main
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: end; /* Align grid items to the end */
+}
 
 
         .service-wrapper {
-<<<<<<< HEAD
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .service-card {
-            min-width: 300px;
-            height: 400px; /* Adjust height as needed */
-=======
             width: 100%;
             max-width: 100%;
             margin-bottom: 20px;
@@ -85,15 +42,10 @@
         .service-card {
             width: 100%;
             height: 400px;
->>>>>>> origin/main
             background-color: #1f1f1f;
             border: 1px solid #333;
             border-radius: 8px;
             overflow: hidden;
-<<<<<<< HEAD
-            flex: 0 0 auto;
-=======
->>>>>>> origin/main
             position: relative;
         }
 
@@ -103,28 +55,7 @@
             object-fit: cover;
         }
 
-<<<<<<< HEAD
-        .feedback-overlay {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .service-card:hover .feedback-overlay {
-            display: flex;
-        }
-=======
-
->>>>>>> origin/main
+       
 
         .service-details {
             text-align: center;
@@ -138,15 +69,10 @@
         }
 
         .star-rating {
-<<<<<<< HEAD
-            color: #ffdf00; /* Star color */
-            font-size: 1.2em; /* Adjust size as needed */
-=======
             color: #ffdf00;
             font-size: 1.2em;
             display: flex;
             justify-content: center;
->>>>>>> origin/main
         }
 
         .book-now-container {
@@ -170,11 +96,7 @@
         }
 
         footer {
-<<<<<<< HEAD
-            margin-top: 50px; /* Add some spacing above the footer */
-=======
             margin-top: 50px;
->>>>>>> origin/main
         }
 
         .footer2 {
@@ -219,214 +141,22 @@
             height: 24px;
             margin: 5px;
         }
-<<<<<<< HEAD
-        
-    </style>
-</head>
-=======
     </style>
 
 </head>
 
->>>>>>> origin/main
 <body>
     <header>
         <h1>Models</h1>
     </header>
 
     <section class="services-container">
-<<<<<<< HEAD
-        <!-- Horizontal Scrollable Container for Service Cards -->
-        <div class="services-scroll">
-            <div class="services">
-                <!-- Service Cards for Models -->
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/tarif.jpg" alt="Model 1">
-                        <div class="feedback-overlay">
-                            <p>His work is always top-notch.<br>Impressive professionalism!</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Mohammad Tousif</h3>
-                        <div class="star-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i> <!-- Adjust based on feedback -->
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/sana.jpg" alt="Model 2">
-                        <div class="feedback-overlay">
-                            <p>She brings a unique charm to every shoot.<br>Highly recommended.</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Sana</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/mansicover.jpg" alt="Model 3">
-                        <div class="feedback-overlay">
-                            <p>Exceptional talent and a pleasure to work with.<br>Will collaborate again!</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Mansi</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/ritucover.jpg" alt="Model 4">
-                        <div class="feedback-overlay">
-                            <p>An absolute delight to work with.<br>Great attitude and versatility.</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Ritu</h3>
-                       
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                          
-                            
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/deepti.JPG" alt="Model 5">
-                        <div class="feedback-overlay">
-                            <p>Deepti's runway presence and editorial<br>shoots are exceptional.</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Deepti</h3>
-                       
-                        <div class="star-rating">
-                            
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/Anshikacover.jpg" alt="Model 1">
-                        <div class="feedback-overlay">
-                            <p>Her portfolio speaks for itself.<br>Consistently stunning work.</p>    
-                        </div>
-                    </div>
-                                    <div class="service-details">
-                        <h3>Anshika</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/kanikacover.jpg" alt="Model 2">
-                        <div class="feedback-overlay">
-                            <p>A true professional in every sense.<br>Efficient and adaptable.</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Kanika</h3>
-                        
-                        <div class="star-rating">
-                           
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-wrapper">
-                    <div class="service-card">
-                        <img src="images/laviecover.jpg" alt="Model 3">
-                        <div class="feedback-overlay">
-                            <p>Lavie has collaborated with new <br>and emerging brands.</p>
-                        </div>
-                    </div>
-                    <div class="service-details">
-                        <h3>Lavie</h3>
-                        
-                        <div class="star-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                    </div>
-                    <div class="book-now-container">
-                        <button class="book-now">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-=======
         <!-- Service Cards for Models -->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/tarif.jpg" alt="Model 1">
-
+                
             </div>
             <div class="service-details">
                 <h3>Mohammad Tousif</h3>
@@ -438,38 +168,45 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="tousif.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!-- Repeat similar structure for the next 3 containers -->
         <!-- Container 2 -->
         <div class="service-wrapper">
-            <div class="service-card">
-                <img src="images/sana.jpg" alt="Model 2">
-
-            </div>
-            <div class="service-details">
-                <h3>Sana</h3>
-                <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+    
+        <div class="service-card">
+            <img src="images/sana.JPG" alt="Model 2">
+        </div>
+        <div class="service-details">
+            <h3>Sana</h3>
+            <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
             </div>
         </div>
+    
+    <div class="book-now-container">
+        <a href="sana.html" style="text-decoration: none; color: inherit;">
+        <button class="book-now" onclick="checkLoggedIn(event)">Book Now</button>
+        </a>
+    </div>
+</div>
+
 
         <!-- Container 3 -->
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/mansicover.jpg" alt="Model 3">
-
+                
             </div>
             <div class="service-details">
                 <h3>Mansi Ojha</h3>
@@ -481,8 +218,12 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="mansi.html" style="text-decoration: none; color: inherit;">
+        
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
@@ -490,7 +231,7 @@
         <div class="service-wrapper">
             <div class="service-card">
                 <img src="images/ritucover.jpg" alt="Model 4">
-
+                
             </div>
             <div class="service-details">
                 <h3>Ritu Kumari</h3>
@@ -502,17 +243,22 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="ritu.html" style="text-decoration: none; color: inherit;">
+        
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!-- Continue adding containers in sets of 4 -->
         <!-- Container 5 -->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/deepti.JPG" alt="Model 5">
-
+                
             </div>
             <div class="service-details">
                 <h3>Deepti Verma</h3>
@@ -524,16 +270,20 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+        
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="deepti.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!-- Container 6 -->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/Anshikacover.jpg" alt="Model 6">
-
+                
             </div>
             <div class="service-details">
                 <h3>Anshika Durgapal </h3>
@@ -545,16 +295,20 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="anshika.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!-- Container 7 -->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/kanikacover.jpg" alt="Model 7">
-
+                
             </div>
             <div class="service-details">
                 <h3>Kanika</h3>
@@ -566,16 +320,21 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="kanika.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
+        
             </div>
         </div>
 
         <!-- Container 8 -->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/laviecover.jpg" alt="Model 8">
-
+                
             </div>
             <div class="service-details">
                 <h3> Lavie</h3>
@@ -584,19 +343,23 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="lavie.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!--container 9-->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/nikhil.jpg" alt="Model 9">
-
+                
             </div>
             <div class="service-details">
                 <h3> Nikhil Bhagwani</h3>
@@ -608,16 +371,20 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="nikhil.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!--container 10-->
         <div class="service-wrapper">
+           
             <div class="service-card">
                 <img src="images/saurabh.jpg" alt="Model 10">
-
+                
             </div>
             <div class="service-details">
                 <h3> Saurabh Sharma</h3>
@@ -629,19 +396,23 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="saurabh.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!--container 11-->
         <div class="service-wrapper">
+            
             <div class="service-card">
                 <img src="images/bharti.jpg" alt="Model 11">
-
+                
             </div>
             <div class="service-details">
-                <h3> Bharti Dhaiya</h3>
+                <h3>  Bharti Dhaiya</h3>
                 <div class="star-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -650,13 +421,41 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="bharti.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
 
->>>>>>> origin/main
+         <!--container 12-->
+         <div class="service-wrapper">
+            
+            <div class="service-card">
+                <img src="images/kashish.jpg" alt="Model 11">
+                
+            </div>
+            <div class="service-details">
+                <h3> Kashish Raizada</h3>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <div class="book-now-container">
+                <a href="kashish.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
+            </div>
+        </div>
+
+        
     </section>
 
     <!-- Footer -->
@@ -667,15 +466,9 @@
             </div>
             <ul>
                 <p>Services</p>
-<<<<<<< HEAD
-                <a>Models</a>
-                <a>Photographer</a>
-                <a>Makeup Artists</a>
-=======
                 <a href="models.html">Models</a>
                 <a href="photographer.html">Photographer</a>
-                <a href="makeup-artists.html">Makeup Artists</a>
->>>>>>> origin/main
+                <a href="makeup_artists.html">Makeup Artists</a>
             </ul>
 
             <ul>
@@ -683,25 +476,12 @@
                 <a>New Delhi,Delhi</a>
                 <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
                 <div>
-<<<<<<< HEAD
                     <a href="https://www.instagram.com/modelens.in/" target="_blank">  
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
                     </a>
                     <a href="https://www.linkedin.com/company/modelens/" target="_blank"> 
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
                     </a>
-=======
-                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
-                            alt="Instagram">
-                    </a>
-                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
-                            alt="LinkedIn">
-                    </a>
-                    <a href="mailto:modelensofficial@gmail.com" target="_blank"><img src="images/image.png"
-                            alt="Gmail"></a>
->>>>>>> origin/main
                 </div>
             </ul>
 
@@ -719,18 +499,8 @@
         </div>
     </footer>
 
-<<<<<<< HEAD
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU" crossorigin="anonymous"></script>
     <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
     <script src="services.js"></script>
 </body>
-=======
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-        integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU"
-        crossorigin="anonymous"></script>
-    <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
-    <script src="services.js"></script>
-</body>
-
->>>>>>> origin/main
 </html>
