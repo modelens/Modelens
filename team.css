@@ -15,12 +15,21 @@ body {
     color: white;
 }
 
+h2 {
+    width: 500px;
+    margin: 0 auto;
+    display: table;
+    margin-top: 70px;
+    text-align: center;
+}
+
 h1 {
 
     width: 500px;
     margin: 0 auto;
     display: table;
-    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -31,7 +40,7 @@ h1 {
 }
 
 .container header {
-    width: 700px;
+    width: 1000px;
     padding: 30px;
     box-shadow: 20px 20px 50px rgba(53, 48, 48, 0.5);
     border-radius: 15px;
@@ -43,13 +52,14 @@ h1 {
 }
 
 .founder {
-    background-image: url(images/group\ 1.JPG);
+    background-image: url(images/Kashish\ Raizada\ _\ Founder\ &\ CEO.jpg);
     background-size: cover;
-    height: 200px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
     display: block;
+    background-size: cover;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .aboutfounder {
@@ -58,16 +68,20 @@ h1 {
     margin-top: 15px;
 }
 
+.aboutfounder p {
+    margin-bottom: 15px;
+}
+
 .foundername {
     display: block;
     width: calc(50% - 50px);
     margin-top: 10px;
     float: left;
-    margin-left: 35px;
+    margin-left: 50px;
 }
 
 .foundername h5 {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .containerblock {
@@ -76,7 +90,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0px;
+    margin-top: 50px;
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
@@ -123,12 +137,6 @@ h1 {
     margin-left: 0px;
 }
 
-
-.social-icons {
-    width: 70px;
-    display: flex;
-    justify-content: space-between;
-}
 
 .team-image-wrapper {
     clip-path: circle(50% at 50% 50%);
