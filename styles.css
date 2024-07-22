@@ -444,6 +444,52 @@ footer p {
     margin: 0;
     color: #666;
 }
+#events {
+  padding: 50px 20px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.event {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-10px);
+}
+
+.event h2 {
+  color: #333;
+}
+
+.event p {
+  color: #666;
+}
+
+.placeholder {
+  background: #e0e0e0;
+  text-align: center;
+  color: #888;
+}
+
+/* Add spacing between sections */
+section {
+  margin-bottom: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #events {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 /* Testimonials Section */
