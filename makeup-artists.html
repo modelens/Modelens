@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>makeup-artists</title>
+    <title>Makeup-Artists</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -23,15 +23,14 @@
         }
 
         .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-content: end;
-            /* Align grid items to the end */
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: end; /* Align grid items to the end */
+}
 
 
         .service-wrapper {
@@ -56,6 +55,7 @@
             object-fit: cover;
         }
 
+       
 
         .service-details {
             text-align: center;
@@ -142,9 +142,7 @@
             margin: 5px;
         }
     </style>
-    <link rel="icon"
-        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
-        type="image/svg+xml">
+
 </head>
 
 <body>
@@ -155,9 +153,10 @@
     <section class="services-container">
         <!-- Service Cards for Models -->
         <div class="service-wrapper">
+            
             <div class="service-card">
-                <img src="images/anshikamua.JPG" alt="mua 1">
-
+                <img src="images/anshikamua.jpg" alt="Model 1">
+                
             </div>
             <div class="service-details">
                 <h3>Anshika</h3>
@@ -169,16 +168,45 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="anshikamua.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
+        <!-- Repeat similar structure for the next 3 containers -->
         <!-- Container 2 -->
         <div class="service-wrapper">
-            <div class="service-card">
-                <img src="images/saijal.jpg" alt="mua 2">
+    
+        <div class="service-card">
+            <img src="images/kashish.JPG" alt="Model 2">
+        </div>
+        <div class="service-details">
+            <h3>Kashish Raizada</h3>
+            <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    
+    <div class="book-now-container">
+        <a href="kashishmua.html" style="text-decoration: none; color: inherit;">
+        <button class="book-now" onclick="checkLoggedIn(event)">Book Now</button>
+        </a>
+    </div>
+</div>
 
+
+        <!-- Container 3 -->
+        <div class="service-wrapper">
+            <div class="service-card">
+                <img src="images/saijal.jpg" alt="Model 3">
+                
             </div>
             <div class="service-details">
                 <h3>Saijal Hans</h3>
@@ -186,44 +214,27 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-            </div>
-        </div>
-
-        <!-- Container 3 -->
-        <div class="service-wrapper">
-            <div class="service-card">
-                <img src="images/makeupfront.jpg" alt="mua 3">
-
-            </div>
-            <div class="service-details">
-                <h3> Yashika</h3>
-                <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="saijal.html" style="text-decoration: none; color: inherit;">
+        
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
         <!-- Container 4 -->
         <div class="service-wrapper">
             <div class="service-card">
-                <img src="images/ritucover.jpg" alt="mua 4">
-
+                <img src="images/yashika.jpg" alt="Model 4">
+                
             </div>
             <div class="service-details">
-                <h3>Ritu Kumari</h3>
+                <h3> Yashika</h3>
                 <div class="star-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -232,35 +243,16 @@
                     <i class="far fa-star"></i>
                 </div>
             </div>
+            
             <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
+                <a href="yashika.html" style="text-decoration: none; color: inherit;">
+        
+                <button class="book-now">Book Now</button>
+                </a>
             </div>
         </div>
 
-
-        <!-- Container 5 -->
-        <div class="service-wrapper">
-            <div class="service-card">
-                <img src="images/deepti.jpg" alt="mua 5">
-
-            </div>
-            <div class="service-details">
-                <h3>Deepti Verma</h3>
-                <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-            <div class="book-now-container">
-                <button class="book-now" onclick="checkLoggedIn()">Book Now</button>
-            </div>
-        </div>
-
-
-
+        
     </section>
 
     <!-- Footer -->
@@ -273,7 +265,7 @@
                 <p>Services</p>
                 <a href="models.html">Models</a>
                 <a href="photographer.html">Photographer</a>
-                <a href="makeup-artists.html">Makeup Artists</a>
+                <a href="makeup_artists.html">Makeup Artists</a>
             </ul>
 
             <ul>
@@ -281,16 +273,12 @@
                 <a>New Delhi,Delhi</a>
                 <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
                 <div>
-                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
-                            alt="Instagram">
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">  
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
                     </a>
-                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
-                            alt="LinkedIn">
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank"> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
                     </a>
-                    <a href="mailto:modelensofficial@gmail.com" target="_blank"><img
-                            src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail"></a>
                 </div>
             </ul>
 
@@ -308,11 +296,8 @@
         </div>
     </footer>
 
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-        integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU"
-        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU" crossorigin="anonymous"></script>
     <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
     <script src="services.js"></script>
 </body>
-
 </html>
