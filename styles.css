@@ -8,7 +8,7 @@
 
 
 /* Header Styles */
-header {
+#main-header {
     background-color: #000000; /* Black color */
     padding: 10px 0;
     position: fixed;
@@ -20,7 +20,7 @@ header {
     z-index: 1000;
 }
 
-nav {
+#main-header nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -268,6 +268,26 @@ nav {
     z-index: 1;
 }
 
+/* Event Section Header Styles */
+#event-header {
+    background-color: #000000; /* Black background */
+    color: #8A2BE2; /* Bright purple text */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#event-header h1 {
+    font-size: 2.5em;
+    color: #8A2BE2; /* Bright purple text */
+}
+
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
 
 /* The Process Section */
 .process-section {
@@ -319,149 +339,68 @@ nav {
     font-size: 16px;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-}
-
-header {
-    background-color: #111;
-    padding: 10px 0;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.events-section {
-    padding: 50px 20px;
-    background-color: #1a1a1a;
-    text-align: center;
-}
-
-.events-section h2 {
-    font-size: 2.5em;
-    color: #cf1aff;
-    margin-bottom: 40px;
-}
-
-.event {
-    background: #222;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.event h3 {
-    font-size: 1.8em;
-    color: #cf1aff;
-    margin-bottom: 10px;
-}
-
-.event p {
-    font-size: 1.2em;
-    color: #ddd;
-}
-
-footer {
-    background-color: #111;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-    color: #666;
-}
-
 /* Events Section */
 #events {
-  text-align: center;
-  padding: 100px 20px; /* Increased padding for more space */
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White text */
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for more space */
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
 }
 
 #events header h2 {
-  color: #8A2BE2; /* Bright purple for the header */
-  margin-bottom: 60px; /* Increased margin for more space below header */
+    color: #8A2BE2; /* Bright purple for the header */
+    margin-bottom: 60px; /* Increased margin for more space below header */
 }
 
 .event-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px; /* Increased gap between event cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Increased gap between event cards */
 }
 
 .event {
-  background-color: #1c1c1c; /* Dark grey background for event cards */
-  color: #ffffff; /* White text for event details */
-  padding: 30px; /* Increased padding for event cards */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  flex: 1 1 calc(45% - 40px);
-  max-width: calc(45% - 40px);
-  transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #1c1c1c; /* Dark grey background for event cards */
+    color: #ffffff; /* White text for event details */
+    padding: 30px; /* Increased padding for event cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(45% - 40px);
+    max-width: calc(45% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .event:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .event h3 {
-  color: #8A2BE2; /* Bright purple for event titles */
+    color: #8A2BE2; /* Bright purple for event titles */
 }
 
 .event p {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .event strong {
-  color: #9370DB; /* Light purple for strong text */
+    color: #9370DB; /* Light purple for strong text */
 }
 
 .register-button {
-  display: inline-block;
-  padding: 15px 30px; /* Increased padding for button */
-  margin-top: 20px;
-  background-color: #8A2BE2; /* Bright purple for the button */
-  color: #ffffff; /* White text */
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for button */
+    margin-top: 20px;
+    background-color: #8A2BE2; /* Bright purple for the button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .register-button:hover {
-  background-color: #9370DB; /* Light purple for the button on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .event {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+    background-color: #9370DB; /* Light purple for the button on hover */
 }
 
 
