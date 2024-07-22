@@ -370,110 +370,6 @@ nav ul li a {
 }
 
 /* Upcoming Events Section */
-#upcoming-events {
-    background-color: #1b1b1b; /* Dark background */
-    padding: 50px 20px;
-    color: #ffffff;
-}
-
-#upcoming-events h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.event {
-    background-color: #2c2c2c; /* Slightly lighter background */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    width: 100%;
-    max-width: 300px; /* Ensure cards don't get too wide */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event:hover {
-    background-color: #3a3a3a; /* Lighter on hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
-
-.event h3 {
-    color: #c90b9b; /* Accent color */
-    margin-bottom: 10px;
-}
-
-.event p {
-    margin-bottom: 10px;
-}
-
-.book-now-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #c90b9b; /* Accent color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.book-now-button:hover {
-    background-color: #a80a80; /* Slightly darker on hover */
-}
-
-@media (max-width: 768px) {
-    .event {
-        width: 100%;
-        margin: 10px 0; /* Adjust margins for smaller screens */
-    }
-}
-
-
-#services .service-link {
-    width: 350px;
-    height: 450px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    overflow: hidden; /* To keep image within container */
-    position: relative;
-}
-
-#services .service-link:hover {
-    background-color: #a86db4;
-}
-
-#services .service-link img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
-}
-
-#services .service-link:hover img {
-    opacity: 0.7; /* Reduce opacity on hover */
-}
-
-#services .service-link span {
-    padding: 10px;
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 1px 1px 2px #000;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -548,6 +444,7 @@ footer p {
     margin: 0;
     color: #666;
 }
+
 
 /* Testimonials Section */
 .testimonials {
