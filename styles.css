@@ -352,7 +352,6 @@ nav ul li a {
 
 
 /* Services Section */
-/* Services Section */
 #services {
     text-align: center;
     padding: 50px 0;
@@ -413,6 +412,7 @@ nav ul li a {
     z-index: 1;
 }
 
+
 /* Events Section */
 #events {
   text-align: center;
@@ -422,7 +422,7 @@ nav ul li a {
 }
 
 #events header h2 {
-  color: #6a0dad; /* Purple color for the header */
+  color: #8A2BE2; /* Bright purple for the header */
   margin-bottom: 40px;
 }
 
@@ -434,8 +434,8 @@ nav ul li a {
 }
 
 .event {
-  background-color: #ffffff; /* White background for event cards */
-  color: #000000; /* Black text for event details */
+  background-color: #1c1c1c; /* Dark grey background for event cards */
+  color: #ffffff; /* White text for event details */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -444,11 +444,15 @@ nav ul li a {
 }
 
 .event h3 {
-  color: #6a0dad; /* Purple color for event titles */
+  color: #8A2BE2; /* Bright purple for event titles */
 }
 
 .event p {
   margin: 10px 0;
+}
+
+.event strong {
+  color: #9370DB; /* Light purple for strong text */
 }
 
 /* Responsive Design */
