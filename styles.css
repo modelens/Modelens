@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* Reset default margin and padding */
-=======
->>>>>>> origin/main
 * {
     margin: 0;
     padding: 0;
@@ -376,8 +373,6 @@ nav ul li a {
 #upcoming-events {
     background-color: #1b1b1b; /* Dark background */
     padding: 50px 20px;
-<<<<<<< HEAD
-=======
     color: #ffffff;
 }
 
@@ -485,7 +480,6 @@ nav ul li a {
     color: #6a0dad; /* White text */
     text-align: center;
     padding: 50px 20px;
->>>>>>> origin/main
 }
 
 .testimonial {
@@ -630,12 +624,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
-<<<<<<< HEAD
-.social-media img
- {
-=======
 .social-media img {
->>>>>>> origin/main
     height: 30px;
     margin: 0 10px;
 }
