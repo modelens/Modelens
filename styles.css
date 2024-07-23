@@ -26,6 +26,62 @@ body {
     z-index: 1000;
 }
 
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-item {
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item h3 {
+    margin: 0;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Project Detail Section */
+#project-detail {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
 #main-header nav {
     display: flex;
     width: 100%;
