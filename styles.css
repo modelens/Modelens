@@ -13,18 +13,40 @@ body {
     background-color: #000;
     color: #fff;
 }
+
 /* Header Styles */
-#main-header{
-    background-color: #000000; /* Black color */
+#main-header {
+    background-color: black;
+    color: white;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#main-header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
+
+#main-header .nav-left a,
+#main-header .nav-right a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#main-header .logo img {
+    height: 40px;
+}
+
+#main-header .nav-left a:hover,
+#main-header .nav-right a:hover {
+    color: #ccc;
+}
+
 
 
 /* Portfolio Section */
@@ -306,6 +328,8 @@ body {
     left: 0;
     z-index: 1;
 }
+
+
 /* The Process Section */
 .process-section {
     background-color: #d24ff6;
