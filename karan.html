@@ -28,7 +28,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -89,7 +88,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 550px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -222,66 +221,81 @@
         </nav>
     </header>
 
-<div class="container">
-    <div class="image-section">
-        <img src="images/karan1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/karan2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/karan3.jpg" alt="Person Image 3" class="thumbnail">
-        <img src="images/karan4.jpg" alt="Person Image 4" class="thumbnail">
-        <img src="images/karan5.jpg" alt="Person Image 5" class="thumbnail">
-       
-    </div>
-    <div class="main-image-container">
-        <img src="images/karan1.jpg" alt="Main Image" class="main-image" id="mainImage">
-    </div>
-    <div class="details-section">
-        <h2>Karan</h2>
-        <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star empty-star"></i>
+    <div class="container">
+        <div class="image-section">
+            <img src="images/karan1.JPG" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/karan1.JPG', 'Karan')">
+            <img src="images/karan2.JPG" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/karan2.JPG', 'Karan')">
+            <img src="images/karan3.JPG" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/karan3.JPG', 'Karan')">
+            <img src="images/karan4.JPG" alt="Person Image 4" class="thumbnail" onclick="changeImage('images/karan4.JPG', 'Karan')">
+            <img src="images/karan5.JPG" alt="Person Image 5" class="thumbnail" onclick="changeImage('images/karan5.JPG', 'Karan')">
         </div>
-        <p>He is a highly skilled and passionate photographer with [number] years of experience capturing life's most precious moments. Known for their unique style and keen eye for detail,he  has a talent for turning ordinary scenes into extraordinary memories.</p>
-        <a href="#" class="book-now-btn">Book Now</a>
-    </div>
-</div>
-
-<footer>
-    <div class="footer2">
-        <div class="footlogo">
-            <div class="logoimg"></div>
+        <div class="main-image-container">
+            <img src="images/karan1.jpg" alt="Main Image" class="main-image" id="mainImage">
         </div>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="models.html">Models</a></li>
-            <li><a href="photographer.html">Photographers</a></li>
-            <li><a href="makeup-artists.html">Makeup Artists</a></li>
-        </ul>
-        <ul>
-            <li><strong>Contact</strong></li>
-            <li>New Delhi, Delhi</li>
-            <li><a href="#" onclick="copyToClipboard()">+91 8178517101</a></li>
-            <li>
-                <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li><strong>Policy</strong></li>
-            <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
-        </ul>
+        <div class="details-section">
+            <h2>Karan</h2>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star empty-star"></i>
+            </div>
+            <p>He is a highly skilled and passionate photographer with [number] years of experience capturing life's most precious moments. Known for their unique style and keen eye for detail,he  has a talent for turning ordinary scenes into extraordinary memories.</p>
+            <a href="#" class="book-now-btn">Book Now</a>
+        </div>
     </div>
-</footer>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="contact.js"></script>
-<script src="script.js"></script>
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
+            </div>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="photographer.html">Photographers</a></li>
+                <li><a href="makeup-artists.html">Makeup Artists</a></li>
+            </ul>
+            <ul>
+                <li><strong>Contact</strong></li>
+                <li>New Delhi, Delhi</li>
+                <li><a href="#" onclick="copyToClipboard()">+91 8178517101</a></li>
+                <li>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><strong>Policy</strong></li>
+                <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function changeImage(imageSrc, modelName) {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = imageSrc;
+            mainImage.alt = modelName;
+
+            // Update details section
+            var detailsSection = document.querySelector('.details-section');
+            detailsSection.querySelector('h2').textContent = modelName;
+
+            // Example: Update description based on image clicked
+            var description = "He is a highly skilled and passionate photographer with [number] years of experience capturing life's most precious moments. Known for their unique style and keen eye for detail,he  has a talent for turning ordinary scenes into extraordinary memories.";
+            detailsSection.querySelector('p').textContent = description;
+        }
+    </script>
 
 </body>
 </html>
