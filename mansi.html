@@ -28,6 +28,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
 
         .nav-left, .nav-right {
@@ -57,18 +58,19 @@
 
         .image-section {
             display: flex;
-            flex-direction: row; /* Display thumbnails horizontally */
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             padding: 10px;
             background: #1a1a1a;
-            max-width: 20%; /* Limit width for small screens */
+            width: 20%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 300px; /* Example max height, adjust as needed */
         }
 
         .image-section img {
-            width: 80px;
-            height: 100px;
-            margin-right: 10px; /* Add space between thumbnails */
+            width: 100px; /* Adjusted width */
+            height: 100px; /* Adjusted height */
+            margin-bottom: 10px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
             object-fit: cover;
@@ -76,18 +78,18 @@
         }
 
         .main-image-container {
-            flex: 1; /* Take remaining space */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Center content vertically */
+            width: 40%;
             padding: 20px;
         }
 
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 550px;
+            height: 550px; /* Adjusted height */
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -95,14 +97,12 @@
         }
 
         .details-section {
-            flex: 1; /* Take remaining space */
-            padding: 20px;
+            padding: 0px;
+            width: 40%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start;
-            background: #1a1a1a;
-            max-width: 40%; /* Limit width for small screens */
+            align-items: flex-start; /* Align items to the start */
         }
 
         .details-section h2 {
@@ -206,38 +206,38 @@
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="index.html">Home</a>
-            <a href="#work-gallery">Work Gallery</a>
-        </div>
-        <div class="logo">
-            <img src="images/Mm logo.jpeg" alt="Logo" />
-        </div>
-        <div class="nav-right">
-            <a href="#about">About</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="#work-gallery">Work Gallery</a>
+            </div>
+            <div class="logo">
+                <img src="images/Mm logo.jpeg" alt="Logo" />
+            </div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
 
 <div class="container">
     <div class="image-section">
-        <img src="images/mansi1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/mansi1.jpg')">
-        <img src="images/mansi2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/mansi2.jpg')">
-        <img src="images/mansi3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/mansi3.jpg')">
-        <img src="images/mansi5.jpg" alt="Person Image 5" class="thumbnail" onclick="changeImage('images/mansi5.jpg')">
+        <img src="images/ritu1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/ritu1.jpg')">
+        <img src="images/ritu2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/ritu2.jpg')">
+        <img src="images/ritu3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/ritu3.jpg')">
+       
     </div>
     <div class="main-image-container">
-        <img src="images/mansi1.jpg" alt="Main Image" class="main-image" id="mainImage">
+        <img src="images/ritu1.jpg" alt="Main Image" class="main-image" id="mainImage">
     </div>
     <div class="details-section">
-        <h2>Mansi Ojha</h2>
+        <h2>Ritu Kumari</h2>
         <div class="rating">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
             <i class="fas fa-star empty-star"></i>
             <i class="fas fa-star empty-star"></i>
         </div>
