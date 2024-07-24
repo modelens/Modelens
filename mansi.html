@@ -56,19 +56,19 @@
         }
 
         .image-section {
+            overflow-y: auto; /* Enable vertical scrolling */
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 10px;
             background: #1a1a1a;
             width: 20%;
-            overflow-y: auto; /* Enable vertical scrolling */
-            max-height: 500px; /* Example max height, adjust as needed */
+            max-height: 500px; /* Limit height for scrolling */
         }
 
         .image-section img {
             width: 80px;
-            height: 80px;
+            height: 100px;
             margin-bottom: 10px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -77,18 +77,18 @@
         }
 
         .main-image-container {
+            flex: 1; /* Take remaining space */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center content vertically */
-            width: 40%;
+            justify-content: center;
             padding: 20px;
         }
 
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 650px;
+            height: 550px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -96,12 +96,14 @@
         }
 
         .details-section {
-            padding: 0px;
-            width: 40%;
+            flex: 1; /* Take remaining space */
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start; /* Align items to the start */
+            align-items: flex-start;
+            background: #1a1a1a;
+            max-width: 40%; /* Limit width for small screens */
         }
 
         .details-section h2 {
@@ -288,3 +290,4 @@
 
 </body>
 </html>
+
