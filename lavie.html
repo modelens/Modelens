@@ -28,7 +28,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -206,29 +205,27 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <a href="index.html">Home</a>
-                <a href="#work-gallery">Work Gallery</a>
-            </div>
-            <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
-            </div>
-            <div class="nav-right">
-                <a href="#about">About</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="#work-gallery">Work Gallery</a>
+        </div>
+        <div class="logo">
+            <img src="images/Mm logo.jpeg" alt="Logo" />
+        </div>
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+</header>
 
 <div class="container">
     <div class="image-section">
-        <img src="images/lavie1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/lavie2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/lavie3.jpg" alt="Person Image 3" class="thumbnail">
-        
-       
+        <img src="images/lavie1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage(this)">
+        <img src="images/lavie2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage(this)">
+        <img src="images/lavie3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage(this)">
     </div>
     <div class="main-image-container">
         <img src="images/lavie1.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -281,6 +278,14 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+
+<script>
+    function changeImage(thumbnail) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = thumbnail.src;
+        mainImage.alt = thumbnail.alt;
+    }
+</script>
 
 </body>
 </html>
