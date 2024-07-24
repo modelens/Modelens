@@ -5,6 +5,53 @@ body {
     color: white;
 }
 
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header style */
+#portfolio-header {
+    background-color: #1e1e1e; /* Dark background color for the header */
+    padding: 10px 20px; /* Space around the content */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between nav-left, logo, and nav-right */
+    align-items: center; /* Align items vertically center */
+}
+
+.nav-left a, .nav-right a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Space between links */
+    font-size: 16px; /* Font size for links */
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.logo img {
+    max-height: 50px; /* Adjust logo size */
+}
+
+#login-link, #signup-link, #logout {
+    background-color: #007bff; /* Blue background for login/signup */
+    color: #ffffff; /* White text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size for login/signup */
+    margin-left: 10px; /* Space between login/signup links */
+}
+
+#login-link:hover, #signup-link:hover, #logout:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
 h4 {
     font-size: 50px;
 }
