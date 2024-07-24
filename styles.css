@@ -412,7 +412,7 @@ section {
 
 #events header h2 {
     color: #8A2BE2; /* Bright purple for the header */
-    margin-bottom: 60px; /* Increased margin for more space below header */
+    margin-bottom: 40px; /* Increased margin for more space below header */
 }
 
 .event-container {
