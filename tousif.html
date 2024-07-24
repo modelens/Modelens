@@ -63,12 +63,12 @@
             background: #1a1a1a;
             width: 20%;
             overflow-y: auto; /* Enable vertical scrolling */
-            max-height: 400px; /* Example max height, adjust as needed */
+            max-height: 600px; /* Example max height, adjust as needed */
         }
 
         .image-section img {
             width: 80px;
-            height: 80px;
+            height: 90px;
             margin-bottom: 10px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -88,7 +88,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 650px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -201,6 +201,58 @@
             color: #fff;
             border-radius: 5px;
         }
+
+        /* Adjustments for thumbnails and main image positioning */
+        .thumbnails-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            position: relative; /* For z-index stacking */
+            z-index: 1; /* Ensure thumbnails are on top of the main image */
+            background: #1a1a1a;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 400px;
+            border-right: 1px solid #666;
+        }
+
+        .thumbnails-container img {
+            width: 80px;
+            height: 90px;
+            margin-bottom: 10px;
+            border: 1px solid #d24ff6;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        @media (max-width: 788px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-section {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+                flex-direction: row;
+                padding: 10px 0;
+            }
+
+            .main-image-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px 0;
+            }
+
+            .details-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -222,11 +274,11 @@
     </header>
 
     <div class="container">
-        <div class="image-section">
-            <img src="images/tousif1.jpg" alt="Product Image 1" class="thumbnail">
-            <img src="images/tousif2.jpg" alt="Product Image 2" class="thumbnail">
-            <img src="images/tousif4.jpg" alt="Product Image 3" class="thumbnail">
-            <img src="images/tousif3.jpg" alt="Product Image 4" class="thumbnail">
+        <div class="thumbnails-container">
+            <img src="images/tousif1.jpg" alt="Product Image 1" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/tousif2.jpg" alt="Product Image 2" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/tousif3.jpg" alt="Product Image 3" class="thumbnail" onclick="changeImage(this)">
+            <img src="images/tousif4.jpg" alt="Product Image 4" class="thumbnail" onclick="changeImage(this)">
         </div>
         <div class="main-image-container">
             <img src="images/tousif1.jpg" alt="Main Product Image" class="main-image" id="mainImage">
@@ -241,7 +293,7 @@
                 <i class="fas fa-star empty-star"></i>
             </div>
             <p>Mohammad Tousif is a talented male model known for his striking features and versatile style. With a passion for fashion and a keen eye for trends, John has quickly made a mark in the industry. His ability to adapt to various roles and showcase diverse looks has earned him recognition among top designers and photographers.</p>
-            <a href="#" class="book-now-btn">Buy Now</a>
+            <a href="#" class="book-now-btn">Book Now</a>
         </div>
     </div>
 
@@ -280,5 +332,11 @@
     <script src="contact.js"></script>
     <script src="script.js"></script>
 
+    <script>
+        function changeImage(img) {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = img.src;
+        }
+    </script>
 </body>
 </html>
