@@ -14,39 +14,92 @@ body {
     color: #fff;
 }
 
-/* Header Styles */
+/* Header style */
 #main-header {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: #000000; 
+    padding: 10px 20px; 
 }
 
-#main-header nav {
+nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Space between nav-left, logo, and nav-right */
+    align-items: center; 
 }
 
-#main-header .nav-left a,
-#main-header .nav-right a {
-    color: white;
-    margin: 0 10px;
+.nav-left a, .nav-right a {
+    color: #ffffff; 
     text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px; 
 }
 
-#main-header .logo img {
-    height: 40px;
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline; 
 }
 
-#main-header .nav-left a:hover,
-#main-header .nav-right a:hover {
-    color: #ccc;
+.logo img {
+    max-height: 50px; /* Adjust logo size */
 }
 
+#login-link, #signup-link, #logout {
+    background-color: #007bff; /* Blue background for login/signup */
+    color: #ffffff; 
+    padding: 5px 10px; 
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size for login/signup */
+    margin-left: 10px; /* Space between login/signup links */
+}
+
+#login-link:hover, #signup-link:hover, #logout:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+h4 {
+    font-size: 50px;
+}
+
+.main-container {
+
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: space-evenly;
+}
+
+.main-item {
+    width: 400px;
+    padding: 30px;
+    box-shadow: 20px 20px 50px rgba(53, 48, 48, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.maincard {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    margin-left: 25px;
+}
+
+.line {
+    height: 10px;
+    width: 100%;
+    background-color: white;
+}
 
 
 /* Portfolio Section */
