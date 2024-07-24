@@ -28,7 +28,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -89,7 +88,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 650px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -206,29 +205,28 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <a href="index.html">Home</a>
-                <a href="#work-gallery">Work Gallery</a>
-            </div>
-            <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
-            </div>
-            <div class="nav-right">
-                <a href="#about">About</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="#work-gallery">Work Gallery</a>
+        </div>
+        <div class="logo">
+            <img src="images/Mm logo.jpeg" alt="Logo" />
+        </div>
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+</header>
 
 <div class="container">
     <div class="image-section">
-        <img src="images/nikhil1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/nikhil2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/nikhil3.jpg" alt="Person Image 3" class="thumbnail">
-        <img src="images/nikhil4.jpg" alt="Person Image 4" class="thumbnail">
-       
+        <img src="images/nikhil1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/nikhil1.jpg', 'Nikhil Bhagwani')">
+        <img src="images/nikhil2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/nikhil2.jpg', 'Nikhil Bhagwani')">
+        <img src="images/nikhil3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/nikhil3.jpg', 'Nikhil Bhagwani')">
+        <img src="images/nikhil4.jpg" alt="Person Image 4" class="thumbnail" onclick="changeImage('images/nikhil4.jpg', 'Nikhil Bhagwani')">
     </div>
     <div class="main-image-container">
         <img src="images/nikhil1.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -281,6 +279,14 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+
+<script>
+    function changeImage(imageSrc, altText) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = imageSrc;
+        mainImage.alt = altText;
+    }
+</script>
 
 </body>
 </html>
