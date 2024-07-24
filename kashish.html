@@ -28,7 +28,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -89,7 +88,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 550px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -222,65 +221,80 @@
         </nav>
     </header>
 
-<div class="container">
-    <div class="image-section">
-        <img src="images/kashish1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/kashish2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/kashish3.jpg" alt="Person Image 3" class="thumbnail">
-        <img src="images/kashish4.jpg" alt="Person Image 4" class="thumbnail">
-       
-    </div>
-    <div class="main-image-container">
-        <img src="images/kashish1.jpg" alt="Main Image" class="main-image" id="mainImage">
-    </div>
-    <div class="details-section">
-        <h2>Kashish Raizada</h2>
-        <div class="rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star "></i>
-            <i class="fas fa-star "></i>
+    <div class="container">
+        <div class="image-section">
+            <img src="images/kashish1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/kashish1.jpg', 'Kashish Raizada')">
+            <img src="images/kashish2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/kashish2.jpg', 'Kashish Raizada')">
+            <img src="images/kashish3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/kashish3.jpg', 'Kashish Raizada')">
+            <img src="images/kashish4.jpg" alt="Person Image 4" class="thumbnail" onclick="changeImage('images/kashish4.jpg', 'Kashish Raizada')">
         </div>
-        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Sana has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
-        <a href="#" class="book-now-btn">Book Now</a>
-    </div>
-</div>
-
-<footer>
-    <div class="footer2">
-        <div class="footlogo">
-            <div class="logoimg"></div>
+        <div class="main-image-container">
+            <img src="images/kashish1.jpg" alt="Main Image" class="main-image" id="mainImage">
         </div>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="models.html">Models</a></li>
-            <li><a href="photographer.html">Photographers</a></li>
-            <li><a href="makeup-artists.html">Makeup Artists</a></li>
-        </ul>
-        <ul>
-            <li><strong>Contact</strong></li>
-            <li>New Delhi, Delhi</li>
-            <li><a href="#" onclick="copyToClipboard()">+91 8178517101</a></li>
-            <li>
-                <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li><strong>Policy</strong></li>
-            <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
-        </ul>
+        <div class="details-section">
+            <h2>Kashish Raizada</h2>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Kashish has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
+            <a href="#" class="book-now-btn">Book Now</a>
+        </div>
     </div>
-</footer>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="contact.js"></script>
-<script src="script.js"></script>
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
+            </div>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="photographer.html">Photographers</a></li>
+                <li><a href="makeup-artists.html">Makeup Artists</a></li>
+            </ul>
+            <ul>
+                <li><strong>Contact</strong></li>
+                <li>New Delhi, Delhi</li>
+                <li><a href="#" onclick="copyToClipboard()">+91 8178517101</a></li>
+                <li>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><strong>Policy</strong></li>
+                <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function changeImage(imageSrc, modelName) {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = imageSrc;
+            mainImage.alt = modelName;
+
+            // Update details section
+            var detailsSection = document.querySelector('.details-section');
+            detailsSection.querySelector('h2').textContent = modelName;
+
+            // Example: Update description based on image clicked
+            var description = "She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, " + modelName + " has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.";
+            detailsSection.querySelector('p').textContent = description;
+        }
+    </script>
 
 </body>
 </html>
