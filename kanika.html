@@ -89,7 +89,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 550px; /* Updated height to 550px */
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -224,11 +224,10 @@
 
 <div class="container">
     <div class="image-section">
-        <img src="images/kanika1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/kanika2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/kanika3.jpg" alt="Person Image 3" class="thumbnail">
-        <img src="images/kanika4.jpg" alt="Person Image 4" class="thumbnail">
-       
+        <img src="images/kanika1.jpg" alt="Person Image 1" class="thumbnail" onclick="showImage('images/kanika1.jpg')">
+        <img src="images/kanika2.jpg" alt="Person Image 2" class="thumbnail" onclick="showImage('images/kanika2.jpg')">
+        <img src="images/kanika3.jpg" alt="Person Image 3" class="thumbnail" onclick="showImage('images/kanika3.jpg')">
+        <img src="images/kanika4.jpg" alt="Person Image 4" class="thumbnail" onclick="showImage('images/kanika4.jpg')">
     </div>
     <div class="main-image-container">
         <img src="images/kanika1.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -281,6 +280,12 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+
+<script>
+    function showImage(imageSrc) {
+        document.getElementById('mainImage').src = imageSrc;
+    }
+</script>
 
 </body>
 </html>
