@@ -28,7 +28,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -206,28 +205,27 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <a href="index.html">Home</a>
-                <a href="#work-gallery">Work Gallery</a>
-            </div>
-            <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
-            </div>
-            <div class="nav-right">
-                <a href="#about">About</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="#work-gallery">Work Gallery</a>
+        </div>
+        <div class="logo">
+            <img src="images/Mm logo.jpeg" alt="Logo" />
+        </div>
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+</header>
 
 <div class="container">
     <div class="image-section">
-        <img src="images/anshika1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/anshika2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/anshika3.jpg" alt="Person Image 3" class="thumbnail">
-       
+        <img src="images/anshika1.jpg" alt="Anshika Image 1" class="thumbnail" onclick="changeImage('images/anshika1.jpg')">
+        <img src="images/anshika2.jpg" alt="Anshika Image 2" class="thumbnail" onclick="changeImage('images/anshika2.jpg')">
+        <img src="images/anshika3.jpg" alt="Anshika Image 3" class="thumbnail" onclick="changeImage('images/anshika3.jpg')">
     </div>
     <div class="main-image-container">
         <img src="images/anshika1.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -241,7 +239,7 @@
             <i class="fas fa-star empty-star"></i>
             <i class="fas fa-star empty-star"></i>
         </div>
-        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Sana has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
+        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Anshika has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
         <a href="#" class="book-now-btn">Book Now</a>
     </div>
 </div>
@@ -280,6 +278,12 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+
+<script>
+    function changeImage(imageUrl) {
+        document.getElementById('mainImage').src = imageUrl;
+    }
+</script>
 
 </body>
 </html>
