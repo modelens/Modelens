@@ -1,115 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
 
-       
+
     <!-- Header -->
     <header id="portfolio-header">
-    <nav>
-        <div class="nav-left">
-            <a href="index.html#services">Services</a>
-            <a href="index.html#events">Events</a>
-            <a href="portfolio.html">Portfolio</a>
-        </div>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/Mm logo.jpeg" alt="Logo">
-            </a>
-        </div>
-        <div class="nav-right">
-            <a href="team.html">Our Team</a>
-            <a href="contact.html">Contact Us</a>
-            <a id="login-link" href="login.html">Login</a>
-            <a id="signup-link" href="signup.html">Signup</a>
-            <a id="logout" href="#" style="display:none;">Logout</a>
-        </div>
-    </nav>
-</header>
-    
+        <nav>
+            <div class="nav-left">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#events">Events</a>
+                <a href="portfolio.html">Portfolio</a>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Mm logo.jpeg" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact Us</a>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="signup-link" href="signup.html">Signup</a>
+                <a id="logout" href="#" style="display:none;">Logout</a>
+            </div>
+        </nav>
+    </header>
+
     <section id="portfolio">
-        <h2>Our Portfolio</h2>
+        <h4>Our Portfolio</h4>
         <div class="portfolio-container">
             <div class="portfolio-item">
-                <a href="portfolio1.html">
-                    <img src="images/portfolio1-thumbnail.png" alt="Portfolio 1">
-                    <h3>Portfolio 1</h3>
-                </a>
+                <div class="portfoliocard">
+                    <a href="portfolio1.html">
+                        <img src="images/portfolio1-thumbnail.png" alt="Portfolio 1">
+                        <h2>Portfolio 1</h2>
+                    </a>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="portfolio2.html">
-                    <img src="images/portfolio2-thumbnail.png" alt="Portfolio 2">
-                    <h3>Portfolio 2</h3>
-                </a>
+                <div class="portfoliocard">
+                    <a href="portfolio2.html">
+                        <img src="images/portfolio2-thumbnail.png" alt="Portfolio 2">
+                        <h2>Portfolio 2</h2>
+                    </a>
+                </div>
             </div>
             <div class="portfolio-item">
-                <a href="portfolio3.html">
-                    <img src="images/portfolio3-thumbnail.png" alt="Portfolio 3">
-                    <h3>Portfolio 3</h3>
-                </a>
+                <div class="portfoliocard">
+                    <a href="portfolio3.html">
+                        <img src="images/portfolio3-thumbnail.png" alt="Portfolio 3">
+                        <h2>Portfolio 3</h2>
+                    </a>
+                </div>
             </div>
             <div class="portfolio-item">
                 <a href="portfolio4.html">
-                    <img src="images/portfolio4-thumbnail.png" alt="Portfolio 4">
-                    <h3>Portfolio 4</h3>
+                    <div class="portfoliocard">
+                        <img src="images/portfolio4-thumbnail.png" alt="Portfolio 4">
+                        <h2>Portfolio 4</h2>
                 </a>
             </div>
-            <div class="portfolio-item">
-                <a href="portfolio5.html">
+        </div>
+        <div class="portfolio-item">
+            <a href="portfolio5.html">
+                <div class="portfoliocard">
                     <img src="images/portfolio4-thumbnail.png" alt="Portfolio 5">
-                    <h3>Portfolio 5</h3>
-                </a>
-            </div>
+                    <h2>Portfolio 5</h2>
+            </a>
+        </div>
+        </div>
         </div>
     </section>
+    <div class="line"></div>
 
-    
+
     <!-- Footer -->
-<footer>
-    <div class="footer2">
-        <div class="footlogo">
-            <div class="logoimg"></div>
-        </div>
-        <ul>
-            <p><a href="services.html">Services</a></p>
-            <a href="models.html">Models</a>
-            <a href="photographer.html">Photographer</a>
-            <a href="makeup-artists.html">Makeup Artists</a>
-        </ul>
-
-        <ul>
-            <p>Contact</p>
-            <a>New Delhi, Delhi</a>
-            <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
-            <div>
-                <a href="https://www.instagram.com/modelens.in/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
-                </a>
-                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:modelensofficial@gmail.com" target="_blank"><img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail"></a>
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
             </div>
-        </ul>
+            <ul>
+                <p><a href="services.html">Services</a></p>
+                <a href="models.html">Models</a>
+                <a href="photographer.html">Photographer</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+            </ul>
 
-        <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
-        <div id="notification" class="notification">
-            Copied the mobile number!
+            <ul>
+                <p>Contact</p>
+                <a>New Delhi, Delhi</a>
+                <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
+                <div>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="mailto:modelensofficial@gmail.com" target="_blank"><img
+                            src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail"></a>
+                </div>
+            </ul>
+
+            <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
+            <div id="notification" class="notification">
+                Copied the mobile number!
+            </div>
+
+            <ul>
+                <p>Policy</p>
+                <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
+                    target="_blank">Terms And Conditions</a>
+            </ul>
         </div>
+    </footer>
 
-        <ul>
-            <p>Policy</p>
-            <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a>
-        </ul>
-    </div>
-</footer>
-
-    
+    <script src="contact.js"></script>
 </body>
-</html>
 
+</html>
