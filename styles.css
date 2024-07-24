@@ -271,7 +271,7 @@ body {
 /* Services Section */
 #services {
     text-align: center;
-    padding: 70px 20px;
+    padding: 50px 20px;
     background-color: #000000;
     color: #ffffff;
 }
@@ -283,7 +283,7 @@ body {
 #services .service-links {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 70px;
 }
 
 #services .service-link {
@@ -312,7 +312,7 @@ body {
 }
 
 #services .service-link:hover img {
-    opacity: 0.7; /* Reduce opacity on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
 }
 
 #services .service-link span {
