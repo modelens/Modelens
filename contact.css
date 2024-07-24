@@ -7,6 +7,64 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+#main-header {
+    background-color: #000000;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Space between nav-left, logo, and nav-right */
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    max-height: 50px;
+    /* Adjust logo size */
+}
+
+#login-link,
+#signup-link,
+#logout {
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Font size for login/signup */
+    margin-left: 10px;
+    /* Space between login/signup links */
+}
+
+#login-link:hover,
+#signup-link:hover,
+#logout:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+
 main {
     margin-top: 40px;
     display: flex;
@@ -205,6 +263,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+
 ul a {
     display: block;
     font-size: 0.85rem;
@@ -295,4 +354,10 @@ ul div a img {
         bottom: 0;
         opacity: 0;
     }
+}
+
+.line {
+    height: 10px;
+    width: 100%;
+    background-color: white;
 }

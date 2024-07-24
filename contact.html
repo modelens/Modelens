@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Contact Us</title>
     <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
@@ -15,18 +14,24 @@
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <nav>
             <div class="nav-left">
-                <a href="./#services">Services</a>
-                <a href="#">Upcoming Events</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#events">Events</a>
+                <a href="portfolio.html">Portfolio</a>
             </div>
             <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
+                <a href="index.html">
+                    <img src="images/Mm logo.jpeg" alt="Logo">
+                </a>
             </div>
             <div class="nav-right">
                 <a href="team.html">Our Team</a>
-                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Us</a>
+                <a id="login-link" href="login.html">Login</a>
+                <a id="signup-link" href="signup.html">Signup</a>
+                <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
         </nav>
     </header>
@@ -129,6 +134,7 @@
         </div>
 
     </main>
+    <div class="line"></div>
     <footer>
         <div class="footer2">
             <div class="footlogo">
