@@ -89,7 +89,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 450px;
+            height: 550px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -224,9 +224,8 @@
 
 <div class="container">
     <div class="image-section">
-        <img src="images/bharti.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/bharti1.jpg" alt="Person Image 2" class="thumbnail">
-      
+        <img src="images/bharti.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/bharti.jpg', 'Bharti Dhaiya')">
+        <img src="images/bharti1.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/bharti1.jpg', 'Bharti Dhaiya')">
     </div>
     <div class="main-image-container">
         <img src="images/bharti.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -240,7 +239,7 @@
             <i class="fas fa-star empty-star"></i>
             <i class="fas fa-star empty-star"></i>
         </div>
-        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Sana has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
+        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Bharti has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
         <a href="#" class="book-now-btn">Book Now</a>
     </div>
 </div>
@@ -279,6 +278,22 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+
+<script>
+    function changeImage(imageSrc, modelName) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = imageSrc;
+        mainImage.alt = modelName;
+
+        // Update details section
+        var detailsSection = document.querySelector('.details-section');
+        detailsSection.querySelector('h2').textContent = modelName;
+
+        // Example: Update description based on image clicked
+        var description = "She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, " + modelName + " has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.";
+        detailsSection.querySelector('p').textContent = description;
+    }
+</script>
 
 </body>
 </html>
