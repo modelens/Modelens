@@ -249,19 +249,19 @@ body {
 /* Services Section */
 #services {
     text-align: center;
-    padding: 50px 0;
+    padding: 70px 20px;
     background-color: #000000;
     color: #ffffff;
 }
 
 #services header {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 #services .service-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 80px;
 }
 
 #services .service-link {
@@ -306,7 +306,6 @@ body {
     left: 0;
     z-index: 1;
 }
-
 /* The Process Section */
 .process-section {
     background-color: #d24ff6;
