@@ -42,7 +42,6 @@ nav {
 }
 
 #login-link, #signup-link, #logout {
-    background-color: #007bff; /* Blue background for login/signup */
     color: #ffffff; 
     padding: 5px 10px; 
     border-radius: 5px; /* Rounded corners */
