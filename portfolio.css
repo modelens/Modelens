@@ -14,25 +14,25 @@ body {
 
 /* Header style */
 #portfolio-header {
-    background-color: #1e1e1e; /* Dark background color for the header */
-    padding: 10px 20px; /* Space around the content */
+    background-color: #000000; 
+    padding: 10px 20px; 
 }
 
 nav {
     display: flex;
     justify-content: space-between; /* Space between nav-left, logo, and nav-right */
-    align-items: center; /* Align items vertically center */
+    align-items: center; 
 }
 
 .nav-left a, .nav-right a {
-    color: #ffffff; /* White text color */
-    text-decoration: none; /* Remove underline */
-    margin: 0 15px; /* Space between links */
-    font-size: 16px; /* Font size for links */
+    color: #ffffff; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px; 
 }
 
 .nav-left a:hover, .nav-right a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
 .logo img {
