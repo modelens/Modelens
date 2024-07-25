@@ -12,11 +12,7 @@
 
         header {
             font-family: 'Poppins', sans-serif;
-        }
-
-        header {
-            background-color: #000000;
-            /* Black color */
+            background-color: #000000; /* Black color */
             padding: 10px 0;
             position: fixed;
             width: 100%;
@@ -43,18 +39,17 @@
 
         .nav-left a,
         .nav-right a {
-            color: #ffffff;
-            /* White color */
+            color: #ffffff; /* White color */
             text-decoration: none;
             padding: 14px 16px;
         }
 
         .logo img {
-            height: 40px;
+            height: 50px;
         }
 
         body {
-            background: linear-gradient(to bottom, #000000, #434343);
+            background: #000000; /* Solid black background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -62,10 +57,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-        }
-
-        .logo img {
-            height: 50px;
+            color: white; /* White text color */
+            font-family: 'Poppins', sans-serif;
         }
 
         h2 {
@@ -89,7 +82,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(255, 255, 255, 0.9);
+            background: #000000; /* Black background for form */
             padding: 1.2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -98,7 +91,7 @@
 
         label {
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #ffffff; /* White color for labels */
             font-weight: bold;
         }
 
@@ -106,16 +99,18 @@
         input[type="password"] {
             padding: 0.8rem;
             margin-bottom: 1rem;
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff; /* White border */
             border-radius: 6px;
             width: 100%;
             box-sizing: border-box;
             font-size: 1rem;
+            background: #333333; /* Darker background for inputs */
+            color: #ffffff; /* White text color in inputs */
         }
 
         button {
             padding: 0.8rem 1.2rem;
-            background-color: #333;
+            background-color: #6f42c1; /* Purple color */
             color: white;
             border: none;
             border-radius: 6px;
@@ -127,7 +122,7 @@
         }
 
         button:hover {
-            background-color: #555;
+            background-color: #5a2d8c; /* Darker purple on hover */
         }
 
         .anchorr {
@@ -159,13 +154,11 @@
         }
 
         .alert-success {
-            background-color: #6c757d;
-            /* Darker shade of purple */
+            background-color: #6c757d; /* Darker shade of purple */
         }
 
         .alert-danger {
-            background-color: #dc3545;
-            /* Red for error */
+            background-color: #dc3545; /* Red for error */
         }
 
         .alert-success::before {
