@@ -1,4 +1,6 @@
 /* Reset default margin and padding */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
 }
 
 /* General Mobile Styles */
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
     body {
         padding: 20px;
         font-size: 14px;
@@ -50,7 +52,7 @@
 }
 
 /* Small Tablets */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .navbar-brand {
         font-size: 1.5rem;
     }
@@ -85,10 +87,10 @@
     .stat p {
         font-size: 1.1em;
     }
-}
+} 
 
 /* Large Tablets */
-@media (max-width: 1024px) {
+ @media (max-width: 1024px) {
     .navbar-brand {
         font-size: 1.8rem;
     }
@@ -123,10 +125,10 @@
     .stat p {
         font-size: 1.2em;
     }
-}
+} 
 
 /* Medium Desktops */
-@media (max-width: 1200px) {
+ @media (max-width: 1200px) {
     .navbar-brand {
         font-size: 2rem;
     }
@@ -161,7 +163,7 @@
     .stat p {
         font-size: 1.3em;
     }
-}
+} 
 
 /* Large Desktops */
 @media (max-width: 1600px) {
@@ -199,7 +201,7 @@
     .stat p {
         font-size: 1.4em;
     }
-}
+} 
 
 /* General Body Styling */
 body {
@@ -210,45 +212,57 @@ body {
 }
 
 /*Fixed Header*/
-.fixed-header {
+ .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
+} */
 
-body {
-  padding-top: 56px; /* Adjust based on the header height */
-}
+ body {
+  padding-top: 56px; 
+} 
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.5rem;
   }
   .navbar-nav .nav-link {
     font-size: 1rem;
   }
-}
+} 
 
 
 /* Header style */
 #main-header {
-    background-color: #000000; 
-    padding: 10px 20px; 
+    background-color: #000000; /* Black color */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-between; /* Space between nav-left, logo, and nav-right */
     align-items: center; 
+    padding: 0 20px;
+    width: 100%;
 }
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+} 
 
 .nav-left a, .nav-right a {
     color: #ffffff; 
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px; 
 }
 
 .nav-left a:hover, .nav-right a:hover {
@@ -257,18 +271,6 @@ nav {
 
 .logo img {
     max-height: 50px; /* Adjust logo size */
-}
-
-#login-link, #signup-link, #logout {
-    color: #ffffff; 
-    padding: 5px 10px; 
-    border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size for login/signup */
-    margin-left: 10px; /* Space between login/signup links */
-}
-
-#login-link:hover, #signup-link:hover, #logout:hover {
-    background-color: #0056b3; /* Darker blue on hover */
 }
 
 h4 {

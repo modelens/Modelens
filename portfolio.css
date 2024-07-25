@@ -24,10 +24,13 @@ nav {
     align-items: center; 
 }
 
+a{
+    padding: 0;
+}
+
 .nav-left a, .nav-right a {
     color: #ffffff; 
     text-decoration: none;
-    margin: 0 15px;
     font-size: 16px; 
 }
 
@@ -37,18 +40,6 @@ nav {
 
 .logo img {
     max-height: 50px; /* Adjust logo size */
-}
-
-#login-link, #signup-link, #logout {
-    color: #ffffff; /* White text color */
-    padding: 5px 10px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size for login/signup */
-    margin-left: 10px; /* Space between login/signup links */
-}
-
-#login-link:hover, #signup-link:hover, #logout:hover {
-    background-color: #0056b3; /* Darker blue on hover */
 }
 
 h4 {

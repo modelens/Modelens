@@ -6,9 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Model Booking</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        header {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background-color: #000000;
+            /* Black color */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left a,
+        .nav-right a {
+            color: #ffffff;
+            /* White color */
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #000000, #434343);
             margin: 0;
             padding: 0;
@@ -92,12 +137,50 @@
             font-size: 0.9rem;
         }
 
+        .nav-left a:hover,
+        .nav-right a:hover {
+            text-decoration: underline;
+        }
+
         .anchorr:hover {
             text-decoration: underline;
         }
+
+        .alert {
+            width: 350px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-success {
+            background-color: #6c757d;
+            /* Darker shade of purple */
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+            /* Red for error */
+        }
+
+        .alert-success::before {
+            content: '✔️';
+            margin-right: 10px;
+        }
+
+        .alert-danger::before {
+            content: '❌';
+            margin-right: 10px;
+        }
     </style>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo=" type="image/svg+xml">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjc1MDlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
+        type="image/svg+xml">
 </head>
 
 <body>
@@ -117,12 +200,14 @@
                 <a href="contact.html">Contact Us</a>
                 <a id="login-link" href="login.html">Login</a>
                 <a id="signup-link" href="signup.html">Signup</a>
-                <a href="#" id="logout" style="display:none;">Logout</a>
             </div>
         </nav>
     </header>
     <h2>Welcome Back!</h2>
     <p class="intro-text">Log in to access your account and book your favorite Person for your next project.</p>
+
+    <div id="alert-container"></div> <!-- Container for alerts -->
+
     <form id="login-form">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required placeholder="Enter your email">
@@ -131,8 +216,28 @@
         <button type="submit">Sign In</button>
     </form>
     <a href="signup.html" class="anchorr">Don't have an account? Sign Up</a>
+
     <script src="config.js"></script>
     <script>
+        window.addEventListener('load', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('signup') === 'success') {
+                showAlert('Signup successful! You can now log in using your details.', 'success');
+                // Remove the query parameter from the URL after showing the alert
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById('alert-container');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.role = 'alert';
+            alert.innerText = message;
+            alertContainer.appendChild(alert);
+            setTimeout(() => alert.remove(), 5000); // Remove alert after 5 seconds
+        }
+
         document.getElementById('login-form').addEventListener('submit', async function (event) {
             event.preventDefault(); // Prevent default form submission
 
@@ -157,49 +262,14 @@
                 localStorage.setItem('token', data.token); // Store token in local storage
                 localStorage.setItem('loginTimestamp', Date.now()); // Set login timestamp
 
-                console.log('Login successful:', data);
-                window.location.href = 'index.html'; // Redirect to a page after login
+                showAlert('Login successful! Redirecting...', 'success');
+                setTimeout(() => window.location.href = 'index.html', 2000); // Redirect after 2 seconds
             } catch (error) {
                 console.error('Error:', error.message);
-                alert('Login failed: ' + error.message);
+                showAlert('Login failed: ' + error.message, 'danger');
             }
         });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const token = localStorage.getItem('token');
-            if (token) {
-                document.getElementById('logout').style.display = 'block';
-            }
-        });
-
-        document.getElementById('logout').addEventListener('click', async function () {
-            const token = localStorage.getItem('token');
-            try {
-                const response = await fetch(`${API_URL}/logout`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    }
-                });
-
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error(errorText);
-                }
-
-                localStorage.removeItem('token'); // Remove token on logout
-                localStorage.removeItem('loginTimestamp'); // Clear login timestamp
-                window.location.href = 'login.html'; // Redirect to login page
-            } catch (error) {
-                console.error('Error:', error.message);
-                alert('Logout failed: ' + error.message);
-            }
-        });
-
-
     </script>
-
 </body>
 
 </html>

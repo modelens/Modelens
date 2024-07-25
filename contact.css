@@ -44,27 +44,6 @@ nav {
     /* Adjust logo size */
 }
 
-#login-link,
-#signup-link,
-#logout {
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    /* Rounded corners */
-    font-size: 14px;
-    /* Font size for login/signup */
-    margin-left: 10px;
-    /* Space between login/signup links */
-}
-
-#login-link:hover,
-#signup-link:hover,
-#logout:hover {
-    background-color: #0056b3;
-    /* Darker blue on hover */
-}
-
-
 main {
     margin-top: 40px;
     display: flex;

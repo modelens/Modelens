@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        header {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background-color: #000000;
+            /* Black color */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left a,
+        .nav-right a {
+            color: #ffffff;
+            /* White color */
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #000000, #434343);
             margin: 0;
             padding: 0;
@@ -48,7 +93,9 @@
             width: 100%;
         }
 
-        input[type="text"], input[type="password"], input[type="email"] {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
             padding: 0.8rem;
             margin-bottom: 1rem;
             border: 1px solid #ccc;
@@ -81,19 +128,27 @@
         }
 
         .anchorr {
+            font-family: 'Poppins', sans-serif;
             color: #d3d3d3;
             text-decoration: none;
             margin-top: 1rem;
             font-size: 0.9rem;
         }
 
+        .nav-left a:hover,
+        .nav-right a:hover {
+            text-decoration: underline;
+        }
+
         .anchorr:hover {
             text-decoration: underline;
         }
     </style>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo=" type="image/svg+xml">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
+        type="image/svg+xml">
 </head>
+
 <body>
     <header>
         <nav>
@@ -104,7 +159,7 @@
             <div class="logo">
                 <a href="index.html">
                     <img src="images/Mm logo.jpeg" alt="Logo" />
-                  </a>                  
+                </a>
             </div>
             <div class="nav-right">
                 <a href="./team.html">Our Team</a>
@@ -133,7 +188,7 @@
     <a href="login.html" class="anchorr">Already have an account? Login</a>
     <script src="config.js"></script>
     <script>
-        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+        document.getElementById('signup-form').addEventListener('submit', async function (event) {
             event.preventDefault();
             const firstname = document.getElementById('firstname').value;
             const lastname = document.getElementById('lastname').value;
@@ -150,15 +205,16 @@
                     },
                     body: JSON.stringify({ firstname, lastname, username, password, email, number })
                 });
-                
+
                 if (!response.ok) {
                     const errorText = await response.text();
                     throw new Error(errorText);
                 }
-                
+
                 const data = await response.json();
+
                 console.log('Signup successful:', data);
-                window.location.href = 'login.html'; // Redirect to login page after signup
+                window.location.href = 'login.html?signup=success';
             } catch (error) {
                 console.error('Error:', error.message);
                 alert('Signup failed: ' + error.message);
@@ -166,4 +222,5 @@
         });
     </script>
 </body>
+
 </html>
