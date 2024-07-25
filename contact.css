@@ -75,7 +75,7 @@ main {
     background: black;
 }
 
-.container {
+.contact-container {
 
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@ main {
     flex-direction: column;
 }
 
-.container form {
+.contact-container form {
     width: 700px;
     padding: 30px;
     display: flex;
@@ -95,7 +95,7 @@ main {
     backdrop-filter: blur(10px);
 }
 
-.container form h1 {
+.contact-container form h1 {
     color: #fff;
     font-weight: 600;
     margin-top: 20px;
@@ -104,9 +104,9 @@ main {
     text-align: center;
 }
 
-.container form input[type="text"],
-.container form input[type="email"],
-.container form input[type="url"] {
+.contact-container form input[type="text"],
+.contact-container form input[type="email"],
+.contact-container form input[type="url"] {
     width: calc(50% - 20px);
     height: 40px;
     padding-left: 10px;
@@ -120,11 +120,11 @@ main {
     margin-right: 20px;
 }
 
-.container form input::placeholder {
+.contact-container form input::placeholder {
     color: #ddd;
 }
 
-.container form h4 {
+.contact-container form h4 {
     color: #fff;
     font-weight: 300;
     width: 100%;
@@ -156,7 +156,7 @@ main {
     font-weight: 300;
 }
 
-.container form textarea {
+.contact-container form textarea {
     background: none;
     border: none;
     border-bottom: 2px solid #fff;
@@ -178,7 +178,7 @@ textarea::-webkit-scrollbar-thumb {
     background-color: rgba(194, 194, 194, 0.713);
 }
 
-.container form #button {
+.contact-container form #button {
     border: none;
     background: #fff;
     border-radius: 5px;
@@ -192,7 +192,7 @@ textarea::-webkit-scrollbar-thumb {
     transition: 0.3s;
 }
 
-.container form #button:hover {
+.contact-container form #button:hover {
     opacity: 0.7;
 }
 
