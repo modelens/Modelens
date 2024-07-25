@@ -15,33 +15,42 @@ body {
 }
 
 #main-header {
-    background-color: #000000;
-    padding: 10px 20px;
+    background-color: #000000; /* Black color */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    /* Space between nav-left, logo, and nav-right */
+    justify-content: space-between; /* Space between nav-left, logo, and nav-right */
+    align-items: center; 
+    padding: 0 20px;
+    width: 100%;
+}
+
+.nav-left, .nav-right {
+    display: flex;
     align-items: center;
-}
+} 
 
-.nav-left a,
-.nav-right a {
-    color: #ffffff;
+.nav-left a, .nav-right a {
+    color: #ffffff; 
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
+    padding: 14px 16px;
 }
 
-.nav-left a:hover,
-.nav-right a:hover {
-    text-decoration: underline;
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline; 
 }
 
 .logo img {
-    max-height: 50px;
-    /* Adjust logo size */
+    max-height: 50px; /* Adjust logo size */
 }
 
 main {
