@@ -7,101 +7,265 @@
     <title>Blysk Jewelleries Photoshoot</title>
     <link rel="stylesheet" href="portfolio.css">
 </head>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #ff79a8;
+    }
+
+    .portfolio-section {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .portfolio-image {
+        background-image: url(images/portfolio/gold1.jpg);
+        background-size: cover;
+        background-position: top 10%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 24%;
+    }
+
+    .project-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .client-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        width: 80%;
+        margin-top: 35%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .client-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .client-header strong {
+        font-size: 1.2em;
+        color: black;
+    }
+
+    .client-name {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: rgb(102, 78, 102);
+    }
+
+    .details-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .detail-item strong {
+        font-weight: bold;
+        color: black;
+    }
+
+    .detail-value {
+        font-size: 0.9em;
+        color: rgb(102, 78, 102);
+    }
+
+    .portfolio-content {
+        padding: 20px;
+        color: white;
+        max-width: 950px;
+        width: 100%;
+        z-index: 1;
+        margin-top: 20px;
+    }
+
+    .section-container {
+        background-color: #000000;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 80%;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+        color: rgb(231, 185, 213);
+        margin-bottom: 10px;
+        border-bottom: 3px solid #bbc2c7;
+        padding-bottom: 5px;
+    }
+
+    .section-content {
+        font-size: 1.1em;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    strong {
+        color: #ff79a8;
+        font-weight: bold;
+    }
+
+    .img2 {
+        background-image: url(images/portfolio/gold.mp4);
+        background-size: cover;
+        height: 500px;
+        width: 60%;
+
+        margin-bottom: 10px;
+        border: #000000;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-position: top 20%;
+    }
+
+    .img3 {
+        background-clip: url(images/portfolio/gold3.jpg);
+        background-size: cover;
+        height: 500px;
+        width: 60%;
+
+        margin-bottom: 10px;
+        border: #000000;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-position: top 20%;
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-content {
+            padding: 15px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+        }
+
+        .client-container {
+            width: 90%;
+            margin-top: 30%;
+        }
+    }
+</style>
 
 <body>
     <section id="project-detail" class="portfolio-section">
-        <h2 class="portfolio-title">Blysk Jewelleries Photoshoot</h2>
+        <div class="portfolio-image"></div>
         <div class="project-container">
-            <img src="images/blysk-jewelleries-shoot.png" alt="Blysk Jewelleries Photoshoot" class="portfolio-image">
-            <div class="portfolio-content">
-                <div class="client-container">
-                    <div class="client-header">
-                        <strong>Client:</strong>
-                        <span class="client-name">Blysk Jewelleries Photoshoot</span>
+            <div class="client-container">
+                <div class="client-header">
+                    <strong>Client:</strong>
+                    <span class="client-name">Sourin India handbags Photoshoot</span>
+                </div>
+                <div class="details-container">
+                    <div class="detail-item">
+                        <strong class="project-include-highlight">Project includes:</strong>
+                        <span class="detail-value">10 models, 2 professional photographers, 1 makeup artist</span>
                     </div>
-                    <div class="details-container">
-
-                        <div class="detail-item">
-                            <strong class="project-include-highlight">Project includes:</strong>
-                            <span class="detail-value">3 professional models, 2 professional photographers, 1 Makeup
-                                artist, event manager team</span>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Date:</strong>
-                            <span class="detail-value">February 2023</span>
-                        </div>
+                    <div class="detail-item">
+                        <strong>Date:</strong>
+                        <span class="detail-value">January 2023</span>
                     </div>
-                </div>
-
-
-                <div class="section-container">
-                    <h3 class="section-title">The Problem</h3>
-                    <p class="section-content">Blysk Jewelleries needed to photograph over 100 jewelry pieces in 3-4
-                        hours, requiring three models, two photographers, and a makeup artist. The challenge was to
-                        create professional images that highlighted the brand’s vision and concept, all within a limited
-                        budget. These images needed to be versatile for use across e-commerce platforms, the website,
-                        marketing posters, and banners.</p>
-                </div>
-
-                <div class="section-container">
-                    <h3 class="section-title">The Solution</h3>
-                    <p class="section-content"><strong>Efficient Planning and Coordination:</strong><br>
-                        We meticulously planned the photoshoot to maximize efficiency. By organizing the jewelry pieces
-                        and creating a detailed schedule, we ensured that all items would be photographed within the
-                        allocated time.</p>
-
-                    <p class="section-content"><strong>Professional and Budget-Friendly Team:</strong><br>
-                        We assembled a professional yet budget-friendly team, including three diverse models, two
-                        experienced photographers, and a skilled makeup artist. This team was chosen to ensure
-                        high-quality results while adhering to the budget.</p>
-
-                    <p class="section-content"><strong>High-Quality and Versatile Images:</strong><br>
-                        The photoshoot focused on capturing high-resolution images that showcased the jewelry from
-                        multiple angles. These images were designed to be versatile, suitable for use across various
-                        platforms such as e-commerce sites, the official website, and marketing materials.</p>
-
-                    <p class="section-content"><strong>Consistent and Cohesive Visual Style:</strong><br>
-                        We maintained a consistent and cohesive visual style throughout the photoshoot. This ensured
-                        that all images aligned with Blysk Jewelleries' brand aesthetics and could be seamlessly
-                        integrated into different marketing channels.</p>
-
-                    <p class="section-content"><strong>Interactive and Engaging Content:</strong><br>
-                        To create immediate impact, we included dynamic shots and close-ups that highlighted the
-                        intricate details of the jewelry. These engaging visuals were designed to attract attention and
-                        provide a unique browsing experience.</p>
-                </div>
-
-                <div class="section-container">
-                    <h3 class="section-title">The Result</h3>
-                    <p class="section-content"><strong>Successful One-Day Shoot:</strong><br>
-                        The efficient planning and professional team enabled us to successfully photograph over 100
-                        jewelry pieces in a single day, meeting the project requirements and staying within budget.</p>
-
-                    <p class="section-content"><strong>Versatile High-Quality Images:</strong><br>
-                        The high-resolution images were versatile and suitable for multiple uses, including e-commerce
-                        listings, the official website, marketing posters, and banners. This versatility ensured a
-                        cohesive brand image across various platforms.</p>
-
-                    <p class="section-content"><strong>Increased Engagement:</strong><br>
-                        The engaging and interactive visuals significantly improved user engagement. The high-quality
-                        images and dynamic shots drew more attention and kept viewers engaged longer.</p>
-
-                    <p class="section-content"><strong>Higher Conversion Rates:</strong><br>
-                        The clear and detailed product images helped reduce hesitation among potential buyers, leading
-                        to increased sales. The visually appealing content and strategic call-to-action placements
-                        contributed to higher conversion rates.</p>
-
-                    <p class="section-content"><strong>Positive Brand Perception:</strong><br>
-                        The professional and cohesive photoshoot enhanced Blysk Jewelleries' brand image, positioning
-                        them as a high-end and creative brand. Customers associated the high-quality visuals with the
-                        premium quality of the jewelry, strengthening brand loyalty and recognition.</p>
-
-                    <p class="section-content"><strong>Broader Audience Reach:</strong><br>
-                        The diverse model representation and optimized content for various platforms ensured a wider
-                        audience could access and interact with the brand, leading to increased brand recognition and a
-                        broader customer base.</p>
                 </div>
             </div>
+
+
+            <div class="section-container">
+                <h3 class="section-title">The Problem</h3>
+                <p class="section-content">Blysk Jewelleries needed to photograph over 100 jewelry pieces in 3-4
+                    hours, requiring three models, two photographers, and a makeup artist. The challenge was to
+                    create professional images that highlighted the brand’s vision and concept, all within a limited
+                    budget. These images needed to be versatile for use across e-commerce platforms, the website,
+                    marketing posters, and banners.</p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-title">The Solution</h3>
+                <p class="section-content"><strong>Efficient Planning and Coordination:</strong><br>
+                    We meticulously planned the photoshoot to maximize efficiency. By organizing the jewelry pieces
+                    and creating a detailed schedule, we ensured that all items would be photographed within the
+                    allocated time.</p>
+
+                <p class="section-content"><strong>Professional and Budget-Friendly Team:</strong><br>
+                    We assembled a professional yet budget-friendly team, including three diverse models, two
+                    experienced photographers, and a skilled makeup artist. This team was chosen to ensure
+                    high-quality results while adhering to the budget.</p>
+
+                <p class="section-content"><strong>High-Quality and Versatile Images:</strong><br>
+                    The photoshoot focused on capturing high-resolution images that showcased the jewelry from
+                    multiple angles. These images were designed to be versatile, suitable for use across various
+                    platforms such as e-commerce sites, the official website, and marketing materials.</p>
+
+                <p class="section-content"><strong>Consistent and Cohesive Visual Style:</strong><br>
+                    We maintained a consistent and cohesive visual style throughout the photoshoot. This ensured
+                    that all images aligned with Blysk Jewelleries' brand aesthetics and could be seamlessly
+                    integrated into different marketing channels.</p>
+
+                <p class="section-content"><strong>Interactive and Engaging Content:</strong><br>
+                    To create immediate impact, we included dynamic shots and close-ups that highlighted the
+                    intricate details of the jewelry. These engaging visuals were designed to attract attention and
+                    provide a unique browsing experience.</p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-title">The Result</h3>
+                <p class="section-content"><strong>Successful One-Day Shoot:</strong><br>
+                    The efficient planning and professional team enabled us to successfully photograph over 100
+                    jewelry pieces in a single day, meeting the project requirements and staying within budget.</p>
+
+                <p class="section-content"><strong>Versatile High-Quality Images:</strong><br>
+                    The high-resolution images were versatile and suitable for multiple uses, including e-commerce
+                    listings, the official website, marketing posters, and banners. This versatility ensured a
+                    cohesive brand image across various platforms.</p>
+
+                <p class="section-content"><strong>Increased Engagement:</strong><br>
+                    The engaging and interactive visuals significantly improved user engagement. The high-quality
+                    images and dynamic shots drew more attention and kept viewers engaged longer.</p>
+
+                <p class="section-content"><strong>Higher Conversion Rates:</strong><br>
+                    The clear and detailed product images helped reduce hesitation among potential buyers, leading
+                    to increased sales. The visually appealing content and strategic call-to-action placements
+                    contributed to higher conversion rates.</p>
+
+                <p class="section-content"><strong>Positive Brand Perception:</strong><br>
+                    The professional and cohesive photoshoot enhanced Blysk Jewelleries' brand image, positioning
+                    them as a high-end and creative brand. Customers associated the high-quality visuals with the
+                    premium quality of the jewelry, strengthening brand loyalty and recognition.</p>
+
+                <p class="section-content"><strong>Broader Audience Reach:</strong><br>
+                    The diverse model representation and optimized content for various platforms ensured a wider
+                    audience could access and interact with the brand, leading to increased brand recognition and a
+                    broader customer base.</p>
+            </div>
+        </div>
         </div>
     </section>
 </body>

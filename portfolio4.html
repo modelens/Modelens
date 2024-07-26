@@ -7,77 +7,241 @@
     <title>CubeCon T-Shirt Photoshoot</title>
     <link rel="stylesheet" href="portfolio.css">
 </head>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #ff79a8;
+    }
+
+    .portfolio-section {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .portfolio-image {
+        background-image: url(images/portfolio/gold1.jpg);
+        background-size: cover;
+        background-position: top 10%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 24%;
+    }
+
+    .project-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .client-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        width: 80%;
+        margin-top: 35%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .client-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .client-header strong {
+        font-size: 1.2em;
+        color: black;
+    }
+
+    .client-name {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: rgb(102, 78, 102);
+    }
+
+    .details-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .detail-item strong {
+        font-weight: bold;
+        color: black;
+    }
+
+    .detail-value {
+        font-size: 0.9em;
+        color: rgb(102, 78, 102);
+    }
+
+    .portfolio-content {
+        padding: 20px;
+        color: white;
+        max-width: 950px;
+        width: 100%;
+        z-index: 1;
+        margin-top: 20px;
+    }
+
+    .section-container {
+        background-color: #000000;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 80%;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+        color: rgb(231, 185, 213);
+        margin-bottom: 10px;
+        border-bottom: 3px solid #bbc2c7;
+        padding-bottom: 5px;
+    }
+
+    .section-content {
+        font-size: 1.1em;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    strong {
+        color: #ff79a8;
+        font-weight: bold;
+    }
+
+    .img2 {
+        background-image: url(images/portfolio/gold.mp4);
+        background-size: cover;
+        height: 500px;
+        width: 60%;
+
+        margin-bottom: 10px;
+        border: #000000;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-position: top 20%;
+    }
+
+    .img3 {
+        background-clip: url(images/portfolio/gold3.jpg);
+        background-size: cover;
+        height: 500px;
+        width: 60%;
+
+        margin-bottom: 10px;
+        border: #000000;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-position: top 20%;
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-content {
+            padding: 15px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+        }
+
+        .client-container {
+            width: 90%;
+            margin-top: 30%;
+        }
+    }
+</style>
 
 <body>
     <section id="project-detail" class="portfolio-section">
-        <h2 class="portfolio-title">Modelens Project 4</h2>
+        <div class="portfolio-image"></div>
         <div class="project-container">
-            <img src="images/blysk-jewelleries-shoot.png" alt="Blysk Jewelleries Photoshoot" class="portfolio-image">
-            <div class="portfolio-content">
-                <div class="client-container">
-                    <div class="client-header">
-                        <strong>Client:</strong>
-                        <span class="client-name">Bridal Shoot</span>
+            <div class="client-container">
+                <div class="client-header">
+                    <strong>Client:</strong>
+                    <span class="client-name">Sourin India handbags Photoshoot</span>
+                </div>
+                <div class="details-container">
+                    <div class="detail-item">
+                        <strong class="project-include-highlight">Project includes:</strong>
+                        <span class="detail-value">10 models, 2 professional photographers, 1 makeup artist</span>
                     </div>
-                    <div class="details-container">
-
-                        <div class="detail-item">
-                            <strong class="project-include-highlight">Project includes:</strong>
-                            <span class="detail-value">3 models, 1 photographer, 1 hairstylist, 1 makeup artist, 1
-                                styler</span>
-                        </div>
-                        <div class="detail-item">
-                            <strong>Date:</strong>
-                            <span class="detail-value">March 2024</span>
-                        </div>
+                    <div class="detail-item">
+                        <strong>Date:</strong>
+                        <span class="detail-value">January 2023</span>
                     </div>
-                </div>
-
-
-                <div class="section-container">
-                    <h3 class="section-title">The Problem</h3>
-                    <p class="section-content">A professional makeup artist wanted to conduct a high-end bridal shoot
-                        featuring three models. The objective was to create stunning visuals to boost her Instagram
-                        presence, attract more customers, and showcase her services digitally on social platforms, as
-                        well as on posters and banners for her newly opening makeup studio.
-                    </p>
-                </div>
-
-                <div class="section-container">
-                    <h3 class="section-title">The Solution</h3>
-                    <p class="section-content"><strong>Elegant and Luxurious Visuals:</strong><br>
-                        We crafted a photoshoot concept that aligned with the makeup artist’s high-end brand image...
-                    </p>
-
-                    <p class="section-content"><strong>Professional Model Selection:</strong><br>
-                        We selected three professional models who could embody the elegance and sophistication of
-                        high-end bridal fashion...</p>
-
-                    <p class="section-content"><strong>High-Quality Product Shots:</strong><br>
-                        High-resolution images showcased the bags from multiple angles, providing followers with a clear
-                        and detailed view of the products. This strategy helped highlight the unique features of each
-                        bag.</p>
-
-                    <p class="section-content"><strong>Interactive and Engaging Content:</strong><br>
-                        To create an immediate impact, we used dynamic and engaging visual elements, including short
-                        videos and GIFs, to draw attention and provide a unique browsing experience.</p>
-                    <p class="section-content"><strong>Clear Call to Action:</strong><br>
-                        Each post included strategically placed call-to-action buttons encouraging viewers to book
-                        appointments and follow the makeup artist on social media...</p>
-
-                    <p class="section-content"><strong>Consistent and Cohesive Theme:</strong><br>
-                        The photoshoot maintained a consistent and cohesive visual style...</p>
-                </div>
-
-                <div class="section-container">
-                    <h3 class="section-title">The Result</h3>
-                    <p class="section-content"><br>
-                        The detailed planning and professional execution enabled us to photograph all bridal looks in a
-                        single session...</p>
-
-
                 </div>
             </div>
+
+
+            <div class="section-container">
+                <h3 class="section-title">The Problem</h3>
+                <p class="section-content">A professional makeup artist wanted to conduct a high-end bridal shoot
+                    featuring three models. The objective was to create stunning visuals to boost her Instagram
+                    presence, attract more customers, and showcase her services digitally on social platforms, as
+                    well as on posters and banners for her newly opening makeup studio.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-title">The Solution</h3>
+                <p class="section-content"><strong>Elegant and Luxurious Visuals:</strong><br>
+                    We crafted a photoshoot concept that aligned with the makeup artist’s high-end brand image...
+                </p>
+
+                <p class="section-content"><strong>Professional Model Selection:</strong><br>
+                    We selected three professional models who could embody the elegance and sophistication of
+                    high-end bridal fashion...</p>
+
+                <p class="section-content"><strong>High-Quality Product Shots:</strong><br>
+                    High-resolution images showcased the bags from multiple angles, providing followers with a clear
+                    and detailed view of the products. This strategy helped highlight the unique features of each
+                    bag.</p>
+
+                <p class="section-content"><strong>Interactive and Engaging Content:</strong><br>
+                    To create an immediate impact, we used dynamic and engaging visual elements, including short
+                    videos and GIFs, to draw attention and provide a unique browsing experience.</p>
+                <p class="section-content"><strong>Clear Call to Action:</strong><br>
+                    Each post included strategically placed call-to-action buttons encouraging viewers to book
+                    appointments and follow the makeup artist on social media...</p>
+
+                <p class="section-content"><strong>Consistent and Cohesive Theme:</strong><br>
+                    The photoshoot maintained a consistent and cohesive visual style...</p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-title">The Result</h3>
+                <p class="section-content"><br>
+                    The detailed planning and professional execution enabled us to photograph all bridal looks in a
+                    single session...</p>
+
+
+            </div>
+        </div>
         </div>
     </section>
 </body>
