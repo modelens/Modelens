@@ -3,54 +3,77 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.getElementById('logout');
     const loginLink = document.getElementById('login-link');
     const signupLink = document.getElementById('signup-link');
+    const dropdownLoginLink = document.getElementById('dropdown-login-link');
+    const dropdownSignupLink = document.getElementById('dropdown-signup-link');
+    const dropdownLogoutLink = document.getElementById('dropdown-logout');
 
     if (token) {
-        logoutLink.style.display = 'block';
-        loginLink.style.display = 'none';
-        signupLink.style.display = 'none';
+        if (logoutLink) logoutLink.style.display = 'block';
+        if (loginLink) loginLink.style.display = 'none';
+        if (signupLink) signupLink.style.display = 'none';
+        if (dropdownLoginLink) dropdownLoginLink.style.display = 'none';
+        if (dropdownSignupLink) dropdownSignupLink.style.display = 'none';
+        if (dropdownLogoutLink) dropdownLogoutLink.style.display = 'block';
     } else {
-        logoutLink.style.display = 'none';
-        loginLink.style.display = 'block';
-        signupLink.style.display = 'block';
+        if (logoutLink) logoutLink.style.display = 'none';
+        if (loginLink) loginLink.style.display = 'block';
+        if (signupLink) signupLink.style.display = 'block';
+        if (dropdownLoginLink) dropdownLoginLink.style.display = 'block';
+        if (dropdownSignupLink) dropdownSignupLink.style.display = 'block';
+        if (dropdownLogoutLink) dropdownLogoutLink.style.display = 'none';
     }
 
-    logoutLink.addEventListener('click', async function (e) {
-        e.preventDefault();
+    if (logoutLink) {
+        logoutLink.addEventListener('click', async function (e) {
+            e.preventDefault();
+            await handleLogout(token);
+        });
+    }
 
-        try {
-            const response = await fetch(`${API_URL}/logout`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                }
-            });
+    if (dropdownLogoutLink) {
+        dropdownLogoutLink.addEventListener('click', async function (e) {
+            e.preventDefault();
+            await handleLogout(token);
+        });
+    }
 
-            if (response.ok) {
-                localStorage.removeItem('token');
-                alert('Logging You Out!!');
-                window.location.href = 'index.html';
-            } else {
-                console.error('Logout failed');
-                alert('Logout failed. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred during logout.');
-        }
-    });
-});
-document.addEventListener('DOMContentLoaded', async function () {
-    const token = localStorage.getItem('token');
     const loginTimestamp = localStorage.getItem('loginTimestamp');
-
     if (token && loginTimestamp) {
-        const currentTime = Date.now();
-        const loginTime = parseInt(loginTimestamp, 10);
+        showWelcomeAlert(token, loginTimestamp);
+    }
+});
 
-        // Show alert if logged in recently (e.g., within the last 10 minutes)
-        if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
-            const response = await fetch(API_URL + '/user', {
+async function handleLogout(token) {
+    try {
+        const response = await fetch(`${API_URL}/logout`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            localStorage.removeItem('token');
+            alert('Logging You Out!!');
+            window.location.href = 'index.html';
+        } else {
+            console.error('Logout failed');
+            alert('Logout failed. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred during logout.');
+    }
+}
+
+async function showWelcomeAlert(token, loginTimestamp) {
+    const currentTime = Date.now();
+    const loginTime = parseInt(loginTimestamp, 10);
+
+    if (currentTime - loginTime < 10 * 60 * 1000) { // 10 minutes
+        try {
+            const response = await fetch(`${API_URL}/user`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -69,8 +92,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                 console.error('Error fetching user data');
             }
 
-            // Clear the login timestamp after showing the alert
             localStorage.removeItem('loginTimestamp');
+        } catch (error) {
+            console.error('Error:', error);
         }
     }
-});
+}
