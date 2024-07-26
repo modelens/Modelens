@@ -12,7 +12,8 @@
 
         header {
             font-family: 'Poppins', sans-serif;
-            background-color: #000000; /* Black color */
+            background-color: #000000;
+            /* Black color */
             padding: 10px 0;
             position: fixed;
             width: 100%;
@@ -39,7 +40,8 @@
 
         .nav-left a,
         .nav-right a {
-            color: #ffffff; /* White color */
+            color: #ffffff;
+            /* White color */
             text-decoration: none;
             padding: 14px 16px;
         }
@@ -48,8 +50,51 @@
             height: 50px;
         }
 
+        /* Dropdown styles */
+        .dropdown {
+            display: none;
+            /* Hide dropdown by default */
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            /* Darker grey background */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            right: 0;
+            border-radius: 6px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+            /* Slightly lighter grey */
+        }
+
+        .dropdown-toggle::after {
+            content: '▼';
+            /* Add an arrow to indicate dropdown */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         body {
-            background: #000000; /* Solid black background */
+            background: #000000;
+            /* Solid black background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -57,7 +102,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            color: white; /* White text color */
+            color: white;
+            /* White text color */
             font-family: 'Poppins', sans-serif;
         }
 
@@ -82,7 +128,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #000000; /* Black background for form */
+            background: #000000;
+            /* Black background for form */
             padding: 1.2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -91,7 +138,8 @@
 
         label {
             margin-bottom: 0.5rem;
-            color: #ffffff; /* White color for labels */
+            color: #ffffff;
+            /* White color for labels */
             font-weight: bold;
         }
 
@@ -99,18 +147,22 @@
         input[type="password"] {
             padding: 0.8rem;
             margin-bottom: 1rem;
-            border: 1px solid #ffffff; /* White border */
+            border: 1px solid #ffffff;
+            /* White border */
             border-radius: 6px;
             width: 100%;
             box-sizing: border-box;
             font-size: 1rem;
-            background: #333333; /* Darker background for inputs */
-            color: #ffffff; /* White text color in inputs */
+            background: #333333;
+            /* Darker background for inputs */
+            color: #ffffff;
+            /* White text color in inputs */
         }
 
         button {
             padding: 0.8rem 1.2rem;
-            background-color: #6f42c1; /* Purple color */
+            background-color: #6f42c1;
+            /* Purple color */
             color: white;
             border: none;
             border-radius: 6px;
@@ -122,7 +174,8 @@
         }
 
         button:hover {
-            background-color: #5a2d8c; /* Darker purple on hover */
+            background-color: #5a2d8c;
+            /* Darker purple on hover */
         }
 
         .anchorr {
@@ -141,6 +194,46 @@
             text-decoration: underline;
         }
 
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+
+            .nav-left,
+            .nav-right {
+                display: none;
+                /* Hide original nav items */
+            }
+
+            .dropdown {
+                display: block;
+                /* Show dropdown on small screens */
+            }
+
+            .dropdown-toggle{
+                color: #007BFF;
+            }
+
+            .dropdown-content {
+                min-width: 100%;
+                /* Make dropdown take full width */
+                box-shadow: none;
+                /* Remove box-shadow on small screens */
+            }
+
+            .dropdown-content a {
+                padding: 12px;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .dropdown {
+                display: none;
+                /* Hide dropdown on larger screens */
+            }
+        }
+
         .alert {
             width: 350px;
             margin-bottom: 1rem;
@@ -154,11 +247,13 @@
         }
 
         .alert-success {
-            background-color: #6c757d; /* Darker shade of purple */
+            background-color: #6c757d;
+            /* Darker shade of purple */
         }
 
         .alert-danger {
-            background-color: #dc3545; /* Red for error */
+            background-color: #dc3545;
+            /* Red for error */
         }
 
         .alert-success::before {
@@ -195,6 +290,19 @@
                 <a id="signup-link" href="signup.html">Signup</a>
                 <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
+            <!-- Dropdown for mobile view -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Menu</a>
+                <div class="dropdown-content">
+                    <a href="./#services">Services</a>
+                    <a href="./#work-gallery">Work Gallery</a>
+                    <a href="./team.html">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a id="login-link" href="login.html">Login</a>
+                    <a id="signup-link" href="signup.html">Signup</a>
+                    <a id="logout" href="#" style="display:none;">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
     <h2>Welcome Back!</h2>
@@ -220,7 +328,7 @@
                 showAlert('Signup successful! You can now log in using your details.', 'success');
                 // Remove the query parameter from the URL after showing the alert
                 window.history.replaceState({}, document.title, window.location.pathname);
-            }else if (document.referrer && !document.referrer.includes('signup.html') && !localStorage.getItem('referrer')) {
+            } else if (document.referrer && !document.referrer.includes('signup.html') && !document.referrer.includes('login.html') && !localStorage.getItem('referrer')) {
                 // Store the referrer in localStorage if it's not the signup page and referrer is not already set
                 localStorage.setItem('referrer', document.referrer);
             }
@@ -262,10 +370,14 @@
 
                 showAlert('Login successful! Redirecting...', 'success');
                 setTimeout(() => {
-                        const referrer = localStorage.getItem('referrer') || 'index.html';
-                        localStorage.removeItem('referrer'); // Clear referrer after redirection
+                    const referrer = localStorage.getItem('referrer') || 'index.html';
+                    localStorage.removeItem('referrer'); // Clear referrer after redirection
+                    if (referrer.includes('login.html')) {
+                        window.location.href = 'index.html';
+                    } else {
                         window.location.href = referrer;
-                    }, 2000); // Redirect after 2 seconds
+                    }
+                }, 2000); // Redirect after 2 seconds
             } catch (error) {
                 console.error('Error:', error.message);
                 showAlert('Login failed: ' + error.message, 'danger');
