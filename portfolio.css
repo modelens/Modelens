@@ -44,20 +44,17 @@ h4 {
 }
 
 .portfolio-container {
-
     height: fit-content;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+    margin: 50px auto 0 auto;
     justify-content: space-evenly;
 }
 
 .portfolio-item {
     width: 400px;
+    height: 400px;
     padding: 30px;
     box-shadow: 20px 20px 50px rgba(53, 48, 48, 0.5);
     border-radius: 15px;
@@ -65,19 +62,45 @@ h4 {
     backdrop-filter: blur(10px);
     flex-wrap: wrap;
     display: flex;
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px);
+    transition: transform 0.3s;
 }
 
-.portfoliocard {
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    padding-right: 25px;
-    padding-bottom: 30px;
-    padding-left: 25px;
-    margin-left: 25px;
+.portfolio-item:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(10deg);
+}
+
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.portfolio-item:hover .portfoliocard img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.portfolio-item h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfoliocard h2 {
+    opacity: 1;
 }
 
 .line {
