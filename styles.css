@@ -10,7 +10,7 @@
 
 /* General Mobile Styles */
  @media
-(min-widht: 320px)
+(min-widht: 320px),
 (max-width: 425px) {
     body {
         padding: 20px;
