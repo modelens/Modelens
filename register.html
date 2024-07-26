@@ -328,6 +328,7 @@
             const phone = document.getElementById('phone').value;
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             const eventId = encodeURIComponent(getQueryParams());
+            console.log(eventId);
             if (!emailPattern.test(email)) {
                 alert('Please enter a valid email address.');
                 return;
