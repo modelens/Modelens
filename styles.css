@@ -9,201 +9,210 @@
 }
 
 /* General Mobile Styles */
- @media
-(min-widht: 320px),
+@media (min-widht: 320px),
 (max-width: 425px) {
     body {
         padding: 20px;
         font-size: 14px;
     }
-    
+
     .navbar-brand {
         font-size: 1.2rem;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 0.9rem;
         padding: 8px;
     }
-    
-    .main-item, .portfolio-item, .service-link {
+
+    .main-item,
+    .portfolio-item,
+    .service-link {
         width: 90%;
         margin: 20px auto;
     }
-    
+
     .overlay h1 {
         font-size: 2rem;
     }
-    
+
     .overlay p {
         font-size: 1rem;
     }
-    
+
     .hero-button {
         font-size: 0.8rem;
         padding: 8px 16px;
     }
-    
+
     .stat h3 {
         font-size: 2.5em;
     }
-    
+
     .stat p {
         font-size: 1em;
     }
 }
 
 /* Small Tablets */
- @media (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar-brand {
         font-size: 1.5rem;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 1rem;
         padding: 10px;
     }
-    
-    .main-item, .portfolio-item, .service-link {
+
+    .main-item,
+    .portfolio-item,
+    .service-link {
         width: 45%;
         margin: 10px;
     }
-    
+
     .overlay h1 {
         font-size: 2.5rem;
     }
-    
+
     .overlay p {
         font-size: 1.2rem;
     }
-    
+
     .hero-button {
         font-size: 0.9rem;
         padding: 10px 18px;
     }
-    
+
     .stat h3 {
         font-size: 3em;
     }
-    
+
     .stat p {
         font-size: 1.1em;
     }
-} 
+}
 
 /* Large Tablets */
- @media (max-width: 1024px) {
+@media (max-width: 1024px) {
     .navbar-brand {
         font-size: 1.8rem;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 1.1rem;
         padding: 12px;
     }
-    
-    .main-item, .portfolio-item, .service-link {
+
+    .main-item,
+    .portfolio-item,
+    .service-link {
         width: 30%;
         margin: 15px;
     }
-    
+
     .overlay h1 {
         font-size: 3rem;
     }
-    
+
     .overlay p {
         font-size: 1.4rem;
     }
-    
+
     .hero-button {
         font-size: 1rem;
         padding: 12px 20px;
     }
-    
+
     .stat h3 {
         font-size: 3.5em;
     }
-    
+
     .stat p {
         font-size: 1.2em;
     }
-} 
+}
 
 /* Medium Desktops */
- @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .navbar-brand {
         font-size: 2rem;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 1.2rem;
         padding: 14px;
     }
-    
-    .main-item, .portfolio-item, .service-link {
+
+    .main-item,
+    .portfolio-item,
+    .service-link {
         width: 25%;
         margin: 20px;
     }
-    
+
     .overlay h1 {
         font-size: 3.5rem;
     }
-    
+
     .overlay p {
         font-size: 1.6rem;
     }
-    
+
     .hero-button {
         font-size: 1.1rem;
         padding: 14px 22px;
     }
-    
+
     .stat h3 {
         font-size: 4em;
     }
-    
+
     .stat p {
         font-size: 1.3em;
     }
-} 
+}
 
 /* Large Desktops */
 @media (max-width: 1600px) {
     .navbar-brand {
         font-size: 2.2rem;
     }
-    
+
     .navbar-nav .nav-link {
         font-size: 1.3rem;
         padding: 16px;
     }
-    
-    .main-item, .portfolio-item, .service-link {
+
+    .main-item,
+    .portfolio-item,
+    .service-link {
         width: 20%;
         margin: 25px;
     }
-    
+
     .overlay h1 {
         font-size: 4rem;
     }
-    
+
     .overlay p {
         font-size: 1.8rem;
     }
-    
+
     .hero-button {
         font-size: 1.2rem;
         padding: 16px 24px;
     }
-    
+
     .stat h3 {
         font-size: 4.5em;
     }
-    
+
     .stat p {
         font-size: 1.4em;
     }
-} 
+}
 
 /* General Body Styling */
 body {
@@ -214,31 +223,33 @@ body {
 }
 
 /*Fixed Header*/
- .fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-} */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
- body {
-  padding-top: 56px; 
-} 
+*/ body {
+    padding-top: 56px;
+}
 
- @media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-  .navbar-nav .nav-link {
-    font-size: 1rem;
-  }
-} 
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
 
 
 /* Header style */
 #main-header {
-    background-color: #000000; /* Black color */
+    background-color: #000000;
+    /* Black color */
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -251,28 +262,33 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between; /* Space between nav-left, logo, and nav-right */
-    align-items: center; 
+    justify-content: space-between;
+    /* Space between nav-left, logo, and nav-right */
+    align-items: center;
     padding: 0 20px;
     width: 100%;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     display: flex;
     align-items: center;
-} 
+}
 
-.nav-left a, .nav-right a {
-    color: #ffffff; 
+.nav-left a,
+.nav-right a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.nav-left a:hover, .nav-right a:hover {
-    text-decoration: underline; 
+.nav-left a:hover,
+.nav-right a:hover {
+    text-decoration: underline;
 }
 
 .logo img {
-    max-height: 50px; /* Adjust logo size */
+    max-height: 50px;
+    /* Adjust logo size */
 }
 
 h4 {
@@ -380,7 +396,9 @@ h4 {
 
 /* Media Queries for Header */
 @media (max-width: 600px) {
-    .nav-left a, .nav-right a {
+
+    .nav-left a,
+    .nav-right a {
         padding: 10px 12px;
     }
 }
@@ -389,15 +407,13 @@ h4 {
 .video-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 500px;
     overflow: hidden;
+    background-image: linear-gradient(to bottom right, white, #d24ff6, #ff4081);
+
 }
 
-.video-container video {
-    width: 100%;
-    height: 100%; /* Ensure the video covers the container */
-    object-fit: cover;
-}
+
 
 /* Style the overlay text */
 .overlay {
@@ -410,18 +426,22 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white; /* Adjust the text color as needed */
+    color: white;
+    /* Adjust the text color as needed */
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Optional: add a dark overlay to improve text readability */
+    background: rgba(0, 0, 0, 0.5);
+    /* Optional: add a dark overlay to improve text readability */
 }
 
 .overlay h1 {
-    font-size: 3rem; /* Adjust font size as needed */
+    font-size: 3rem;
+    /* Adjust font size as needed */
     margin-bottom: 10px;
 }
 
 .overlay p {
-    font-size: 1.5rem; /* Adjust font size as needed */
+    font-size: 1.5rem;
+    /* Adjust font size as needed */
     margin-bottom: 20px;
 }
 
@@ -429,16 +449,19 @@ h4 {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #ff4081; /* Adjust button color as needed */
+    background-color: #ff4081;
+    /* Adjust button color as needed */
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none;
+    /* Remove underline from link */
     display: inline-block;
 }
 
 .hero-button:hover {
-    background-color: #ff79a8; /* Adjust button hover color as needed */
+    background-color: #ff79a8;
+    /* Adjust button hover color as needed */
 }
 
 
@@ -447,7 +470,7 @@ h4 {
     background-color: #000000;
     padding: 50px;
     text-align: center;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .about-modelens h2 {
@@ -470,10 +493,12 @@ h4 {
 .stat {
     text-align: center;
 }
+
 .stat h3 {
     font-size: 3em;
     color: #d24ff6;
 }
+
 .stat p {
     font-size: 1.2em;
 }
@@ -491,7 +516,7 @@ h4 {
 
 
 /* Work Gallery Section */
-.section{
+.section {
     background-color: #d24ff6;
     padding: 20px;
     text-align: center;
@@ -501,9 +526,11 @@ h4 {
     display: grid;
     place-items: center;
 }
+
 #work-gallery {
- /* Change background color */
-    color: #ffffff; /* Ensure text is readable on the new background */
+    /* Change background color */
+    color: #ffffff;
+    /* Ensure text is readable on the new background */
     text-align: center;
 }
 
@@ -567,7 +594,8 @@ h4 {
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s;
-    overflow: hidden; /* To keep image within container */
+    overflow: hidden;
+    /* To keep image within container */
     position: relative;
 }
 
@@ -582,11 +610,13 @@ h4 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+    transition: opacity 0.3s ease-in-out;
+    /* Add opacity transition */
 }
 
 #services .service-link:hover img {
-    opacity: 0.8; /* Reduce opacity on hover */
+    opacity: 0.8;
+    /* Reduce opacity on hover */
 }
 
 #services .service-link span {
@@ -594,7 +624,8 @@ h4 {
     font-size: 1.5em;
     color: white;
     text-shadow: 1px 1px 2px #000;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for text */
     width: 100%;
     box-sizing: border-box;
     position: absolute;
@@ -661,45 +692,58 @@ section {
     place-items: center;
     position: relative;
     background-color: #000000;
-    padding: 50px 0; /* Add padding for spacing between sections */
+    padding: 50px 0;
+    /* Add padding for spacing between sections */
 }
 
 /* Events Section */
 #event-header {
-    background-color: #000000; /* Black background */
-    color: #8A2BE2; /* Bright purple text */
+    background-color: #000000;
+    /* Black background */
+    color: #8A2BE2;
+    /* Bright purple text */
     padding: 50px 20px;
     text-align: center;
 }
 
 #event-header h1 {
     font-size: 2.5em;
-    color: #8A2BE2; /* Bright purple text */
+    color: #8A2BE2;
+    /* Bright purple text */
 }
 
 #events {
     text-align: center;
-    padding: 50px 20px; /* Adjusted padding */
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
+    padding: 50px 20px;
+    /* Adjusted padding */
+    background-color: #000000;
+    /* Black background */
+    color: #ffffff;
+    /* White text */
 }
 
 #events header h2 {
-    color: #8A2BE2; /* Bright purple for the header */
-    margin-bottom: 40px; /* Increased margin for more space below header */
+    color: #8A2BE2;
+    /* Bright purple for the header */
+    margin-bottom: 40px;
+    /* Increased margin for more space below header */
 }
 
 .event-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Increased gap between event cards */
+    gap: 40px;
+    /* Increased gap between event cards */
 }
 
 .event {
-    background-color: #1c1c1c; /* Dark grey background for event cards */
-    color: #ffffff; /* White text for event details */
-    padding: 30px; /* Increased padding for event cards */
+    background-color: #1c1c1c;
+    /* Dark grey background for event cards */
+    color: #ffffff;
+    /* White text for event details */
+    padding: 30px;
+    /* Increased padding for event cards */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1 1 calc(45% - 40px);
@@ -713,7 +757,8 @@ section {
 }
 
 .event h3 {
-    color: #8A2BE2; /* Bright purple for event titles */
+    color: #8A2BE2;
+    /* Bright purple for event titles */
 }
 
 .event p {
@@ -721,15 +766,19 @@ section {
 }
 
 .event strong {
-    color: #9370DB; /* Light purple for strong text */
+    color: #9370DB;
+    /* Light purple for strong text */
 }
 
 .register-button {
     display: inline-block;
-    padding: 15px 30px; /* Increased padding for button */
+    padding: 15px 30px;
+    /* Increased padding for button */
     margin-top: 20px;
-    background-color: #8A2BE2; /* Bright purple for the button */
-    color: #ffffff; /* White text */
+    background-color: #8A2BE2;
+    /* Bright purple for the button */
+    color: #ffffff;
+    /* White text */
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -737,13 +786,15 @@ section {
 }
 
 .register-button:hover {
-    background-color: #9370DB; /* Light purple for the button on hover */
+    background-color: #9370DB;
+    /* Light purple for the button on hover */
 }
 
 
 /* Testimonials Section */
 .testimonials {
-    color: #6a0dad; /* Purple text */
+    color: #6a0dad;
+    /* Purple text */
     text-align: center;
     padding: 50px 20px;
 }
@@ -776,7 +827,7 @@ section {
 }
 
 .ImgHolder {
-    background-color:  #6a0dad;
+    background-color: #6a0dad;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -872,11 +923,14 @@ section {
 
 /* Footer Styles */
 footer {
-    background-color: #000000; /* Black color */
-    color: #ffffff; /* White text */
+    background-color: #000000;
+    /* Black color */
+    color: #ffffff;
+    /* White text */
     text-align: center;
     padding: 20px;
 }
+
 .social-media img {
     height: 30px;
     margin: 0 10px;
