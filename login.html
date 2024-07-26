@@ -218,6 +218,9 @@
                 showAlert('Signup successful! You can now log in using your details.', 'success');
                 // Remove the query parameter from the URL after showing the alert
                 window.history.replaceState({}, document.title, window.location.pathname);
+            }else if (document.referrer && !document.referrer.includes('signup.html') && !localStorage.getItem('referrer')) {
+                // Store the referrer in localStorage if it's not the signup page and referrer is not already set
+                localStorage.setItem('referrer', document.referrer);
             }
         });
 
@@ -256,7 +259,11 @@
                 localStorage.setItem('loginTimestamp', Date.now()); // Set login timestamp
 
                 showAlert('Login successful! Redirecting...', 'success');
-                setTimeout(() => window.location.href = 'index.html', 2000); // Redirect after 2 seconds
+                setTimeout(() => {
+                        const referrer = localStorage.getItem('referrer') || 'index.html';
+                        localStorage.removeItem('referrer'); // Clear referrer after redirection
+                        window.location.href = referrer;
+                    }, 2000); // Redirect after 2 seconds
             } catch (error) {
                 console.error('Error:', error.message);
                 showAlert('Login failed: ' + error.message, 'danger');
