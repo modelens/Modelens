@@ -1,3 +1,13 @@
+function checkLoggedIn() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('Please login to book this service.');
+        window.location.href = 'login.html'; 
+    } else {
+        // Implement your booking logic here
+        alert('Booking functionality to be implemented.'); // Replace with your actual booking logic
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);
