@@ -231,8 +231,8 @@
             );
 
             // Construct the mailto link
-            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
-            const gmailWindow=window.open(gmailLink, '_blank');
+            const gmaillink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
+            const gmailWindow=window.open(gmaillink, '_blank');
             const checkWindowClosed=setInterval(()=>{
                 if(gmailWindow.closed){
                     clearInterval(checkWindowClosed);
