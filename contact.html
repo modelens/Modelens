@@ -38,7 +38,7 @@
 
     <main>
         <div class="contact-container">
-            <form>
+            <form id="registration-form">
                 <h1>Get in Touch</h1>
                 <h4>Full Name</h4>
                 <input type="text" id="fullname" placeholder="Full name" required>
@@ -48,54 +48,39 @@
                 <input type="text" id="mobile" placeholder="Mobile" required>
                 <h4>Organisation's link</h4>
 
-                <div class="check">
-
+                <div class="check" id="services">
                     <div>
                         <input type="checkbox" id="brandphotoshoot" name="brandphotoshoot" />
-                        <label for="brandphotoshoot">Brand Photoshoot
-                        </label>
+                        <label for="brandphotoshoot">Brand Photoshoot</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Modelling" name="Modelling " />
-                        <label for="Modelling">Modelling </label>
+                        <input type="checkbox" id="Modelling" name="Modelling" />
+                        <label for="Modelling">Modelling</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="photography 
-                " name="photography 
-                " />
-                        <label for="photography 
-                ">Photography
-                        </label>
+                        <input type="checkbox" id="photography" name="photography" />
+                        <label for="photography">Photography</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Brandconsultant 
-                " name="Brandconsultant 
-                " />
-                        <label for="Brandconsultant 
-                ">Brand consultant
-                        </label>
+                        <input type="checkbox" id="Brandconsultant" name="Brandconsultant" />
+                        <label for="Brandconsultant">Brand consultant</label>
                     </div>
+
                     <div>
-                        <input type="checkbox" id="makeup 
-                " name="makeup 
-                " />
-                        <label for="makeup 
-                ">Makeup
-                        </label>
+                        <input type="checkbox" id="makeup" name="makeup" />
+                        <label for="makeup">Makeup</label>
                     </div>
+
                     <div>
                         <input type="checkbox" id="others" name="others" />
-                        <label for="others 
-                        ">Others
-                        </label>
+                        <label for="others">Others</label>
                     </div>
                 </div>
                 <h4>Lastly, how did you hear about us?</h4>
-                <div class="check">
-
+                <div class="check" id="hear-about-us">
                     <div>
                         <input type="checkbox" id="Insta" />
                         <label for="Insta">Instagram</label>
@@ -103,16 +88,13 @@
 
                     <div>
                         <input type="checkbox" id="LinkedIn" />
-                        <label for="LinkedIn">LinkedIn </label>
+                        <label for="LinkedIn">LinkedIn</label>
                     </div>
 
                     <div>
                         <input type="checkbox" id="Refferals" />
-                        <label for="LinkedIn">Refferals </label>
-
+                        <label for="Refferals">Refferals</label>
                     </div>
-
-
                 </div>
 
                 <h4>Want to add any specific message?</h4>
@@ -190,6 +172,78 @@
     <script src="contact.js"></script>
     <script src="config.js"></script>
     <script src="login-signup.js"></script>
+    <script>
+        async function populateForm(token) {
+            try {
+                const response = await fetch(API_URL + '/user', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById('fullname').value = data.user.firstname + ' ' + data.user.lastname || ' ';
+                    document.getElementById('email').value = data.user.email || ' ';
+                    document.getElementById('mobile').value = data.user.number || ' ';
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error retrieving your data. Please try again.');
+            }
+        };
+        function checkLoggedIn() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                populateForm(token);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLoggedIn();
+        })
+        document.getElementById('registration-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Collect form data
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const message = document.querySelector('textarea').value;
+
+            // Get selected services and heard about us data
+            const selectedServices = Array.from(document.querySelectorAll('#services input:checked'))
+                .map(input => input.nextElementSibling.textContent)
+                .join(', ');
+            const heardAboutUs = Array.from(document.querySelectorAll('#hear-about-us input:checked'))
+                .map(input => input.nextElementSibling.textContent)
+                .join(', ');
+
+            // Construct subject and body
+            const subject = encodeURIComponent("Contact Us");
+            const body = encodeURIComponent(
+                `Full Name: ${fullname}\n` +
+                `Email: ${email}\n` +
+                `Mobile: ${mobile}\n` +
+                `Message: ${message}\n` +
+                `Selected Services: ${selectedServices}\n` +
+                `Heard About Us: ${heardAboutUs}`
+            );
+
+            // Construct the mailto link
+            // const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=dhruv.2516403221@ipu.ac.in&su=${subject}&body=${body}`;
+            const gmailWindow=window.open(gmailLink, '_blank');
+            const checkWindowClosed=setInterval(()=>{
+                if(gmailWindow.closed){
+                    clearInterval(checkWindowClosed);
+                    alert('Thanks for your message! \n We’ll get back to you soon.');
+                    window.location.href = 'index.html';
+                }
+            },1000);
+        });
+
+    </script>
 </body>
 
 </html>
