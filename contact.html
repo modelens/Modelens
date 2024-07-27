@@ -231,8 +231,7 @@
             );
 
             // Construct the mailto link
-            // const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
-            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=dhruv.2516403221@ipu.ac.in&su=${subject}&body=${body}`;
+            const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
             const gmailWindow=window.open(gmailLink, '_blank');
             const checkWindowClosed=setInterval(()=>{
                 if(gmailWindow.closed){
