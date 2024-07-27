@@ -6,175 +6,290 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blysk Jewelleries Photoshoot</title>
     <link rel="stylesheet" href="portfolio.css">
-</head>
-<style>
-    body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #ff79a8;
-    }
-
-    .portfolio-section {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .portfolio-image {
-        background-image: url(images/portfolio/gold1.jpg);
-        background-size: cover;
-        background-position: top 10%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 24%;
-    }
-
-    .project-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .client-container {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        width: 80%;
-        margin-top: 35%;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .client-header {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .client-header strong {
-        font-size: 1.2em;
-        color: black;
-    }
-
-    .client-name {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: rgb(102, 78, 102);
-    }
-
-    .details-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .detail-item {
-        display: flex;
-        flex-direction: column;
-        font-size: 1em;
-        margin-bottom: 10px;
-    }
-
-    .detail-item strong {
-        font-weight: bold;
-        color: black;
-    }
-
-    .detail-value {
-        font-size: 0.9em;
-        color: rgb(102, 78, 102);
-    }
-
-    .portfolio-content {
-        padding: 20px;
-        color: white;
-        max-width: 950px;
-        width: 100%;
-        z-index: 1;
-        margin-top: 20px;
-    }
-
-    .section-container {
-        background-color: #000000;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        width: 80%;
-    }
-
-    .section-title {
-        font-size: 1.6em;
-        color: rgb(231, 185, 213);
-        margin-bottom: 10px;
-        border-bottom: 3px solid #bbc2c7;
-        padding-bottom: 5px;
-    }
-
-    .section-content {
-        font-size: 1.1em;
-        color: white;
-        margin-bottom: 15px;
-    }
-
-    strong {
-        color: #ff79a8;
-        font-weight: bold;
-    }
-
-    .img2 {
-        background-image: url(images/portfolio/gold.mp4);
-        background-size: cover;
-        height: 500px;
-        width: 60%;
-
-        margin-bottom: 10px;
-        border: #000000;
-        border-radius: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        background-position: top 20%;
-    }
-
-    .img3 {
-        background-clip: url(images/portfolio/gold3.jpg);
-        background-size: cover;
-        height: 500px;
-        width: 60%;
-
-        margin-bottom: 10px;
-        border: #000000;
-        border-radius: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        background-position: top 20%;
-    }
-
-    @media (max-width: 768px) {
-        .portfolio-content {
-            padding: 15px;
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
         }
 
-        .section-title {
-            font-size: 1.4em;
+        .portfolio-section {
+            position: relative;
+            width: 100%;
+            padding: 40px 0;
+            background: linear-gradient(white, #de75f8, rgb(241, 131, 205), #de75f8, white);
+            perspective: 1000px;
+        }
+
+        .portfolio-image {
+            background-image: url(images/portfolio/Blysk1.jpg);
+            background-size: cover;
+            background-position: top 10%;
+            position: absolute;
+            top: 10px;
+            left: 23%;
+            width: 55%;
+            height: 20%;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: rotateX(5deg) translateZ(50px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+        .project-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 25vh;
         }
 
         .client-container {
-            width: 90%;
-            margin-top: 30%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            width: 80%;
+            margin-top: 20%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: rotateY(-5deg) translateZ(40px);
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
         }
-    }
-</style>
+
+        .client-container:hover {
+            transform: rotateY(0deg) translateZ(60px) scale(1.05);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .client-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .client-header strong {
+            font-size: 1.2em;
+            color: black;
+        }
+
+        .client-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgb(102, 78, 102);
+        }
+
+        .details-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .detail-item strong {
+            font-weight: bold;
+            color: black;
+        }
+
+        .detail-value {
+            font-size: 0.9em;
+            color: rgb(102, 78, 102);
+        }
+
+        .portfolio-content {
+            padding: 20px;
+            color: white;
+            max-width: 950px;
+            width: 100%;
+            z-index: 1;
+            margin-top: 20px;
+        }
+
+        .section-container {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            transform: rotateX(5deg) translateZ(30px);
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+
+        .section-container:hover {
+            transform: rotateX(0deg) translateZ(50px) scale(1.05);
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: rgb(231, 185, 213);
+            margin-bottom: 10px;
+            border-bottom: 3px solid #bbc2c7;
+            padding-bottom: 5px;
+        }
+
+        .section-content {
+            font-size: 1.1em;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #ff79a8;
+            font-weight: bold;
+        }
+
+        .img2,
+        .img3 {
+            background-size: cover;
+            height: 500px;
+            width: 60%;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-position: top 20%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: rotateY(-5deg) translateZ(40px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img2:hover,
+        .img3:hover {
+            transform: rotateY(0deg) translateZ(60px) scale(1.05);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        ul {
+            display: flex;
+            width: calc(80% - 2rem);
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.2s ease;
+        }
+
+        ul:is(:hover, :focus-within) img {
+            opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+            filter: grayscale(calc(1 - var(--active-lerp, 0)));
+        }
+
+        :root {
+            --lerp-0: 1;
+            --lerp-1: 0.5787037;
+            --lerp-2: 0.2962963;
+            --lerp-3: 0.125;
+            --lerp-4: 0.037037;
+            --lerp-5: 0.0046296;
+            --lerp-6: 0;
+        }
+
+        a {
+            outline-offset: 4px;
+        }
+
+        li {
+            flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+            transition: flex 0.2s ease;
+        }
+
+        li:is(:hover, :focus-within) {
+            --active-lerp: var(--lerp-0);
+            z-index: 7;
+        }
+
+        li:has(+ li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li {
+            --active-lerp: var(--lerp-1);
+            z-index: 6;
+        }
+
+        li:has(+ li + li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li+li {
+            --active-lerp: var(--lerp-2);
+            z-index: 5;
+        }
+
+        li:has(+ li + li + li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li+li+li {
+            --active-lerp: var(--lerp-3);
+            z-index: 4;
+        }
+
+        li:has(+ li + li + li + li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li+li+li+li {
+            --active-lerp: var(--lerp-4);
+            z-index: 3;
+        }
+
+        li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li+li+li+li+li {
+            --active-lerp: var(--lerp-5);
+            z-index: 2;
+        }
+
+        li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+        li:is(:hover, :focus-within)+li+li+li+li+li+li {
+            --active-lerp: var(--lerp-6);
+            z-index: 1;
+        }
+
+
+        @media (max-width: 768px) {
+            .portfolio-content {
+                padding: 15px;
+            }
+
+            .section-title {
+                font-size: 1.4em;
+            }
+
+            .client-container {
+                width: 90%;
+                margin-top: 30%;
+            }
+
+            .img2,
+            .img3 {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+</head>
+
 
 <body>
     <section id="project-detail" class="portfolio-section">
@@ -183,16 +298,18 @@
             <div class="client-container">
                 <div class="client-header">
                     <strong>Client:</strong>
-                    <span class="client-name">Sourin India handbags Photoshoot</span>
+                    <span class="client-name">Blysk Jewelleries Photoshoot</span>
                 </div>
                 <div class="details-container">
                     <div class="detail-item">
                         <strong class="project-include-highlight">Project includes:</strong>
-                        <span class="detail-value">10 models, 2 professional photographers, 1 makeup artist</span>
+                        <span class="detail-value">3 professional models, 2 professional photographers, 1 Makeup artist,
+                            event manager team
+                        </span>
                     </div>
                     <div class="detail-item">
                         <strong>Date:</strong>
-                        <span class="detail-value">January 2023</span>
+                        <span class="detail-value"> Feburary 2023</span>
                     </div>
                 </div>
             </div>
@@ -206,6 +323,44 @@
                     budget. These images needed to be versatile for use across e-commerce platforms, the website,
                     marketing posters, and banners.</p>
             </div>
+            <ul class="results">
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk2.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk3.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk5.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk4.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk6.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk7.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk8.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk9.JPG" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk10.JPG" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk11.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk1.jpg" width="500" height="500" alt=""></a>
+                </li>
+                <li class="result">
+                    <a href="#"><img src="images/portfolio/blysk cover page.jpg" width="500" height="500" alt=""></a>
+                </li>
+            </ul>
 
             <div class="section-container">
                 <h3 class="section-title">The Solution</h3>

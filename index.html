@@ -84,32 +84,40 @@
         <p>
         <h2>Explore our portfolio showcasing the finest work from our talented team. </h2>
         </p>
-        <div class="gallery">
-            <span style="--i:1">
-                <img src="images/group 1.JPG" alt="" />
-            </span>
-            <span style="--i:2">
-                <img src="images/group 2.JPG" alt="" />
-            </span>
-            <span style="--i:3">
-                <img src="images/img 2.JPG" alt="" />
-            </span>
-            <span style="--i:4">
-                <img src="images/group 4.JPG" alt="" />
-            </span>
-            <span style="--i:5">
-                <img src="images/group 6.jpg" alt="" />
-            </span>
-            <span style="--i:6">
-                <img src="images/img 5.jpg" alt="" />
-            </span>
-            <span style="--i:7">
-                <img src="images/img 14.jpg" alt="" />
-            </span>
-            <span style="--i:8">
-                <img src="images/img 17.jpg" alt="" />
-            </span>
-        </div>
+        <ul class="results">
+            <li class="result">
+                <a href="#"><img src="images/img 14.jpg" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/group 2.JPG" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/group 4.JPG" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/img 5.jpg" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/img 2.JPG" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/group 6.jpg" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/group 1.JPG" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/img 14.jpg" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/img 10.png" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/portfolio/sourin3.jpg" width="500" height="500" alt=""></a>
+            </li>
+            <li class="result">
+                <a href="#"><img src="images/portfolio/blysk1.jpg" width="500" height="500" alt=""></a>
+            </li>
     </section>
 
     <!-- Services Section -->
@@ -310,7 +318,7 @@
             const alertLinks = document.querySelectorAll('.alert-link');
             alertLinks.forEach(link => {
                 link.addEventListener('click', (event) => {
-                    event.preventDefault(); 
+                    event.preventDefault();
                     alert('Stay tuned for more events!');
                 });
             });
