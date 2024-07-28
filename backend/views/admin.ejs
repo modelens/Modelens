@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+    href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
+    type="image/svg+xml">
+</head>
+<body>
+    <div class="header">
+        <h1>User Details</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="search-container">
+        <label for="searchInput">Search for names:</label>
+        <input type="text" id="searchInput" onkeyup="searchInput()" placeholder="Search...">
+    </div>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% let cnt=1; %>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= cnt++ %></td>
+                    <td><%= user.firstname %></td>
+                    <td><%= user.lastname %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.number %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <!-- <script src="/Modelens/config.js"></script> -->
+    <script>
+        function searchInput(){
+            let input=document.getElementById('searchInput');
+            let filter = input.value.toLowerCase();
+            let table = document.getElementById('userTable');
+            let tr = table.getElementsByTagName('tr');
+            for(let i=1;i<tr.length;i++){
+                let td=tr[i].getElementsByTagName('td');
+                let show=false;
+                for (let j = 1; j < td.length; j++) { // Start from 1 to skip the serial number column
+                    if (td[j]) {
+                        let txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            show = true;
+                            break;
+                        }
+                    }
+                }
+                tr[i].style.display = show ? '' : 'none';
+            }
+        }
+        async function logout() {
+            try {
+                const response = await fetch(`${API_URL}/admin/logout`, { method: 'GET' });
+                if (response.ok) {
+                    window.location.reload();
+                }
+            } catch (error) {
+                console.error('Error during logout:', error);
+            }
+        }
+    </script>
+</body>
+</html>

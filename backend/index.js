@@ -18,7 +18,6 @@ const secretKey = process.env.SECRET_KEY;
 
 // const mongourl='mongodb://127.0.0.1:27017/modelens'; // Your secret key for JWT
 
-
 app.use(cors()); // Enable CORS for all routes
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -58,6 +57,21 @@ const verifyToken = async (req, res, next) => {
         return res.status(401).json({ message: 'Token expired or invalid' });
     }
 };
+
+const basicAuth = (req, res, next) => {
+    const auth = { login: process.env.ADMIN_USERNAME, password: process.env.ADMIN_PASSWORD };
+
+    const b64auth = (req.headers.authorization || '').split(' ')[1] || '';
+    const [login, password] = Buffer.from(b64auth, 'base64').toString().split(':');
+
+    if (login && password && login === auth.login && password === auth.password) {
+        return next();
+    }
+
+    res.set('WWW-Authenticate', 'Basic realm="401"');
+    res.status(401).send('Authentication required.');
+};
+
 
 
 app.post('/login', async (req, res) => {
@@ -141,9 +155,20 @@ app.post('/logout', verifyToken, async (req, res) => {
     }
 });
 
+app.get('/admin', basicAuth, async(req,res)=>{
+    try{
+        const users=await User.find().select('-password');
+        res.render('admin.ejs',{users});
+    }catch(err){
+        console.error(err);
+        res.status(500).json({ error: 'Server Error' });
+    }
+});
 
-
-
+app.get('/admin/logout', (req, res) => {
+    res.setHeader('WWW-Authenticate', 'Basic realm="401"');
+    res.status(401).send('You have been logged out. Please login again.');
+});
 
 
 app.get('/user', verifyToken, async (req, res) => {
