@@ -991,15 +991,105 @@ section {
 
 /* Footer Styles */
 footer {
-    background-color: #000000;
-    /* Black color */
-    color: #ffffff;
-    /* White text */
-    text-align: center;
-    padding: 20px;
+    margin-top: 15px;
 }
 
-.social-media img {
+.footer2 {
+    height: 300px;
+    color: #cccccc;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footersection a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.footersection a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footersection p {
+    font-weight: 600;
+}
+
+.footersection {
+    margin-top: 50px;
+}
+
+.footersection div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     height: 30px;
-    margin: 0 10px;
+
+}
+
+.footersection div a img {
+    height: auto;
+    width: 25px;
+    margin-top: 10px;
+}
+
+
+.logoimg {
+    background-image: url(images/M\ logo.jpeg);
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.notification {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.notification.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
