@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Profile Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+        }
+
+        .nav-left a, .nav-right a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            background: #2a2a2a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 90%;
+            margin: 20px auto; /* Centering the container */
+        }
+
+        .thumbnails-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            overflow-y: auto;
+            max-height: 600px;
+            background: #1a1a1a;
+            padding: 10px;
+            border-right: 1px solid #666;
+        }
+
+        .thumbnails-container img {
+            width: 80px;
+            height: 90px;
+            margin-bottom: 10px;
+            border: 1px solid #d24ff6;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .main-image-container {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-image {
+    max-width: 100%; /* Ensure image is responsive */
+    max-height: 550px; /* Set maximum height */
+    width: auto; /* Allow width to adjust */
+    height: auto; /* Allow height to adjust */
+    border: 1px solid #d24ff6;
+    border-radius: 5px;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+
+        .details-section {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .details-section h2 {
+            margin-top: 0;
+            font-size: 32px;
+            color: #d24ff6;
+        }
+
+        .details-section p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .rating .fas {
+            color: gold;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .rating .empty-star {
+            color: lightgray;
+        }
+
+        .book-now-btn {
+            background-color: #6a0dad;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .book-now-btn:hover {
+            background-color: #520a71;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        .footer2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 20px;
+        }
+
+        .footer2 li {
+            margin: 5px 0;
+        }
+
+        .footer2 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer2 a img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 788px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .thumbnails-container {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+                flex-direction: row;
+                padding: 10px 0;
+            }
+
+            .main-image-container {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px 0;
+            }
+
+            .details-section {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="#work-gallery">Work Gallery</a>
+        </div>
+        <div class="logo">
+            <img src="images/Mm logo.jpeg" alt="Logo" />
+        </div>
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="thumbnails-container">
+        <img src="images/tousif2.jpg" alt="Product Image 1" class="thumbnail" onclick="changeImage(images/tousif2.jpg)">
+        <img src="images/tousif4.jpg" alt="Product Image 2" class="thumbnail" onclick="changeImage(images/tousif4.jpg)">
+        <img src="images/tousif1.jpg" alt="Product Image 4" class="thumbnail" onclick="changeImage(images/tousif1.png)">
+    </div>
+    <div class="main-image-container">
+        <img src="images/tousif1.jpg" alt="Main Product Image" class="main-image" id="mainImage">
+    </div>
+    <div class="details-section">
+        <h2> Mohammad Tousif</h2>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star empty-star"></i>
+        </div>
+        <p>Mohammad Tousif is a talented male model known for his striking features and versatile style. With a passion for fashion and a keen eye for trends, John has quickly made a mark in the industry. His ability to adapt to various roles and showcase diverse looks has earned him recognition among top designers and photographers.</p>
+        <a href="#" class="book-now-btn">Book Now</a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer2">
+        <div class="footlogo">
+            <div class="logoimg"></div>
+        </div>
+        <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="photographer.html">Photographers</a></li>
+            <li><a href="makeup-artists.html">Makeup Artists</a></li>
+        </ul>
+        <ul>
+            <li><strong>Contact</strong></li>
+            <li>New Delhi, Delhi</li>
+            <li><a href="#" onclick="copyToClipboard()">+91 8178517101</a></li>
+            <li>
+                <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li><strong>Policy</strong></li>
+            <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="contact.js"></script>
+<script src="script.js"></script>
+
+<script>
+    function changeImage(img) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = img.src;
+    }
+</script>
+</body>
+</html>
