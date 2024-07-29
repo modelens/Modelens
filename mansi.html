@@ -6,7 +6,6 @@
     <title>Models Booking Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
-   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
@@ -27,7 +26,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
         }
 
         .nav-left, .nav-right {
@@ -63,7 +61,7 @@
             background: #1a1a1a;
             width: 20%;
             overflow-y: auto; /* Enable vertical scrolling */
-            max-height: 400px; /* Example max height, adjust as needed */
+            max-height: 300px; /* Example max height, adjust as needed */
         }
 
         .image-section img {
@@ -74,6 +72,7 @@
             border-radius: 5px;
             object-fit: cover;
             cursor: pointer;
+            z-index: 10; /* Ensure clickable area is above other elements */
         }
 
         .main-image-container {
@@ -88,7 +87,7 @@
         .main-image {
             width: 100%;
             max-width: 500px;
-            height: 650px;
+            height: 6000px;
             margin-bottom: 20px;
             border: 1px solid #d24ff6;
             border-radius: 5px;
@@ -270,14 +269,35 @@
         </ul>
         <ul>
             <li><strong>Policy</strong></li>
-            <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
+            <li><a href="https://drive.google.com/file/d/1RyIq5Uj4YumznSk6sqqHJ3e9MC-QzFj7/view">Privacy Policy</a></li>
+            <li><a href="https://drive.google.com/file/d/1SzS2w3Gmo5D9fDAmClb2rnlD6ekq8n5U/view">Terms and Conditions</a></li>
         </ul>
     </div>
 </footer>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="contact.js"></script>
-<script src="script.js"></script>
+<!-- JavaScript -->
+<script>
+    function changeImage(imageSrc) {
+        document.getElementById('mainImage').src = imageSrc;
+    }
 
+    function copyToClipboard() {
+        var mobileNumber = document.getElementById('mobileNumber');
+        mobileNumber.select();
+        document.execCommand('copy');
+        showNotification('Mobile number copied to clipboard!');
+    }
+
+    function showNotification(message) {
+        var notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.innerText = message;
+        document.body.appendChild(notification);
+        setTimeout(function() {
+            notification.style.display = 'none';
+            document.body.removeChild(notification);
+        }, 3000);
+    }
+</script>
 </body>
 </html>
