@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
+    background-color: #f9f9f9;
 }
 
 .header {
@@ -9,15 +10,16 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid #444;
 }
 
 .logout-btn {
     padding: 8px 16px;
-    background-color: #333;
+    background-color: #555;
     color: white;
-    border: 1px solid #444;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -25,49 +27,90 @@ body {
 }
 
 .logout-btn:hover {
-    color: #fff;
-    background-color: #555;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #777;
 }
 
-
-h1{ 
-    flex:1;
+h1 { 
+    flex: 1;
     text-align: center;
     margin: 0;
 }
-table{
+
+.table-container {
+    padding: 20px;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-table,th,td{
-    border: 1px solid #000;
+
+table, th, td {
+    border: 1px solid #ddd;
 }
+
 th, td {
     padding: 10px;
     text-align: left;
 }
+
 th {
-    background-color: white;
+    background-color: #f1f1f1;
 }
+
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #f1f1f1;
 }
+
 .search-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
     margin: 20px 0;
 }
 
 #searchInput {
     padding: 10px;
-    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 400px;
     box-sizing: border-box;
-    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+.pagination #page-info {
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: underline;
 }
