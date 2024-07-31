@@ -17,6 +17,53 @@
         #main-header {
             font-family: 'Poppins', sans-serif;
         }
+
+        .user-menu {
+            position: relative;
+            display: inline-block;
+            margin-left: 0.6rem;
+        }
+
+        .user-icon {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .user-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            right: 0;
+            top: 100%;
+            min-width: 160px;
+            padding: 0.5rem;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .user-menu:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 
@@ -37,8 +84,13 @@
             <div class="nav-right">
                 <a href="team.html">Our Team</a>
                 <a href="contact.html">Contact Us</a>
-                <a id="login-link" href="login.html">Login</a>
-                <a id="signup-link" href="signup.html">Signup</a>
+                <div class="user-menu">
+                    <img src="images/usericon.png" alt="User Icon" class="user-icon">
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a id="login-link" href="login.html">Login</a>
+                        <a id="signup-link" href="signup.html">Signup</a>
+                    </div>
+                </div>
                 <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
         </nav>
@@ -313,7 +365,6 @@
                 });
             });
         });
-
     </script>
 </body>
 

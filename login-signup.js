@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.getElementById('logout');
     const loginLink = document.getElementById('login-link');
     const signupLink = document.getElementById('signup-link');
+    const dropdownMenu = document.querySelector('.user-menu');
+    const usericon = document.querySelector('.user-icon');
     const dropdownLoginLink = document.getElementById('dropdown-login-link');
     const dropdownSignupLink = document.getElementById('dropdown-signup-link');
     const dropdownLogoutLink = document.getElementById('dropdown-logout');
@@ -11,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (logoutLink) logoutLink.style.display = 'block';
         if (loginLink) loginLink.style.display = 'none';
         if (signupLink) signupLink.style.display = 'none';
+        if (dropdownMenu) dropdownMenu.style.display = 'none';
+        if (usericon) usericon.style.display = 'none';
         if (dropdownLoginLink) dropdownLoginLink.style.display = 'none';
         if (dropdownSignupLink) dropdownSignupLink.style.display = 'none';
         if (dropdownLogoutLink) dropdownLogoutLink.style.display = 'block';
@@ -18,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (logoutLink) logoutLink.style.display = 'none';
         if (loginLink) loginLink.style.display = 'block';
         if (signupLink) signupLink.style.display = 'block';
+        if (dropdownMenu) dropdownMenu.style.display = 'block';
+        if (usericon) usericon.style.display = 'block';
         if (dropdownLoginLink) dropdownLoginLink.style.display = 'block';
         if (dropdownSignupLink) dropdownSignupLink.style.display = 'block';
         if (dropdownLogoutLink) dropdownLogoutLink.style.display = 'none';
