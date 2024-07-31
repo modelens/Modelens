@@ -495,56 +495,7 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     z-index: 1;
 }
 
-/* Services Section*/
-.process-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.process-steps .step {
-    text-align: center;
-    position: relative;
-    flex: 1;
-}
-
-.process-steps .step .step-number {
-    background-color: #000;
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.process-steps .step:not(:last-child)::after {
-    content: '• • • • •';
-    position: absolute;
-    top: 50%;
-    right: -60px;
-    transform: translateY(-50%);
-    color: #000;
-    font-size: 24px;
-    letter-spacing: 5px;
-}
-
-.process-steps .step:nth-child(4)::after {
-    content: '• • •';
-    right: -40px;
-    letter-spacing: 10px;
-}
-
-.process-steps .step:last-child::after {
-    display: none;
-}
-
-
+/* The Process Section  - Behind The Scenes*/
 /* The Process Section */
 .process-section {
     background-image: linear-gradient(to bottom right, rgb(221, 213, 213), #de75f8, rgb(255, 64, 191), #de75f8, rgb(221, 213, 213));
@@ -553,24 +504,28 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     text-align: center;
 }
 
+/* Title Styling */
 .process-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+/* Steps Container */
 .process-steps {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+/* Individual Step */
 .step {
     flex: 1;
     margin: 20px;
     max-width: 200px;
 }
 
+/* Step Number Styling */
 .step-number {
     background-color: #000000;
     color: #ffffff;
@@ -585,14 +540,27 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     margin: 0 auto 10px;
 }
 
+/* Step Title Styling */
 .step-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Step Description Styling */
 .step-description {
     font-size: 16px;
+}
+
+/* Dot Styling */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    align-self: center;
 }
 
 
@@ -606,7 +574,8 @@ section {
     /* Add padding for spacing between sections */
 }
 
-/* Events Section */
+
+/* Upcoming Wvents Section */
 #event-header {
     background-color: #000000;
     /* Black background */
