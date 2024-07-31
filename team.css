@@ -16,7 +16,8 @@ body {
 }
 
 h2 {
-    width: 500px;
+    font-size: 40px;
+    width: 700px;
     margin: 0 auto;
     display: table;
     margin-top: 70px;
@@ -26,6 +27,7 @@ h2 {
 h1 {
 
     width: 500px;
+    font-size: 50px;
     margin: 0 auto;
     display: table;
     text-align: center;
@@ -256,4 +258,5 @@ ul div a img {
     height: 10px;
     width: 100%;
     background-color: white;
+    margin-top: 40px;
 }
