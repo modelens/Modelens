@@ -653,6 +653,8 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     display: flex;
     justify-content: center;
     gap: 80px;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 #services .service-link {
@@ -663,8 +665,8 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     text-decoration: none;
     transition: background-color 0.3s;
     overflow: hidden;
-    /* To keep image within container */
     position: relative;
+    margin: 10px;
 }
 
 #services .service-link:hover {
@@ -679,12 +681,10 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     top: 0;
     left: 0;
     transition: opacity 0.3s ease-in-out;
-    /* Add opacity transition */
 }
 
 #services .service-link:hover img {
     opacity: 0.8;
-    /* Reduce opacity on hover */
 }
 
 #services .service-link span {
@@ -693,13 +693,41 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     color: white;
     text-shadow: 1px 1px 2px #000;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background for text */
     width: 100%;
     box-sizing: border-box;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1;
+}
+
+/* Dots between services */
+#services .service-link:not(:last-child)::after {
+    content: '•';
+    font-size: 2em;
+    color: #ffffff;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    #services .service-links {
+        flex-direction: column;
+    }
+
+    #services .service-link {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    #services .service-link:not(:last-child)::after {
+        right: 10px;
+        top: 60%;
+    }
 }
 
 
