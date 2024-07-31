@@ -20,7 +20,7 @@
         position: relative;
         width: 100%;
         padding: 40px 0;
-        background: linear-gradient(white, #de75f8, rgb(241, 131, 205), #de75f8, white);
+        background-image: linear-gradient(to bottom right, black, #600377, rgb(85, 38, 69), #550569, black);
         perspective: 1000px;
     }
 
@@ -55,6 +55,12 @@
         margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, background-color 0.3s;
+    }
+
+    .client-container:hover {
+        transform: rotateY(0deg) translateZ(60px) scale(1.05);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .client-header {
@@ -108,17 +114,23 @@
     }
 
     .section-container {
-        background-color: #000000;
+        background-color: rgba(255, 255, 255, 0.8);
         border-radius: 8px;
         padding: 20px;
         margin-bottom: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         width: 80%;
+        transition: transform 0.3s ease-in-out, background 0.3s;
+    }
+
+    .section-container:hover {
+        transform: rotateX(0deg) translateZ(50px) scale(1.05);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .section-title {
         font-size: 1.6em;
-        color: rgb(231, 185, 213);
+        color: black;
         margin-bottom: 10px;
         border-bottom: 3px solid #bbc2c7;
         padding-bottom: 5px;
@@ -126,12 +138,12 @@
 
     .section-content {
         font-size: 1.1em;
-        color: white;
+        color: rgb(102, 78, 102);
         margin-bottom: 15px;
     }
 
     strong {
-        color: #ff79a8;
+        color: black;
         font-weight: bold;
     }
 
