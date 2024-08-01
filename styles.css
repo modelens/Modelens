@@ -7,211 +7,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* General Mobile Styles */
-@media (min-widht: 320px),
-(max-width: 425px) {
-    body {
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .main-item,
-    .portfolio-item,
-    .service-link {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .overlay h1 {
-        font-size: 2rem;
-    }
-
-    .overlay p {
-        font-size: 1rem;
-    }
-
-    .hero-button {
-        font-size: 0.8rem;
-        padding: 8px 16px;
-    }
-
-    .stat h3 {
-        font-size: 2.5em;
-    }
-
-    .stat p {
-        font-size: 1em;
-    }
-}
-
-/* Small Tablets */
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    .main-item,
-    .portfolio-item,
-    .service-link {
-        width: 45%;
-        margin: 10px;
-    }
-
-    .overlay h1 {
-        font-size: 2.5rem;
-    }
-
-    .overlay p {
-        font-size: 1.2rem;
-    }
-
-    .hero-button {
-        font-size: 0.9rem;
-        padding: 10px 18px;
-    }
-
-    .stat h3 {
-        font-size: 3em;
-    }
-
-    .stat p {
-        font-size: 1.1em;
-    }
-}
-
-/* Large Tablets */
-@media (max-width: 1024px) {
-    .navbar-brand {
-        font-size: 1.8rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.1rem;
-        padding: 12px;
-    }
-
-    .main-item,
-    .portfolio-item,
-    .service-link {
-        width: 30%;
-        margin: 15px;
-    }
-
-    .overlay h1 {
-        font-size: 3rem;
-    }
-
-    .overlay p {
-        font-size: 1.4rem;
-    }
-
-    .hero-button {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-
-    .stat h3 {
-        font-size: 3.5em;
-    }
-
-    .stat p {
-        font-size: 1.2em;
-    }
-}
-
-/* Medium Desktops */
-@media (max-width: 1200px) {
-    .navbar-brand {
-        font-size: 2rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.2rem;
-        padding: 14px;
-    }
-
-    .main-item,
-    .portfolio-item,
-    .service-link {
-        width: 25%;
-        margin: 20px;
-    }
-
-    .overlay h1 {
-        font-size: 3.5rem;
-    }
-
-    .overlay p {
-        font-size: 1.6rem;
-    }
-
-    .hero-button {
-        font-size: 1.1rem;
-        padding: 14px 22px;
-    }
-
-    .stat h3 {
-        font-size: 4em;
-    }
-
-    .stat p {
-        font-size: 1.3em;
-    }
-}
-
-/* Large Desktops */
-@media (max-width: 1600px) {
-    .navbar-brand {
-        font-size: 2.2rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.3rem;
-        padding: 16px;
-    }
-
-    .main-item,
-    .portfolio-item,
-    .service-link {
-        width: 20%;
-        margin: 25px;
-    }
-
-    .overlay h1 {
-        font-size: 4rem;
-    }
-
-    .overlay p {
-        font-size: 1.8rem;
-    }
-
-    .hero-button {
-        font-size: 1.2rem;
-        padding: 16px 24px;
-    }
-
-    .stat h3 {
-        font-size: 4.5em;
-    }
-
-    .stat p {
-        font-size: 1.4em;
-    }
-}
 
 /* General Body Styling */
 body {
@@ -411,7 +206,6 @@ h4 {
     background-image: linear-gradient(to bottom right, white, #de75f8, rgb(255, 64, 191), #de75f8, white);
 
 }
-
 
 
 /* Style the overlay text */
@@ -701,36 +495,6 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     z-index: 1;
 }
 
-/* Dots between services */
-#services .service-link:not(:last-child)::after {
-    content: '•';
-    font-size: 2em;
-    color: #ffffff;
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media (max-width: 768px) {
-    #services .service-links {
-        flex-direction: column;
-    }
-
-    #services .service-link {
-        width: 100%;
-        max-width: none;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    #services .service-link:not(:last-child)::after {
-        right: 10px;
-        top: 60%;
-    }
-}
-
-
 /* The Process Section */
 .process-section {
     background-image: linear-gradient(to bottom right, rgb(221, 213, 213), #de75f8, rgb(255, 64, 191), #de75f8, rgb(221, 213, 213));
@@ -748,13 +512,15 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
 .process-steps {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .step {
-    flex: 1;
+    text-align: center;
     margin: 20px;
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .step-number {
@@ -781,6 +547,25 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     font-size: 16px;
 }
 
+.process-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
 
 /* General Section Style */
 section {
@@ -792,7 +577,8 @@ section {
     /* Add padding for spacing between sections */
 }
 
-/* Events Section */
+
+/* Upcoming Events Section */
 #event-header {
     background-color: #000000;
     /* Black background */
