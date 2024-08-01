@@ -12,7 +12,8 @@
 
         header {
             font-family: 'Poppins', sans-serif;
-            background-color: #000000; /* Black color */
+            background-color: #000000;
+            /* Black color */
             padding: 10px 0;
             position: fixed;
             width: 100%;
@@ -39,7 +40,8 @@
 
         .nav-left a,
         .nav-right a {
-            color: #ffffff; /* White color */
+            color: #ffffff;
+            /* White color */
             text-decoration: none;
             padding: 14px 16px;
         }
@@ -55,7 +57,8 @@
 
         /* Dropdown styles */
         .dropdown {
-            display: none; /* Hide dropdown by default */
+            display: none;
+            /* Hide dropdown by default */
             position: relative;
             display: inline-block;
         }
@@ -63,7 +66,8 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #333333; /* Darker grey background */
+            background-color: #333333;
+            /* Darker grey background */
             min-width: 160px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -80,11 +84,13 @@
         }
 
         .dropdown-content a:hover {
-            background-color: #575757; /* Slightly lighter grey */
+            background-color: #575757;
+            /* Slightly lighter grey */
         }
 
         .dropdown-toggle::after {
-            content: ' ▼'; /* Add an arrow to indicate dropdown */
+            content: ' ▼';
+            /* Add an arrow to indicate dropdown */
         }
 
         .dropdown:hover .dropdown-content {
@@ -92,8 +98,10 @@
         }
 
         body {
-            background-color: #000000; /* Solid black background */
-            color: #ffffff; /* White text */
+            background-color: #000000;
+            /* Solid black background */
+            color: #ffffff;
+            /* White text */
             margin: 0;
             padding: 0;
             display: flex;
@@ -106,28 +114,30 @@
 
         h2 {
             text-align: center;
-            color: #ffffff; /* White text */
-            margin-bottom: 1rem;
+            color: #ffffff;
+            /* White text */
             font-size: 2rem;
-            font-weight: bold;
+            font-weight: 700;
+            margin: 5vh auto 2vh;
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #333333; /* Dark grey background for the form */
+            background: #333333;
+            /* Dark grey background for the form */
             padding: 1.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             width: 380px;
-            margin-top: 5rem;
         }
 
         label {
             margin-bottom: 0.5rem;
-            color: #ffffff; /* White text */
-            font-weight: bold;
+            color: #ffffff;
+            /* White text */
+            font-weight: 500;
             text-align: left;
             width: 100%;
         }
@@ -135,41 +145,51 @@
         input[type="text"],
         input[type="password"],
         input[type="email"] {
-            padding: 0.8rem;
+            padding: 0.4rem;
             margin-bottom: 1rem;
-            border: 1px solid #444; /* Darker border for inputs */
+            border: 1px solid #444;
+            /* Darker border for inputs */
             border-radius: 6px;
             width: 100%;
             box-sizing: border-box;
-            font-size: 0.9rem;
-            color: #ffffff; /* White text */
-            background-color: #222222; /* Darker background for inputs */
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ffffff;
+            /* White text */
+            background-color: #222222;
+            /* Darker background for inputs */
         }
 
         input::placeholder {
-            color: #888; /* Light grey placeholder text */
+            color: #888;
+            /* Light grey placeholder text */
             font-style: italic;
+            font-weight: 300;
         }
 
         button {
-            padding: 0.8rem;
-            background-color: #6a0dad; /* Purple background */
+            padding: 0.5rem;
+            background-color: #6a0dad;
+            /* Purple background */
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
             width: 100%;
             box-sizing: border-box;
             font-weight: bold;
         }
 
         button:hover {
-            background-color: #5a0c8d; /* Darker purple on hover */
+            background-color: #5a0c8d;
+            /* Darker purple on hover */
         }
 
         .anchorr {
-            color: #d3d3d3; /* Light grey color */
+            color: #d3d3d3;
+            /* Light grey color */
             text-decoration: none;
             margin-top: 1rem;
             font-size: 0.9rem;
@@ -181,17 +201,23 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
+
             .nav-left,
             .nav-right {
-                display: none; /* Hide original nav items */
+                display: none;
+                /* Hide original nav items */
             }
+
             .dropdown {
-                display: block; /* Show dropdown on small screens */
+                display: block;
+                /* Show dropdown on small screens */
             }
 
             .dropdown-content {
-                min-width: 100%; /* Make dropdown take full width */
-                box-shadow: none; /* Remove box-shadow on small screens */
+                min-width: 100%;
+                /* Make dropdown take full width */
+                box-shadow: none;
+                /* Remove box-shadow on small screens */
             }
 
             .dropdown-content a {
@@ -203,8 +229,57 @@
 
         @media (min-width: 769px) {
             .dropdown {
-                display: none; /* Hide dropdown on larger screens */
+                display: none;
+                /* Hide dropdown on larger screens */
             }
+        }
+
+        .name-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .name-field {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            /* Add some space between the fields */
+        }
+
+        .name-field:last-child {
+            margin-right: 0;
+        }
+
+        .name-field label {
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            /* White text */
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .name-field input {
+            padding: 0.4rem;
+            margin-bottom: 0;
+            /* Remove default margin-bottom from input */
+            border: 1px solid #444;
+            /* Darker border for inputs */
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+            color: #ffffff;
+            /* White text */
+            background-color: #222222;
+            /* Darker background for inputs */
+        }
+
+        input:focus,
+        button:focus {
+            outline: 2px solid #6a0dad;
         }
     </style>
     <link rel="icon"
@@ -248,18 +323,29 @@
     </header>
     <h2>Signup</h2>
     <form id="signup-form">
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" placeholder="John" required>
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+        <div class="name-row">
+            <div class="name-field">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="John" required pattern="[A-Za-z]+"
+                    title="Only letters are allowed">
+            </div>
+            <div class="name-field">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Doe" required pattern="[A-Za-z]+"
+                    title="Only letters are allowed">
+            </div>
+        </div>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="johndoe123" required>
+        <input type="text" id="username" name="username" placeholder="johndoe123" required minlength="4" maxlength="20"
+            title="Username must be between 4 and 20 characters">
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="********" required>
+        <input type="password" id="password" name="password" placeholder="********" required minlength="6"
+            title="Password must be at least 6 characters long">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
         <label for="number">Mobile Number:</label>
-        <input type="text" id="number" name="number" placeholder="+91" required>
+        <input type="text" id="number" name="number" placeholder="+91" required pattern="\+?\d{10,15}"
+            title="Enter a valid phone number with 10 to 15 digits">
         <button type="submit">Signup</button>
     </form>
     <a href="login.html" class="anchorr">Already have an account? Login</a>
@@ -268,6 +354,10 @@
     <script>
         document.getElementById('signup-form').addEventListener('submit', async function (event) {
             event.preventDefault();
+            if (this.checkValidity() === false) {
+                this.reportValidity();
+                return;
+            }
             const firstname = document.getElementById('firstname').value;
             const lastname = document.getElementById('lastname').value;
             const username = document.getElementById('username').value;
