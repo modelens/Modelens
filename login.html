@@ -265,6 +265,64 @@
             content: '❌';
             margin-right: 10px;
         }
+
+        .spinner-container {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay to fade background */
+    z-index: 999;
+    /* Ensure it appears above other content */
+    visibility: hidden;
+    /* Hide visibility when not displayed */
+    opacity: 0;
+    /* Hide with opacity */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transition */
+}
+
+.spinner-container.show {
+    display: flex;
+    /* Use flexbox to center spinner */
+    justify-content: center;
+    align-items: center;
+    /* Center horizontally and vertically */
+    visibility: visible;
+    /* Make visible */
+    opacity: 1;
+    /* Fully opaque */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    /* Light gray border */
+    border-top: 8px solid #6f42c1;
+    /* Purple color for the spinning part */
+    border-radius: 50%;
+    width: 60px;
+    /* Slightly larger size */
+    height: 60px;
+    /* Slightly larger size */
+    animation: spin 1s linear infinite;
+    /* Continuous spinning animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
     </style>
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjc1MDlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
@@ -272,6 +330,9 @@
 </head>
 
 <body>
+    <div id="spinner-container" class="spinner-container">
+        <div class="spinner"></div>
+    </div>
     <header>
         <nav>
             <div class="nav-left">
@@ -346,7 +407,7 @@
 
         document.getElementById('login-form').addEventListener('submit', async function (event) {
             event.preventDefault(); // Prevent default form submission
-
+            document.getElementById('spinner-container').classList.add('show');
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
@@ -381,6 +442,9 @@
             } catch (error) {
                 console.error('Error:', error.message);
                 showAlert('Login failed: ' + error.message, 'danger');
+            } finally {
+                // Hide the spinner
+                document.getElementById('spinner-container').classList.remove('show');
             }
         });
     </script>
