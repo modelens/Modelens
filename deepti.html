@@ -6,218 +6,40 @@
     <title>Models Booking Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="models.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
+        type="image/svg+xml">
     <!-- Font Awesome for star icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            text-align: center;
-            position: relative;
-            padding: 20px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
-
-        .nav-left, .nav-right {
-            display: flex;
-        }
-
-        .nav-left a, .nav-right a {
-            margin: 0 10px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .logo img {
-            width: 100px;
-            height: auto;
-        }
-
-        .container {
-            display: flex;
-            background: #2a2a2a;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            width: 90%;
-            margin: 20px auto; /* Centering the container */
-        }
-
-        .image-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            background: #1a1a1a;
-            width: 20%;
-            overflow-y: auto; /* Enable vertical scrolling */
-            max-height: 300px; /* Example max height, adjust as needed */
-        }
-
-        .image-section img {
-            width: 80px;
-            height: 100px;
-            margin-bottom: 10px;
-            border: 1px solid #d24ff6;
-            border-radius: 5px;
-            object-fit: cover;
-            cursor: pointer;
-        }
-
-        .main-image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Center content vertically */
-            width: 40%;
-            padding: 20px;
-        }
-
-        .main-image {
-            width: 100%;
-            max-width: 500px;
-            height: 550px;
-            margin-bottom: 20px;
-            border: 1px solid #d24ff6;
-            border-radius: 5px;
-            object-fit: cover;
-        }
-
-        .details-section {
-            padding: 0px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start; /* Align items to the start */
-        }
-
-        .details-section h2 {
-            margin-top: 0;
-            font-size: 32px;
-            color: #d24ff6;
-        }
-
-        .details-section p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .rating {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        .rating .fas {
-            color: gold;
-            font-size: 24px;
-            margin-right: 5px;
-        }
-
-        .rating .empty-star {
-            color: lightgray;
-        }
-
-        .book-now-btn {
-            background-color: #6a0dad;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .book-now-btn:hover {
-            background-color: #520a71;
-        }
-
-        footer {
-            margin-top: 20px;
-        }
-
-        .footer2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .footer2 ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 20px;
-        }
-
-        .footer2 li {
-            margin: 5px 0;
-        }
-
-        .footer2 a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer2 a img {
-            width: 24px;
-            height: 24px;
-            margin: 0 5px;
-        }
-
-        /* Example for copying mobile number */
-        #mobileNumber {
-            position: absolute;
-            left: -9999px;
-        }
-
-        .notification {
-            display: none;
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
+    <header id="main-header">
+        <nav>
             <div class="nav-left">
-                <a href="index.html">Home</a>
-                <a href="#work-gallery">Work Gallery</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#events">Events</a>
+                <a href="portfolio.html">Portfolio</a>
             </div>
             <div class="logo">
-                <img src="images/Mm logo.jpeg" alt="Logo" />
+                <a href="index.html">
+                    <img src="images/Mm logo.jpeg" alt="Logo">
+                </a>
             </div>
             <div class="nav-right">
-                <a href="#about">About</a>
+                <a href="team.html">Our Team</a>
                 <a href="contact.html">Contact Us</a>
+                <div class="user-menu">
+                    <img src="images/usericon.png" alt="User Icon" class="user-icon">
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a id="login-link" href="login.html">Login</a>
+                        <a id="signup-link" href="signup.html">Signup</a>
+                    </div>
+                </div>
+                <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
         </nav>
     </header>
@@ -279,6 +101,8 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
+<script src="config.js"></script>
+<script src="login-signup.js"></script>
 
 <script>
     function changeImage(imageUrl) {
