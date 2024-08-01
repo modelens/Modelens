@@ -6,8 +6,6 @@
     <title>Models Booking Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
-
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="models.css">
@@ -17,7 +15,6 @@
         type="image/svg+xml">
 </head>
 <body>
-
     <header id="main-header">
         <nav>
             <div class="nav-left">
@@ -47,10 +44,10 @@
 
 <div class="container">
     <div class="image-section">
-        <img src="images/ritu1.jpg" alt="Person Image 1" class="thumbnail">
-        <img src="images/ritu2.jpg" alt="Person Image 2" class="thumbnail">
-        <img src="images/ritu3.jpg" alt="Person Image 3" class="thumbnail">
-       
+        <img src="images/ritu1.jpg" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/mansi1.jpg')">
+        <img src="images/ritu2.jpg" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/ritu2.jpg')">
+        <img src="images/ritu3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/ritu3.jpg')">
+        
     </div>
     <div class="main-image-container">
         <img src="images/ritu1.jpg" alt="Main Image" class="main-image" id="mainImage">
@@ -64,7 +61,7 @@
             <i class="fas fa-star empty-star"></i>
             <i class="fas fa-star empty-star"></i>
         </div>
-        <p>She is an experienced fashion model known for her versatility and dynamic presence on the runway. With over five years in the industry, Sana has worked with top designers and brands, showcasing an impressive range of styles from high fashion to casual wear. Her strong features, confident demeanor, and ability to adapt to different looks make her a sought-after model in the industry.</p>
+        <p>An accomplished fashion model, she is renowned for her versatility and captivating runway presence. With over five years of experience, she has collaborated with top designers and high-profile brands, showcasing a broad spectrum of styles from avant-garde fashion to casual trends. Her striking features, commanding confidence, and exceptional adaptability have made her a highly sought-after talent in the fashion industry.</p>
         <a href="#" class="book-now-btn">Book Now</a>
     </div>
 </div>
@@ -75,7 +72,7 @@
             <div class="logoimg"></div>
         </div>
         <ul>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="models.html">Models</a></li>
             <li><a href="photographer.html">Photographers</a></li>
             <li><a href="makeup-artists.html">Makeup Artists</a></li>
@@ -95,16 +92,37 @@
         </ul>
         <ul>
             <li><strong>Policy</strong></li>
-            <li><a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing" target="_blank">Terms And Conditions</a></li>
+            <li><a href="https://drive.google.com/file/d/1RyIq5Uj4YumznSk6sqqHJ3e9MC-QzFj7/view">Privacy Policy</a></li>
+            <li><a href="https://drive.google.com/file/d/1SzS2w3Gmo5D9fDAmClb2rnlD6ekq8n5U/view">Terms and Conditions</a></li>
         </ul>
     </div>
 </footer>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="contact.js"></script>
-<script src="script.js"></script>
+<!-- JavaScript -->
 <script src="config.js"></script>
 <script src="login-signup.js"></script>
+<script>
+    function changeImage(imageSrc) {
+        document.getElementById('mainImage').src = imageSrc;
+    }
 
+    function copyToClipboard() {
+        var mobileNumber = document.getElementById('mobileNumber');
+        mobileNumber.select();
+        document.execCommand('copy');
+        showNotification('Mobile number copied to clipboard!');
+    }
+
+    function showNotification(message) {
+        var notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.innerText = message;
+        document.body.appendChild(notification);
+        setTimeout(function() {
+            notification.style.display = 'none';
+            document.body.removeChild(notification);
+        }, 3000);
+    }
+</script>
 </body>
 </html>
