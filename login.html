@@ -209,7 +209,7 @@
                 /* Show dropdown on small screens */
             }
 
-            .dropdown-toggle{
+            .dropdown-toggle {
                 color: #007BFF;
             }
 
@@ -265,38 +265,6 @@
             content: '❌';
             margin-right: 10px;
         }
-        .password-container {
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
-        .password-container input[type="password"] {
-            padding-right: 2.5rem;
-            /* Increased padding to make space for the icon */
-            box-sizing: border-box;
-            /* Include padding in the element's total width */
-        }
-
-        .toggle-password {
-            position: absolute;
-            right: 0.8rem;
-            /* Adjust spacing as needed */
-            top: 50%;
-            transform: translateY(-89%);
-            cursor: pointer;
-            color: rgba(255, 255, 255, 0.6);
-            /* Light color for transparency */
-            font-size: 1rem;
-            /* Adjust size as needed */
-        }
-
-
-        .toggle-password:hover {
-            color: #ffffff;
-            /* Full color on hover */
-        }
     </style>
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjc1MDlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
@@ -346,10 +314,7 @@
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required placeholder="Enter your email">
         <label for="password">Password</label>
-        <div class="password-container">
-            <input type="password" id="password" name="password" required placeholder="Enter your password">
-            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
-        </div>
+        <input type="password" id="password" name="password" required placeholder="Enter your password">
         <button type="submit">Sign In</button>
     </form>
     <a href="signup.html" class="anchorr">Don't have an account? Sign Up</a>
