@@ -16,7 +16,7 @@
     background: #1a1a1a;
     width: 20%;
     overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 300px; /* Example max height, adjust as needed */
+    max-height: 400px; /* Example max height, adjust as needed */
 }
 
 .image-section img {
@@ -41,7 +41,7 @@
 .main-image {
     width: 100%;
     max-width: 500px;
-    height: 550px;
+    height: 600px;
     margin-bottom: 20px;
     border: 1px solid #d24ff6;
     border-radius: 5px;
