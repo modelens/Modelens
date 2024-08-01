@@ -145,14 +145,45 @@
             height: 24px;
             margin: 5px;
         }
-    </style>
 
+        h1{
+            margin-top: calc(9vh + 1rem);
+            text-align: center;
+        }
+
+    </style>
+    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
-    <header>
-        <h1>Models</h1>
+    <header id="main-header">
+        <nav>
+            <div class="nav-left">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#events">Events</a>
+                <a href="portfolio.html">Portfolio</a>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Mm logo.jpeg" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact Us</a>
+                <div class="user-menu">
+                    <img src="images/usericon.png" alt="User Icon" class="user-icon">
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a id="login-link" href="login.html">Login</a>
+                        <a id="signup-link" href="signup.html">Signup</a>
+                    </div>
+                </div>
+                <a id="logout" href="#" style="display:none;">Logout</a>
+            </div>
+        </nav>
     </header>
+
+    <h1>Models</h1>
 
     <section class="services-container">
         <!-- Service Cards for Models -->
@@ -512,6 +543,8 @@
         crossorigin="anonymous"></script>
     <script src="contact.js"></script> <!-- Including contact.js for specific functionality -->
     <script src="services.js"></script>
+    <script src="config.js"></script>
+    <script src="login-signup.js"></script>
 </body>
 
 </html>

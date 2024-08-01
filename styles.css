@@ -395,10 +395,6 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     color: #ffffff;
 }
 
-#services header {
-    margin-bottom: 70px;
-}
-
 #services .service-links {
     display: flex;
     justify-content: center;
