@@ -466,13 +466,21 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    margin: 10px;
+    max-width: 300px;
+    position: relative;
+    text-align: left;
     position: relative;
 }
 
 .step {
     text-align: center;
     margin: 20px;
-    max-width: 150px;
+    max-width: 250px;
 }
 
 .step-number {
@@ -487,16 +495,44 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
     align-items: center;
     justify-content: center;
     margin: 0 auto 10px;
+    position: relative;
 }
 
 .step-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .step-description {
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.circle-container {
+    position: absolute;
+    top: 0px;
+    /* Adjust as needed */
+    left: 200px;
+    /* Adjust as needed */
+    display: flex;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 .process-dots {
