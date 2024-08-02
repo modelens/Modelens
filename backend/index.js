@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const User = require('./models/user'); 
 const Session = require('./models/session');
+// const sendWelcomeEmail=require('./config/sendEmail');
 const port = 8080;
 
 require('dotenv').config();
@@ -121,6 +122,7 @@ app.post('/signup', async (req, res) => {
 
         const token = jwt.sign({ id: user._id }, secretKey);
         console.log('Registered user token:', token);
+        // sendWelcomeEmail(email);
         res.json({ token });
     } catch (err) {
         console.error(err);
@@ -170,6 +172,9 @@ app.get('/admin/logout', (req, res) => {
     res.status(401).send('You have been logged out. Please login again.');
 });
 
+app.get('/check',async(req,res)=>{
+    res.send('dekh');
+});
 
 app.get('/user', verifyToken, async (req, res) => {
     try {
