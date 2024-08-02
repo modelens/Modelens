@@ -30,9 +30,9 @@
         background-position: top 70%;
         position: absolute;
         top: 10px;
-        left: 20%;
-        width: 60%;
-        height: 21%;
+        left: 15%;
+        width: 70%;
+        height: 16%;
         border-radius: 30px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         transform: rotateX(5deg) translateZ(50px);
@@ -51,7 +51,7 @@
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;
         width: 80%;
-        margin-top: 31%;
+        margin-top: 36%;
         margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -148,38 +148,52 @@
     }
 
     .img2 {
-        background-image: url(images/portfolio/gold.mp4);
         background-size: cover;
-        height: 500px;
-        width: 60%;
-
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border: #000000;
         border-radius: 30px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        background-position: top 20%;
+        background-position: top;
+        position: relative;
+        width: 80%;
+        height: 600px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transform: rotateX(7deg) translateZ(50px);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img2:hover {
+        transform: rotateY(0deg) translateZ(60px) scale(1.05);
     }
 
     .img3 {
-        background-clip: url(images/portfolio/gold3.jpg);
         background-size: cover;
-        height: 500px;
-        width: 60%;
-
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         border: #000000;
         border-radius: 30px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        background-position: top 20%;
+        background-position: top;
+        position: relative;
+        width: 70%;
+        height: 900px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transform: rotateX(7deg) translateZ(50px);
+        transition: transform 0.3s ease-in-out;
     }
 
-    img {
-        width: 400px;
-        height: 300px;
+    .img3:hover {
+        transform: rotateY(0deg) translateZ(60px) scale(1.05);
+    }
+
+    .portfoliocontainer img {
+        width: 550px;
+        height: 800px;
         margin: 10px;
         border: 10px solid black;
         object-fit: cover;
@@ -187,13 +201,12 @@
         transition-duration: 1s;
     }
 
-    img:hover {
+    .portfoliocontainer img:hover {
         border: 5px solid black;
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
-        -webkit-filter: none;
-        filter: none;
+
     }
 
 
@@ -253,10 +266,8 @@
                     well as on posters and banners for her newly opening makeup studio.
                 </p>
             </div>
-            <div class="portfoliocontainer">
-                <img src="images/portfolio/bridal4.JPG">
-                <img src="images/portfolio/bridal3.JPG">
-            </div>
+            <div class="img3" style="background-image: url(images/portfolio/bridal\ shoot\ 5\ 2.JPG);"></div>
+
 
             <div class="section-container">
                 <h3 class="section-title">The Solution</h3>
@@ -284,7 +295,7 @@
                 <p class="section-content"><strong>Consistent and Cohesive Theme:</strong><br>
                     The photoshoot maintained a consistent and cohesive visual style...</p>
             </div>
-
+            <div class="img2" style="background-image: url(images/portfolio/bridal5.JPG);"></div>
             <div class="section-container">
                 <h3 class="section-title">The Result</h3>
                 <p class="section-content"><br>
@@ -294,9 +305,8 @@
 
             </div>
             <div class="portfoliocontainer">
-                <img src="images/portfolio/bridal5.JPG">
-                <img src="images/portfolio/bridal2.JPG">
-
+                <img src="images/portfolio/bridal4.JPG">
+                <img src="images/portfolio/bridal3.JPG">
             </div>
         </div>
         </div>
