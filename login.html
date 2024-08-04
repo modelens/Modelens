@@ -389,7 +389,7 @@
                 showAlert('Signup successful! You can now log in using your details.', 'success');
                 // Remove the query parameter from the URL after showing the alert
                 window.history.replaceState({}, document.title, window.location.pathname);
-            } else if (document.referrer && !document.referrer.includes('signup.html') && !document.referrer.includes('login.html') && !localStorage.getItem('referrer')) {
+            } else if (document.referrer && !document.referrer.includes('signup.html') && !document.referrer.includes('login.html')) {
                 // Store the referrer in localStorage if it's not the signup page and referrer is not already set
                 localStorage.setItem('referrer', document.referrer);
             }
