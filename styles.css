@@ -760,6 +760,30 @@ section {
     text-align: center;
 }
 
+.ContentHolder p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Show only two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.show-more-btn {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.show-more-btn:hover {
+    background-color: #5a0dab;
+}
+
 @media (max-width: 638px) {
     .swiper-container {
         width: 100%;
