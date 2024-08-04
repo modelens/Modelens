@@ -69,7 +69,7 @@
             <p>With over five years of experience in the beauty industry, Anshika has honed her craft to become a
                 sought-after professional makeup artist. Known for her exceptional talent and attention to detail, she
                 has worked with a diverse clientele, including brides, models, and celebrities.</p>
-            <a href="#" class="book-now-btn">Book Now</a>
+            <button class="book-now-btn" id="bookNowBtn" onclick="checkLoggedIn()">Book Now</button>
         </div>
     </div>
 
@@ -107,6 +107,19 @@
         </div>
     </footer>
 
+     <!-- The Modal -->
+     <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Booking Confirmation</h2>
+            <!-- <p>Are you sure you want to book this model?</p> -->
+            <div class="modal-buttons">
+                <button class="cancel-btn" id="cancelBtn">Cancel</button>
+                <button class="confirm-btn" id="confirmBtn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
     <script src="script.js"></script>
@@ -118,7 +131,7 @@
             document.getElementById('mainImage').src = imageUrl;
         }
     </script>
-
+    <script src="models.js"></script>
 </body>
 
 </html>

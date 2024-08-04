@@ -104,5 +104,68 @@
 }
 
 .container {
-    margin-top: 13vh;
+    margin-top: 10vh;
+}
+
+/* Adjusted modal styles for fixed position */
+.modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    /* Adjust this value as needed */
+    right: 20px;
+    /* Adjust this value as needed */
+    width: 300px;
+    /* Adjust width as needed */
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Darker background for better visibility */
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-buttons .cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-buttons .confirm-btn {
+    background-color: #6a1b9a;
+    color: white;
 }
