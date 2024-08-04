@@ -64,7 +64,7 @@
             <i class="fas fa-star empty-star"></i>
         </div>
         <p>A seasoned fashion model, he is acclaimed for his versatility and dynamic presence on the runway. With more than five years of experience, he has worked with leading designers and top brands, effortlessly transitioning between high fashion and casual looks. His strong features, confident demeanor, and ability to embody a wide range of styles have made him a highly sought-after figure in the fashion industry.</p>
-        <a href="#" class="book-now-btn">Book Now</a>
+        <button class="book-now-btn" id="bookNowBtn" onclick="checkLoggedIn()">Book Now</button>
     </div>
 </div>
 
@@ -99,6 +99,19 @@
     </div>
 </footer>
 
+ <!-- The Modal -->
+ <div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Booking Confirmation</h2>
+        <!-- <p>Are you sure you want to book this model?</p> -->
+        <div class="modal-buttons">
+            <button class="cancel-btn" id="cancelBtn">Cancel</button>
+            <button class="confirm-btn" id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+</div>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="contact.js"></script>
 <script src="script.js"></script>
@@ -112,6 +125,7 @@
         mainImage.alt = altText;
     }
 </script>
+<script src="models.js"></script>
 
 </body>
 </html>
