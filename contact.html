@@ -12,6 +12,8 @@
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
         type="image/svg+xml">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -43,6 +45,22 @@
     </header>
 
     <main>
+        <div class="messagecont">
+            <div class="message">
+                <h2>Let’s make it a reality!</h2>
+                <p>
+                    We're excited to work with you soon! Please share your details & we'll get back in 2-3 working days!
+
+                </p>
+                <h5>Contact</h5>
+                <div class="logogmail"><i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:modelensofficial@gmail.com">
+                        modelensofficial@gmail.com
+                    </a>
+                </div>
+
+            </div>
+        </div>
         <div class="contact-container">
             <form id="registration-form">
                 <h1>Get in Touch</h1>
@@ -53,7 +71,8 @@
                 <h4>Mobile no.</h4>
                 <input type="text" id="mobile" placeholder="Mobile" required>
                 <h4>Organisation's link</h4>
-
+                <input type="text" id="link" placeholder="Organization's Name, Website Link" required>
+                <h4>What services are you interested in?</h4>
                 <div class="check" id="services">
                     <div>
                         <input type="checkbox" id="brandphotoshoot" name="brandphotoshoot" />
@@ -111,18 +130,7 @@
 
 
 
-        <div class="messagecont">
-            <div class="message">
-                <h2>Let’s make it a reality!</h2>
-                <p>
 
-                </p>
-                <p>Contact</p>
-                <a href="mailto:modelensofficial@gmail.com">
-                    modelensofficial@gmail.com
-                </a>
-            </div>
-        </div>
 
     </main>
     <div class="line"></div>
@@ -238,14 +246,14 @@
 
             // Construct the mailto link
             const gmaillink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
-            const gmailWindow=window.open(gmaillink, '_blank');
-            const checkWindowClosed=setInterval(()=>{
-                if(gmailWindow.closed){
+            const gmailWindow = window.open(gmaillink, '_blank');
+            const checkWindowClosed = setInterval(() => {
+                if (gmailWindow.closed) {
                     clearInterval(checkWindowClosed);
                     alert('Thanks for your message! \n We’ll get back to you soon.');
                     window.location.href = 'index.html';
                 }
-            },1000);
+            }, 1000);
         });
 
     </script>

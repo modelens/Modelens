@@ -2,9 +2,9 @@ function checkLoggedIn() {
     const token = localStorage.getItem('token');
     if (!token) {
         alert('Please login to book this service.');
-        window.location.href = 'login.html'; 
+        window.location.href = 'login.html';
     } else {
-        window.location.href='register.html';// Replace with your actual booking logic
+        window.location.href = 'register.html';// Replace with your actual booking logic
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,3 +77,22 @@ function queryResizer() {
     swiper.update();
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+    showMoreButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const contentHolder = this.previousElementSibling;
+            if (this.textContent === 'Show More') {
+                contentHolder.style.display = '-webkit-box';
+                contentHolder.style.webkitLineClamp = 'initial'; /* Show all lines */
+                this.textContent = 'Show Less';
+            } else {
+                contentHolder.style.display = '-webkit-box';
+                contentHolder.style.webkitLineClamp = 2; /* Show only two lines */
+                this.textContent = 'Show More';
+            }
+        });
+    });
+});
