@@ -112,60 +112,114 @@
     display: none;
     position: fixed;
     bottom: 20px;
-    /* Adjust this value as needed */
     right: 20px;
-    /* Adjust this value as needed */
     width: 300px;
-    /* Adjust width as needed */
     height: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Darker background for better visibility */
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for better visibility */
     border-radius: 8px;
     z-index: 1000;
 }
 
+/* Style for the modal content */
 .modal-content {
     background-color: #1c1c1c;
-    padding: 20px;
+    padding: 15px; /* Padding around the content */
     color: white;
     border-radius: 8px;
     text-align: center;
 }
 
+/* Style for the close button */
 .close {
     color: #aaa;
     float: right;
-    font-size: 20px;
+    font-size: 18px; /* Font size for the close button */
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: white;
     text-decoration: none;
-    cursor: pointer;
 }
 
+/* Style for the modal heading */
+.modal-content h2 {
+    margin: 0; /* Remove margin to reduce gap */
+    font-size: 18px; /* Adjust size if needed */
+}
+
+/* Style for the modal body text */
+.modal-content p {
+    margin: 5px 0; /* Reduced margin between heading and user details */
+    font-size: 14px; /* Font size for the details */
+}
+
+/* Style for buttons container */
 .modal-buttons {
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+    justify-content: center; /* Adjust spacing between buttons */
+    margin-top: 10px; /* Reduced margin for spacing from content */
 }
 
+/* Style for buttons */
 .modal-buttons button {
-    padding: 8px 16px;
+    padding: 8px 12px; /* Padding for buttons */
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 14px; /* Font size for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+
+/* Style for cancel button */
 .modal-buttons .cancel-btn {
     background-color: #f44336;
     color: white;
 }
 
+.modal-buttons .cancel-btn {
+    margin-right: 1.5vw; /* Adjust as needed */
+}
+
+
+.modal-buttons .cancel-btn:hover {
+    background-color: #d32f2f; /* Darker shade on hover */
+}
+
+/* Style for confirm button */
 .modal-buttons .confirm-btn {
     background-color: #6a1b9a;
     color: white;
+}
+
+.modal-buttons .confirm-btn:hover {
+    background-color: #4a148c; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .modal {
+        width: 90%; /* Make modal take up more width on small screens */
+        bottom: 10px; /* Adjust bottom position */
+        right: 10px; /* Adjust right position */
+    }
+
+    .modal-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .modal-content h2 {
+        font-size: 16px; /* Adjust font size for heading */
+    }
+
+    .modal-content p {
+        font-size: 12px; /* Adjust font size for details */
+    }
+
+    .modal-buttons button {
+        font-size: 12px; /* Adjust font size for buttons */
+    }
 }
