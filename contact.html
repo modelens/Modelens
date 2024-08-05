@@ -224,6 +224,7 @@
             const email = document.getElementById('email').value;
             const mobile = document.getElementById('mobile').value;
             const message = document.querySelector('textarea').value;
+            const OrganizationLink=document.getElementById('link').value;
 
             // Get selected services and heard about us data
             const selectedServices = Array.from(document.querySelectorAll('#services input:checked'))
@@ -239,6 +240,7 @@
                 `Full Name: ${fullname}\n` +
                 `Email: ${email}\n` +
                 `Mobile: ${mobile}\n` +
+                `Organization Links: ${OrganizationLink}\n` + 
                 `Message: ${message}\n` +
                 `Selected Services: ${selectedServices}\n` +
                 `Heard About Us: ${heardAboutUs}`
