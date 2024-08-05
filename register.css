@@ -231,6 +231,29 @@ select {
     box-sizing: border-box;
 }
 
+#role,#makeup-artist-level,#model-level,#photographer-type {
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+  font-size: 14px;
+    padding-right: 30px;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+                      linear-gradient(135deg, gray 50%, transparent 50%),
+                      linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) center, /* Position for the arrow */
+                        calc(100% - 15px) center, /* Adjust as needed */
+                        calc(100% - 2.5em) 0.5em;
+    background-size: 8px 8px, 8px 8px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+#role::-ms-expand {
+    display: none;
+    /* Remove default arrow in IE */
+}
+
 /* Optional: If dropdowns are contained in divs, make sure these divs are also full width */
 #photographer-options,
 #model-options,
@@ -241,6 +264,7 @@ select {
 
 /* Option styling */
 option {
-    color: #ffffff; /* White text color for options */
+    color: #ffffff;
+    /* White text color for options */
     background-color: #444444;
 }
