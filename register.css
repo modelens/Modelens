@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    /* Black color */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    color: #ffffff;
+    /* White color */
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.dropdown {
+    display: none;
+    /* Hide dropdown by default */
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    /* Darker grey background */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+    /* Slightly lighter grey */
+}
+
+.dropdown-toggle::after {
+    content: '▼';
+    /* Add an arrow to indicate dropdown */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+body {
+    background-color: #000000;
+    /* Solid black background */
+    color: #ffffff;
+    /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p.intro-text {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #333333;
+    /* Dark grey background for the form */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 380px;
+    margin-top: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    /* White text */
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    /* Darker border for inputs */
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    color: #ffffff;
+    /* White text */
+    background-color: #222222;
+    /* Darker background for inputs */
+}
+
+input::placeholder {
+    color: #888;
+    /* Light grey placeholder text */
+    font-style: italic;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .nav-left,
+    .nav-right {
+        display: none;
+        /* Hide original nav items */
+    }
+
+    .dropdown {
+        display: block;
+        /* Show dropdown on small screens */
+    }
+
+    .dropdown-toggle {
+        color: #007BFF;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+        /* Make dropdown take full width */
+        box-shadow: none;
+        /* Remove box-shadow on small screens */
+    }
+
+    .dropdown-content a {
+        padding: 12px;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .dropdown {
+        display: none;
+        /* Hide dropdown on larger screens */
+    }
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    background-color: #6f42c1;
+    /* Purple color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #5a2d8c;
+    /* Darker purple on hover */
+}
+
+/* Ensure all select elements have the same width */
+select {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 0.9rem;
+    width: 100%;
+    /* Make sure all dropdowns have full width */
+    box-sizing: border-box;
+}
+
+/* Optional: If dropdowns are contained in divs, make sure these divs are also full width */
+#photographer-options,
+#model-options,
+#makeup-artist-options {
+    width: 100%;
+    /* Ensure these containers are full width */
+}
+
+/* Option styling */
+option {
+    color: #ffffff; /* White text color for options */
+    background-color: #444444;
+}

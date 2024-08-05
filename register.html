@@ -7,226 +7,7 @@
     <title>Register - Modelens</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-        header {
-            font-family: 'Poppins', sans-serif;
-            background-color: #000000;
-            /* Black color */
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .nav-left,
-        .nav-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-left a,
-        .nav-right a {
-            color: #ffffff;
-            /* White color */
-            text-decoration: none;
-            padding: 14px 16px;
-        }
-
-        .nav-left a:hover,
-        .nav-right a:hover {
-            text-decoration: underline;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
-        .dropdown {
-            display: none;
-            /* Hide dropdown by default */
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333333;
-            /* Darker grey background */
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            right: 0;
-            border-radius: 6px;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 1rem;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757;
-            /* Slightly lighter grey */
-        }
-
-        .dropdown-toggle::after {
-            content: '▼';
-            /* Add an arrow to indicate dropdown */
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-
-        body {
-            background-color: #000000;
-            /* Solid black background */
-            color: #ffffff;
-            /* White text */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Poppins', sans-serif;
-            padding-top: 70px;
-        }
-
-        h2 {
-            text-align: center;
-            color: white;
-            margin: 0.5rem 0;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        p.intro-text {
-            text-align: center;
-            color: white;
-            font-size: 1rem;
-            max-width: 400px;
-            line-height: 1.5;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #333333;
-            /* Dark grey background for the form */
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            width: 380px;
-            margin-top: 1rem;
-        }
-
-        label {
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-            /* White text */
-            font-weight: bold;
-            text-align: left;
-            width: 100%;
-        }
-
-        input {
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #444;
-            /* Darker border for inputs */
-            border-radius: 6px;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 0.9rem;
-            color: #ffffff;
-            /* White text */
-            background-color: #222222;
-            /* Darker background for inputs */
-        }
-
-        input::placeholder {
-            color: #888;
-            /* Light grey placeholder text */
-            font-style: italic;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-
-            .nav-left,
-            .nav-right {
-                display: none;
-                /* Hide original nav items */
-            }
-
-            .dropdown {
-                display: block;
-                /* Show dropdown on small screens */
-            }
-
-            .dropdown-toggle {
-                color: #007BFF;
-            }
-
-            .dropdown-content {
-                min-width: 100%;
-                /* Make dropdown take full width */
-                box-shadow: none;
-                /* Remove box-shadow on small screens */
-            }
-
-            .dropdown-content a {
-                padding: 12px;
-                font-size: 1rem;
-                text-align: center;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .dropdown {
-                display: none;
-                /* Hide dropdown on larger screens */
-            }
-        }
-
-        button {
-            padding: 0.8rem 1.2rem;
-            background-color: #6f42c1;
-            /* Purple color */
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background-color: #5a2d8c;
-            /* Darker purple on hover */
-        }
-    </style>
+    <link rel="stylesheet" href="register.css">
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjc1MDlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
         type="image/svg+xml">
@@ -280,6 +61,40 @@
 
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone">
+        <label for="role">You're registering as?</label>
+        <select id="role" name="role" required>
+            <option value="">Select your role</option>
+            <option value="model">Model</option>
+            <option value="photographer">Photographer</option>
+            <option value="makeup_artist">Makeup Artist</option>
+        </select>
+
+        <div id="photographer-options" style="display: none;">
+            <label for="photographer-type">Photographer Type</label>
+            <select id="photographer-type" name="photographer-type">
+                <option value="dslr">DSLR</option>
+                <option value="android">Android</option>
+                <option value="iphone">iPhone</option>
+            </select>
+        </div>
+
+        <div id="model-options" style="display: none;">
+            <label for="model-level">Model Level</label>
+            <select id="model-level" name="model-level">
+                <option value="professional">Professional</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="fresher">Fresher</option>
+            </select>
+        </div>
+
+        <div id="makeup-artist-options" style="display: none;">
+            <label for="makeup-artist-level">Makeup Artist Level</label>
+            <select id="makeup-artist-level" name="makeup-artist-level">
+                <option value="professional">Professional</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="fresher">Fresher</option>
+            </select>
+        </div>
         <button type="submit">Register</button>
     </form>
     <script src="config.js"></script>
@@ -333,19 +148,46 @@
                 alert('Please enter a valid email address.');
                 return;
             }
+            const role = document.getElementById('role').value;
+            let roleText = '';
+            let additionalInfo = '';
+            switch (role) {
+                case 'photographer':
+                    roleText = 'Photographer';
+                    additionalInfo = `Photographer Type: ${document.getElementById('photographer-type').value}`;
+                    break;
+                case 'model':
+                    roleText = 'Model';
+                    additionalInfo = `Model Level: ${document.getElementById('model-level').value}`;
+                    break;
+                case 'makeup_artist':
+                    roleText = 'Makeup Artist';
+                    additionalInfo = `Makeup Artist Level: ${document.getElementById('makeup-artist-level').value}`;
+                    break;
+                default:
+                    roleText = 'Unknown';
+                    additionalInfo = '';
+                    break;
+            }
             const subject = encodeURIComponent(`Event Registration: ${eventId}`);
             const body = encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nEvent ID: ${eventId}`
-            );
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nEvent ID: ${eventId}\nRegistering as: ${roleText}\n${additionalInfo}`
+    );
             const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=modelensofficial@gmail.com&su=${subject}&body=${body}`;
-            const gmailWindow=window.open(gmailLink, '_blank');
-            const checkWindowClosed=setInterval(()=>{
-                if(gmailWindow.closed){
+            const gmailWindow = window.open(gmailLink, '_blank');
+            const checkWindowClosed = setInterval(() => {
+                if (gmailWindow.closed) {
                     clearInterval(checkWindowClosed);
                     alert('Your registration has been submitted. You will now be redirected.');
                     window.location.href = 'index.html';
                 }
-            },1000);
+            }, 1000);
+        });
+        document.getElementById('role').addEventListener('change', function () {
+            const role = this.value;
+            document.getElementById('photographer-options').style.display = role === 'photographer' ? 'block' : 'none';
+            document.getElementById('model-options').style.display = role === 'model' ? 'block' : 'none';
+            document.getElementById('makeup-artist-options').style.display = role === 'makeup_artist' ? 'block' : 'none';
         });
     </script>
 
