@@ -569,34 +569,27 @@ section {
 /* Upcoming Events Section */
 #event-header {
     background-color: #000000;
-    /* Black background */
     color: #8A2BE2;
-    /* Bright purple text */
     padding: 50px 20px;
     text-align: center;
 }
 
 #event-header h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Increased font size */
     color: #8A2BE2;
-    /* Bright purple text */
 }
 
 #events {
     text-align: center;
     padding: 50px 20px;
-    /* Adjusted padding */
     background-color: #000000;
-    /* Black background */
     color: #ffffff;
-    /* White text */
 }
 
 #events header h2 {
+    font-size: 2.5em; /* Increased font size for "Upcoming Events" */
     color: #8A2BE2;
-    /* Bright purple for the header */
     margin-bottom: 40px;
-    /* Increased margin for more space below header */
 }
 
 .event-container {
@@ -604,21 +597,18 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    /* Increased gap between event cards */
 }
 
 .event {
     background-color: #1c1c1c;
-    /* Dark grey background for event cards */
     color: #ffffff;
-    /* White text for event details */
     padding: 30px;
-    /* Increased padding for event cards */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1 1 calc(45% - 40px);
     max-width: calc(45% - 40px);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Align text to the left */
 }
 
 .event:hover {
@@ -627,8 +617,8 @@ section {
 }
 
 .event h3 {
+    font-size: 1.8em; /* Larger than details but smaller than "Upcoming Events" */
     color: #8A2BE2;
-    /* Bright purple for event titles */
 }
 
 .event p {
@@ -637,18 +627,14 @@ section {
 
 .event strong {
     color: #9370DB;
-    /* Light purple for strong text */
 }
 
 .register-button {
     display: inline-block;
     padding: 15px 30px;
-    /* Increased padding for button */
     margin-top: 20px;
     background-color: #8A2BE2;
-    /* Bright purple for the button */
     color: #ffffff;
-    /* White text */
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -657,7 +643,6 @@ section {
 
 .register-button:hover {
     background-color: #9370DB;
-    /* Light purple for the button on hover */
 }
 
 
