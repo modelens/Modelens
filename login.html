@@ -238,92 +238,119 @@
         .alert {
             width: 350px;
             margin-bottom: 1rem;
-            padding: 1rem;
+            padding: 0.5rem;
             border-radius: 6px;
             color: white;
             font-weight: bold;
             position: relative;
             display: flex;
             align-items: center;
+            border: 2px solid #9c27b0;
+            /* Lighter purple border */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            /* Slightly larger text */
+            letter-spacing: 0.5px;
+            /* Subtle letter spacing */
+            animation: fadeIn 0.5s ease-in-out;
+            /* Entry animation */
         }
 
         .alert-success {
-            background-color: #6c757d;
-            /* Darker shade of purple */
+            background: linear-gradient(135deg, #a26cc8, #8e24aa);
+            /* Gradient for success */
         }
 
         .alert-danger {
-            background-color: #dc3545;
-            /* Red for error */
+            background: linear-gradient(135deg, #e08484, #e53935);
+            /* Gradient for danger */
         }
 
         .alert-success::before {
             content: '✔️';
             margin-right: 10px;
+            color: #00e676;
+            /* Bright green for success icon */
         }
 
         .alert-danger::before {
             content: '❌';
             margin-right: 10px;
+            color: #ff1744;
+            /* Bright red for danger icon */
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
         .spinner-container {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* Full width of the viewport */
-    height: 100vh;
-    /* Full height of the viewport */
-    background: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay to fade background */
-    z-index: 999;
-    /* Ensure it appears above other content */
-    visibility: hidden;
-    /* Hide visibility when not displayed */
-    opacity: 0;
-    /* Hide with opacity */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Smooth transition */
-}
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            /* Full width of the viewport */
+            height: 100vh;
+            /* Full height of the viewport */
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent overlay to fade background */
+            z-index: 999;
+            /* Ensure it appears above other content */
+            visibility: hidden;
+            /* Hide visibility when not displayed */
+            opacity: 0;
+            /* Hide with opacity */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            /* Smooth transition */
+        }
 
-.spinner-container.show {
-    display: flex;
-    /* Use flexbox to center spinner */
-    justify-content: center;
-    align-items: center;
-    /* Center horizontally and vertically */
-    visibility: visible;
-    /* Make visible */
-    opacity: 1;
-    /* Fully opaque */
-}
+        .spinner-container.show {
+            display: flex;
+            /* Use flexbox to center spinner */
+            justify-content: center;
+            align-items: center;
+            /* Center horizontally and vertically */
+            visibility: visible;
+            /* Make visible */
+            opacity: 1;
+            /* Fully opaque */
+        }
 
-.spinner {
-    border: 8px solid #f3f3f3;
-    /* Light gray border */
-    border-top: 8px solid #6f42c1;
-    /* Purple color for the spinning part */
-    border-radius: 50%;
-    width: 60px;
-    /* Slightly larger size */
-    height: 60px;
-    /* Slightly larger size */
-    animation: spin 1s linear infinite;
-    /* Continuous spinning animation */
-}
+        .spinner {
+            border: 8px solid #f3f3f3;
+            /* Light gray border */
+            border-top: 8px solid #6f42c1;
+            /* Purple color for the spinning part */
+            border-radius: 50%;
+            width: 60px;
+            /* Slightly larger size */
+            height: 60px;
+            /* Slightly larger size */
+            animation: spin 1s linear infinite;
+            /* Continuous spinning animation */
+        }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjc1MDlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
