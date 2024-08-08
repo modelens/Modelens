@@ -88,7 +88,8 @@ nav {
 
 
 body {
-    background-color: #000000;
+    background-image: linear-gradient(to bottom right, #6f42c1, #8a2be2, #9b30ff, #ba55d3, #9370db);
+    /* background-color: #000000; */
     /* Solid black background */
     color: #ffffff;
     /* White text */
@@ -104,6 +105,7 @@ h2 {
     text-align: center;
     color: white;
     margin: 0.5rem 0;
+    margin-top: 1rem;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -126,7 +128,8 @@ form {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     width: 380px;
-    margin-top: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 label {
