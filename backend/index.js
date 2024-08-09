@@ -165,10 +165,26 @@ app.get('/admin', basicAuth, async(req,res)=>{
     }
 });
 
+app.delete('/admin/delete/:id',basicAuth,async (req,res)=>{
+    try{
+        const userId=req.params.id;
+        const user = await User.findByIdAndDelete(userId);
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        res.status(200).json({ message: 'User deleted successfully' });
+    } 
+    catch(error){
+        console.error(error);
+        res.status(500).json({ error: 'Server Error' });
+    }
+});
+
 app.get('/admin/logout', (req, res) => {
     res.setHeader('WWW-Authenticate', 'Basic realm="401"');
     res.status(401).send('You have been logged out. Please login again.');
 });
+
 
 
 app.get('/user', verifyToken, async (req, res) => {
