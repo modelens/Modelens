@@ -1,10 +1,13 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f9f9f9;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Header styling */
 .header {
     display: flex;
     justify-content: space-between;
@@ -13,8 +16,17 @@ body {
     background-color: #333;
     color: white;
     border-bottom: 1px solid #444;
+    box-sizing: border-box; /* Ensure padding does not affect layout */
+    flex-wrap: wrap;
 }
 
+h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* Logout button styling */
 .logout-btn {
     padding: 8px 16px;
     background-color: #555;
@@ -30,22 +42,18 @@ body {
     background-color: #777;
 }
 
-h1 { 
-    flex: 1;
-    text-align: center;
-    margin: 0;
-}
-
+/* Table styling */
 .table-container {
     padding: 20px;
+    overflow-x: auto; /* Enable horizontal scroll if necessary */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    table-layout: fixed; /* Ensure consistent column width */
 }
 
 table, th, td {
@@ -53,8 +61,10 @@ table, th, td {
 }
 
 th, td {
-    padding: 6px;
+    padding: 5px; /* Increase padding for better readability */
     text-align: left;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 th {
@@ -69,6 +79,7 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Search container styling */
 .search-container {
     display: flex;
     flex-direction: row;
@@ -81,12 +92,14 @@ tr:hover {
 #searchInput {
     padding: 10px;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px; /* Increase max-width for larger screens */
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 0; /* Remove margin if causing extra space */
 }
 
+/* Pagination styling */
 .pagination {
     display: flex;
     justify-content: center;
@@ -115,49 +128,49 @@ tr:hover {
     text-decoration: underline;
 }
 
+/* Delete button styling */
 .delete-btn {
     background-color: transparent;
     border: 1px solid transparent;
     cursor: pointer;
-    padding: 3px 6px; /* Reduce padding for a more compact button */
+    padding: 3px 6px;
     color: red;
-    font-size: 10px; /* Slightly smaller font size */
+    font-size: 10px;
     text-align: center;
-    border-radius: 3px; /* Slightly reduce border radius */
+    border-radius: 3px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .delete-btn:hover {
     background-color: red;
     color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Lighter shadow for a more subtle effect */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     border-color: red;
 }
 
 .delete-btn:active {
     background-color: darkred;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on press */
-    transform: scale(0.90); /* Slightly less scale for a more subtle press effect */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(0.90);
 }
 
 .material-icons {
-    font-size: 18px; /* Slightly reduce icon size */
+    font-size: 18px;
     text-align: center;
     vertical-align: middle;
 }
 
-
-/* Modal styles */
+/* Modal styling */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1050; 
+    display: none;
+    position: fixed;
+    z-index: 1050;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
     padding-top: 50px;
     transition: opacity 0.3s ease;
 }
@@ -165,11 +178,11 @@ tr:hover {
 .modal-content {
     background-color: #fff;
     margin: 5% auto;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     border: none;
     width: 90%;
-    max-width: 350px;
+    max-width: 360px; /* Increase max-width for larger screens */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: slideIn 0.3s ease-out;
 }
@@ -211,7 +224,7 @@ tr:hover {
 }
 
 .modal-footer button {
-    background-color: #007BFF; /* Blue */
+    background-color: #007BFF;
     border: none;
     color: white;
     padding: 12px 24px;
@@ -226,19 +239,123 @@ tr:hover {
 }
 
 .modal-footer button:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
 .modal-footer button.cancel-btn {
-    background-color: #6c757d; /* Gray */
+    background-color: #6c757d;
 }
 
 .modal-footer button.cancel-btn:hover {
-    background-color: #5a6268; /* Darker gray */
+    background-color: #5a6268;
 }
 
 .modal-footer button:active {
     transform: scale(0.98);
 }
 
+/* Controls styling */
+.controls {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+/* Export button styling */
+.export-btn {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.export-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.export-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    #searchInput {
+        max-width: 100%;
+    }
+
+    .pagination button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .export-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    #searchInput {
+        padding: 8px;
+        max-width: 100%;
+    }
+
+    .pagination button {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+    .delete-btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .export-btn {
+        font-size: 12px;
+    }
+}

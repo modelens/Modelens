@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo=" type="image/svg+xml">
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
+        type="image/svg+xml">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
+
 <body>
     <div class="header">
         <h1>User Details</h1>
         <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="controls">
+        <button class="export-btn" onclick="exportTableToCSV('user_list.csv')">Export as CSV</button>
+        <button class="export-btn" onclick="exportTableToExcel()">Export as Excel</button>
     </div>
     <div class="search-container">
         <label for="searchInput">Search for names:</label>
@@ -31,21 +40,33 @@
         </thead>
         <tbody>
             <% let cnt=1; %>
-            <% users.forEach(user => { %>
-                <tr>
-                    <td><%= cnt++ %></td>
-                    <td><%= user.firstname %></td>
-                    <td><%= user.lastname %></td>
-                    <td><%= user.username %></td>
-                    <td><%= user.email %></td>
-                    <td><%= user.number %></td>
-                    <td>
-                        <button class="delete-btn" onclick="confirmDelete('<%= user._id %>')">
-                            <span class="material-icons">delete</span>
-                        </button>
-                    </td>                    
-                </tr>
-            <% }); %>
+                <% users.forEach(user=> { %>
+                    <tr>
+                        <td>
+                            <%= cnt++ %>
+                        </td>
+                        <td>
+                            <%= user.firstname %>
+                        </td>
+                        <td>
+                            <%= user.lastname %>
+                        </td>
+                        <td>
+                            <%= user.username %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <%= user.number %>
+                        </td>
+                        <td>
+                            <button class="delete-btn" onclick="confirmDelete('<%= user._id %>')">
+                                <span class="material-icons">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <% }); %>
         </tbody>
     </table>
     <div class="pagination">
@@ -157,8 +178,64 @@
             }
         }
 
+        // Function to export table data as CSV
+        function exportTableToCSV(filename) {
+            const rows = Array.from(document.querySelectorAll('#userTable tbody tr')); // Select all rows
+            let csvContent = "";
+
+            rows.forEach((row) => {
+                const cols = row.querySelectorAll("td:not(:last-child)"); // Exclude the last column (Action)
+                const rowContent = [];
+                cols.forEach((col) => {
+                    const text = col.innerText.trim().replace(/[\r\n]+/g, " "); // Trim spaces/newlines and remove extra newlines
+                    rowContent.push(`"${text}"`);
+                });
+                csvContent += rowContent.join(",") + "\n";
+            });
+
+            const blob = new Blob([csvContent], { type: "text/csv" });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.setAttribute("href", url);
+            a.setAttribute("download", filename);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+
+
+        function exportTableToExcel(filename = 'user_list.xlsx') {
+            const rows = Array.from(document.querySelectorAll('#userTable tbody tr')); // Select all rows
+            const data = [];
+            const headers = ['S.no', 'First Name', 'Last Name', 'Username', 'Email', 'Phone Number'];
+
+            data.push(headers); // Add headers
+
+            rows.forEach(row => {
+                const rowData = Array.from(row.cells).slice(0, -1).map((cell, index) => {
+                    let text = cell.innerText.trim().replace(/[\r\n]+/g, " "); // Trim spaces/newlines and remove extra newlines
+                    if (index === 5) {
+                        return `${text}`; // Format phone number as text
+                    }
+                    return text;
+                });
+                data.push(rowData);
+            });
+
+            const ws = XLSX.utils.aoa_to_sheet(data);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Users");
+
+            XLSX.writeFile(wb, filename);
+        }
+
+
+
+
+
         // Initialize pagination
         displayPage(currentPage);
     </script>
 </body>
+
 </html>
