@@ -1,5 +1,4 @@
 /* Reset default margin and padding */
-
 * {
     margin: 0;
     padding: 0;
@@ -904,3 +903,96 @@ footer {
         opacity: 0;
     }
 }
+
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left, .nav-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 150px; /* Adjust logo size */
+        margin: 0 auto 15px auto;
+    }
+
+    .service-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-link {
+        margin-bottom: 15px;
+    }
+
+    .work-gallery ul.results {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result {
+        margin-bottom: 15px;
+    }
+
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .process-steps .step {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .overlay h1 {
+        font-size: 24px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .company-logo {
+        width: 80%; /* Adjust company logo size */
+    }
+
+    .step-title {
+        font-size: 18px;
+    }
+
+    .step-description {
+        font-size: 14px;
+    }
+}
+
+
