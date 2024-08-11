@@ -913,12 +913,12 @@ body {
     box-sizing: border-box;
 }
 
-header nav {
+/* header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-}
+} */
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
