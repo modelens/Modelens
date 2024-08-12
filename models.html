@@ -38,10 +38,25 @@
 
 
         .service-wrapper {
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card img {
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.service-wrapper.active .service-card img {
+    opacity: 1;
+}
+
+.service-wrapper.inactive .service-card img {
+    opacity: 0;
+}
+
 
         .service-card {
             width: 100%;
@@ -186,30 +201,30 @@
     <h1>Models</h1>
 
     <section class="services-container">
-        <!-- Service Cards for Models -->
-        <div class="service-wrapper">
-
-            <div class="service-card">
-                <img src="images/tarif.jpg" alt="Model 1">
-
-            </div>
-            <div class="service-details">
-                <h3>Mohammad Tousif</h3>
-                <div class="star-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-            </div>
-
-            <div class="book-now-container">
-                <a href="tousif.html" style="text-decoration: none; color: inherit;">
-                    <button class="book-now">Book Now</button>
-                </a>
+    <div class="service-wrapper" id="model1">
+        <div class="service-card">
+            <img src="images/tarif.jpg" alt="Model 1">
+        </div>
+        <div class="service-details">
+            <h3>Mohammad Tousif</h3>
+            <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
             </div>
         </div>
+        <div class="book-now-container">
+            <a href="tousif.html" style="text-decoration: none; color: inherit;">
+                <button class="book-now">Book Now</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Repeat similar structure for other models -->
+</section>
+
 
         <!-- Repeat similar structure for the next 3 containers -->
         <!-- Container 2 -->
@@ -744,6 +759,32 @@
     <script src="services.js"></script>
     <script src="config.js"></script>
     <script src="login-signup.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const serviceWrappers = document.querySelectorAll('.service-wrapper');
+        let currentIndex = 0;
+
+        function showNextModel() {
+            serviceWrappers[currentIndex].classList.remove('active');
+            serviceWrappers[currentIndex].classList.add('inactive');
+            
+            currentIndex = (currentIndex + 1) % serviceWrappers.length;
+            
+            serviceWrappers[currentIndex].classList.remove('inactive');
+            serviceWrappers[currentIndex].classList.add('active');
+        }
+
+        // Initially show the first model
+        serviceWrappers[currentIndex].classList.add('active');
+
+        // Attach click event to buttons to change models
+        document.querySelectorAll('.book-now').forEach(button => {
+            button.addEventListener('click', showNextModel);
+        });
+    });
+</script>
+
 </body>
 
 </html>
