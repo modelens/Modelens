@@ -848,6 +848,16 @@ footer {
     margin-top: 10px;
 }
 
+.footer2 {
+    height: auto;
+    padding: 20px;
+}
+
+.footersection div {
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .logoimg {
     background-image: url(images/M\ logo.jpeg);
@@ -995,5 +1005,30 @@ header nav {
     }
 }
 
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .main-item {
+        width: 100%;
+        padding: 15px;
+    }
 
+    .hero-button {
+        font-size: 0.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-item {
+        width: 100%;
+    }
+
+    .hero-button {
+        font-size: 0.9rem;
+    }
+}
 
