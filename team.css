@@ -8,11 +8,12 @@
 }
 
 body {
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: black;
     color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .heading {
@@ -40,7 +41,7 @@ h1 {
 }
 
 .container {
-    min-height: 80vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,27 +54,51 @@ h1 {
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    flex-wrap: wrap;
     display: flex;
+    justify-content: space-between;
+}
 
+.founder-section {
+    width: 500px;
+    /* Adjust the width of the left section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
+    /* Center text */
 }
 
 .founder {
     background-image: url(images/Kashish\ Raizada\ _\ Founder\ &\ CEO.jpg);
     background-size: cover;
+    background-position: center;
     height: 350px;
-    width: 300px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
+    width: 2000px;
+    /* Make the image full-width within its container */
+    border-radius: 10px;
+}
+
+.foundername {
+    margin-top: 20px;
+    width: 100%;
+    /* Ensure the name takes full width */
+}
+
+.foundername h5 {
+    font-size: 18px;
+    margin: 0;
+    /* Remove any default margin */
+}
+
+.foundername p {
+    margin: 5px 0 0 0;
+    /* Adjust margin for proper spacing */
 }
 
 .aboutfounder {
-    width: calc(50% - 20px);
-    margin: 0 auto;
+    width: 60%;
+    /* Take up more space for the text */
     margin-top: 15px;
 }
 
@@ -81,21 +106,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-.foundername {
-    display: block;
-    width: calc(50% - 50px);
-    margin-top: 5px;
-    float: left;
-    margin-left: 90px;
-}
 
-.foundername h5 {
-    font-size: 18px;
-}
-
-.foundername p {
-    margin-left: 10px;
-}
 
 
 .containerblock {
@@ -271,4 +282,150 @@ ul div a img {
     width: 100%;
     background-color: white;
     margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+
+    h2,
+    h1 {
+        font-size: 24px;
+        width: 90%;
+    }
+
+    .container header {
+        width: 90%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founder {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .aboutfounder,
+    .foundername {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .containerblock {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teamblock {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .team-image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoimg {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    h2,
+    h1 {
+        font-size: 32px;
+        width: 30%;
+    }
+
+    .container header {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .founder {
+        width: 45%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .aboutfounder,
+    .foundername {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    .containerblock {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .card {
+        margin-left: 0;
+        padding: 25px;
+        align-items: center;
+    }
+
+    .team-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logoimg {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .container header {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .founder {
+        width: 40%;
+    }
+
+    .aboutfounder,
+    .foundername {
+        width: calc(50% - 20px);
+    }
+
+    .containerblock {
+        justify-content: space-evenly;
+    }
+
+    .team-image-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logoimg {
+        height: 200px;
+        width: 200px;
+    }
 }
