@@ -15,29 +15,87 @@ body {
     color: #fff;
 }
 
-/*Fixed Header*/
+/* Base styles for the fixed header */
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #333; /* Background color for the header */
+    color: #fff; /* Text color */
+    padding: 1rem; /* Padding around the header content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-*/ body {
-    padding-top: 56px;
+/* Ensure body content doesn't get hidden behind the fixed header */
+body {
+    padding-top: 56px; /* Adjust this value based on your header height */
 }
 
-@media (max-width: 768px) {
+/* Media queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 992px) {
     .navbar-brand {
         font-size: 1.5rem;
     }
 
     .navbar-nav .nav-link {
-        font-size: 1rem;
+        font-size: 0.875rem; /* Slightly smaller font size */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-align nav links */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show menu toggle button for smaller screens */
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide the nav menu by default */
+    }
+
+    .navbar-collapse.show {
+        display: block; /* Show the nav menu when toggled */
     }
 }
 
+/* For mobile screens */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.75rem; /* Smaller font size for mobile */
+    }
+
+    .fixed-header {
+        padding: 0.5rem; /* Reduced padding */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.75rem; /* Consistent with the previous media query */
+    }
+
+    .fixed-header {
+        padding: 0.25rem; /* Minimal padding */
+    }
+}
 
 
 h4 {
