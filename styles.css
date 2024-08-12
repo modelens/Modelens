@@ -16,7 +16,7 @@ body {
 }
 
 /* Base styles for the fixed header */
-.fixed-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
