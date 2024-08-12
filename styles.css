@@ -1004,31 +1004,253 @@ header nav {
         font-size: 14px;
     }
 }
+/* For small phones (320px and up) */
+@media (max-width: 320px) {
+    .fixed-header {
+        font-size: 0.8rem;
+    }
 
-/* Mobile Phones */
-@media (max-width: 480px) {
+    h4 {
+        font-size: 30px;
+    }
+
     .main-item {
         width: 100%;
         padding: 15px;
     }
 
-    .hero-button {
-        font-size: 0.8rem;
+    .maincard {
+        padding: 15px;
+        margin-left: 15px;
     }
 
-    .navbar-brand {
-        font-size: 1.2rem;
+    .video-container {
+        height: 400px;
+    }
+
+    .overlay h1 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .portfolio-item {
+        width: 90%;
+    }
+
+    .project-container {
+        padding: 20px;
+    }
+
+    .event {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footersection div {
+        flex-direction: column;
     }
 }
 
-/* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+
+
+/* For medium phones (480px and up) */
+@media (max-width: 480px) {
+    .fixed-header {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 40px;
+    }
+
     .main-item {
         width: 100%;
+        padding: 20px;
+    }
+
+    .maincard {
+        padding: 20px;
+        margin-left: 20px;
+    }
+
+    .video-container {
+        height: 500px;
+    }
+
+    .overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.2rem;
     }
 
     .hero-button {
-        font-size: 0.9rem;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .portfolio-item {
+        width: 45%;
+    }
+
+    .project-container {
+        padding: 30px;
+    }
+
+    .event {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* For tablets (768px and up) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 45px;
+    }
+
+    .main-item {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .maincard {
+        padding: 25px;
+        margin-left: 25px;
+    }
+
+    .video-container {
+        height: 600px;
+    }
+
+    .overlay h1 {
+        font-size: 2.8rem;
+    }
+
+    .overlay p {
+        font-size: 1.3rem;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+
+    .portfolio-item {
+        width: 30%;
+    }
+
+    .event {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+/* For larger tablets and small desktops (1024px and up) */
+@media (max-width: 1024px) {
+    .navbar-brand {
+        font-size: 1.75rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 50px;
+    }
+
+    .main-item {
+        width: 85%;
+    }
+
+    .maincard {
+        padding: 30px;
+        margin-left: 30px;
+    }
+
+    .video-container {
+        height: 650px;
+    }
+
+    .overlay h1 {
+        font-size: 3rem;
+    }
+
+    .overlay p {
+        font-size: 1.4rem;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 1.2rem;
+    }
+
+    .portfolio-item {
+        width: 25%;
+    }
+}
+
+/* For large desktops (1440px and up) */
+@media (min-width: 1440px) {
+    .fixed-header {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 60px;
+    }
+
+    .main-item {
+        width: 80%;
+    }
+
+    .maincard {
+        padding: 35px;
+        margin-left: 35px;
+    }
+
+    .video-container {
+        height: 700px;
+    }
+
+    .overlay h1 {
+        font-size: 3.5rem;
+    }
+
+    .overlay p {
+        font-size: 1.5rem;
+    }
+
+    .hero-button {
+        padding: 16px 32px;
+        font-size: 1.3rem;
+    }
+
+    .portfolio-item {
+        width: 20%;
     }
 }
 
