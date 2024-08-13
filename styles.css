@@ -15,29 +15,35 @@ body {
     color: #fff;
 }
 
-/*Fixed Header*/
-.fixed-header {
+/* Base styles for the fixed header */
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #333;
+    /* Background color for the header */
+    color: #fff;
+    /* Text color */
+    padding: 1rem;
+    /* Padding around the header content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional shadow */
 }
 
-*/ body {
+/* Ensure body content doesn't get hidden behind the fixed header */
+body {
     padding-top: 56px;
+    /* Adjust this value based on your header height */
 }
 
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
+/* Media queries for responsiveness */
 
-    .navbar-nav .nav-link {
-        font-size: 1rem;
-    }
-}
-
+/* For tablets and smaller screens */
 
 
 h4 {
@@ -143,14 +149,6 @@ h4 {
     margin-bottom: 20px;
 }
 
-/* Media Queries for Header */
-@media (max-width: 600px) {
-
-    .nav-left a,
-    .nav-right a {
-        padding: 10px 12px;
-    }
-}
 
 /* Ensure the video covers the entire container */
 .video-container {
@@ -574,7 +572,8 @@ section {
 }
 
 #event-header h1 {
-    font-size: 3em; /* Increased font size */
+    font-size: 3em;
+    /* Increased font size */
     color: #8A2BE2;
 }
 
@@ -586,7 +585,8 @@ section {
 }
 
 #events header h2 {
-    font-size: 2.5em; /* Increased font size for "Upcoming Events" */
+    font-size: 2.5em;
+    /* Increased font size for "Upcoming Events" */
     color: #8A2BE2;
     margin-bottom: 40px;
 }
@@ -607,7 +607,8 @@ section {
     flex: 1 1 calc(45% - 40px);
     max-width: calc(45% - 40px);
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
 }
 
 .event:hover {
@@ -616,7 +617,8 @@ section {
 }
 
 .event h3 {
-    font-size: 1.8em; /* Larger than details but smaller than "Upcoming Events" */
+    font-size: 1.8em;
+    /* Larger than details but smaller than "Upcoming Events" */
     color: #8A2BE2;
 }
 
@@ -839,13 +841,23 @@ footer {
     align-items: center;
     gap: 20px;
     height: 30px;
-
-}
+    flex-direction: row;
+}   
 
 .footersection div a img {
     height: auto;
     width: 25px;
     margin-top: 10px;
+}
+
+.footer2 {
+    height: auto;
+    padding: 20px;
+}
+
+.footersection div {
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -918,81 +930,154 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-} */
+}  */
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        align-items: flex-start;
+/* Base styles for mobile (up to 600px) */
+
+/* Medium devices (600px to 1024px) */
+
+@media (max-width: 768px) {
+    #event-header h2 {
+        font-size: 1.8em;
     }
 
-    .nav-left, .nav-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 10px;
+    .event-container {
+        flex-direction: row;
     }
 
-    .logo img {
-        width: 150px; /* Adjust logo size */
-        margin: 0 auto 15px auto;
+    .event {
+        padding: 15px;
     }
 
-    .service-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .event h3 {
+        font-size: 1em;
     }
 
-    .service-link {
-        margin-bottom: 15px;
+    .event p {
+        font-size: 1em;
     }
 
-    .work-gallery ul.results {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .result {
-        margin-bottom: 15px;
-    }
-
-    .process-steps {
-        flex-direction: column;
-    }
-
-    .process-steps .step {
-        margin-bottom: 20px;
+    .register-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .overlay h1 {
-        font-size: 24px;
+@media (max-width: 480px) {
+    #event-header h2 {
+        font-size: 1.8em;
     }
 
-    .overlay p {
-        font-size: 16px;
+    .event h3 {
+        font-size: 0.8em;
+    }
+
+    .event p {
+        font-size: 0.4em;
+    }
+
+    .register-button {
+        font-size: 0.6em;
+        padding: 4px 6px;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 40px;
+    }
+
+    .main-item,
+    .maincard {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .video-container {
+        height: 500px;
     }
 
     .hero-button {
-        font-size: 14px;
         padding: 10px 20px;
+        font-size: 1rem;
     }
 
-    .company-logo {
-        width: 80%; /* Adjust company logo size */
+    .portfolio-item {
+        width: 45%;
     }
 
-    .step-title {
-        font-size: 18px;
-    }
-
-    .step-description {
-        font-size: 14px;
+    .event {
+        flex: 1 1 45%;
+        max-width: 45%;
     }
 }
 
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
 
+    h4 {
+        font-size: 50px;
+    }
+
+    .main-item,
+    .maincard {
+        padding: 30px;
+        width: 80%;
+    }
+
+    .video-container {
+        height: 650px;
+    }
+
+    .hero-button {
+        padding: 14px 28px;
+        font-size: 1.2rem;
+    }
+
+    .portfolio-item {
+        width: 30%;
+    }
+
+    .event {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+/* Extra large devices (1440px and up) */
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h4 {
+        font-size: 60px;
+    }
+
+    .main-item,
+    .maincard {
+        padding: 35px;
+        width: 70%;
+    }
+
+    .video-container {
+        height: 700px;
+    }
+
+    .hero-button {
+        padding: 16px 32px;
+        font-size: 1.3rem;
+    }
+
+    .portfolio-item {
+        width: 25%;
+    }
+}
