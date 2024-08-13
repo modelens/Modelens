@@ -263,66 +263,109 @@
             }
         }
 
-        .footer {
-            margin-top: 15px;
-        }
+        /* General Styles for Footer */
+footer {
+    margin-top: 15px;
+}
 
-        .footer2 {
-            height: auto;
-            color: #cccccc;
-            background-color: black;
-            display: flex;
-            justify-content: space-evenly;
-            padding: 20px;
-        }
+.footer2 {
+    color: #cccccc;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-        .footersection {
-            margin-top: 50px;
-        }
+.footersection {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+    margin: 10px;
+    text-align: center; /* Center-align text for better appearance on smaller screens */
+}
 
-        .footersection p {
-            font-weight: 600;
-        }
+.footersection p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 
-        .footersection a {
-            display: block;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            color: #dddddd;
-            text-decoration: none;
-        }
+.footersection a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
 
-        .footersection a:hover {
-            color: white;
-            text-decoration: underline;
-        }
+.footersection a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
-        .footersection div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            height: auto;
-            flex-direction: row;
-            /* Ensure horizontal alignment */
-        }
+.footersection div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row; /* Ensure horizontal alignment */
+    margin-top: 10px;
+}
 
-        .footersection div a img {
-            height: auto;
-            width: 25px;
-            margin-top: 0;
-            /* Adjust as needed */
-        }
+.footersection div a img {
+    width: 25px;
+    height: auto;
+}
 
-        .logoimg {
-            background-image: url(images/M\ logo.jpeg);
-            background-size: contain;
-            height: 200px;
-            width: 200px;
-            display: block;
-            margin: 0 auto;
-            margin-top: 40px;
-        }
+/* Logo Image */
+.logoimg {
+    background-image: url(images/M\ logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footersection {
+        flex: 1 1 auto;
+        margin-top: 20px;
+    }
+
+    .footersection div {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footersection div a img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer2 {
+        padding: 10px;
+    }
+
+    .footersection a {
+        font-size: 0.75rem;
+    }
+
+    .logoimg {
+        height: 120px;
+        width: 120px;
+        margin-top: 10px;
+    }
+}
+
 
         body {
             overflow-x: hidden;
