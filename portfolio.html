@@ -165,8 +165,9 @@
                 /* Hide dropdown on larger screens */
             }
         }
-         /* General Styles for Footer */
-         footer {
+
+        /* General Styles for Footer */
+        footer {
             margin-top: 15px;
         }
 
@@ -271,6 +272,62 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: 50vw;
+                /* Increase width to 40% of viewport width */
+                height: 50vw;
+                /* Increase height to 40% of viewport width */
+                padding: 1.5rem;
+                /* Reduce padding slightly */
+                box-shadow: 1rem 1rem 2.5rem rgba(53, 48, 48, 0.5);
+                /* Slightly smaller box shadow */
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 480px) {
+            .portfolio-item {
+                width: 80vw;
+                /* Increase width to 80% of viewport width */
+                height: 80vw;
+                /* Increase height to 80% of viewport width */
+                padding: 1rem;
+                /* Further reduce padding */
+                box-shadow: 0.75rem 0.75rem 2rem rgba(53, 48, 48, 0.5);
+                /* Smaller box shadow */
+            }
+        }
+
+        /* Adjustments for larger screens */
+        @media (min-width: 1024px) {
+            h4 {
+                font-size: 3rem;
+                /* Larger font size on bigger screens */
+                margin-top: 3rem;
+                /* Larger margin-top on bigger screens */
+            }
+        }
+
+        /* Adjustments for medium screens */
+        @media (max-width: 768px) {
+            h4 {
+                font-size: 6vw;
+                /* Slightly larger font size for medium screens */
+                margin-top: 6vw;
+                /* Slightly larger margin-top for medium screens */
+            }
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 480px) {
+            h4 {
+                font-size: 7vw;
+                /* Larger font size for small screens */
+                margin-top: 7vw;
+                /* Larger margin-top for small screens */
+            }
+        }
     </style>
 </head>
 
