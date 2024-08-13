@@ -12,15 +12,331 @@
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
         type="image/svg+xml">
+    <style>
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            /* Ensure dropdown content is positioned relative to this container */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            right: 0;
+            top: 100%;
+            min-width: 100%;
+            /* Make dropdown take full width */
+            padding: 0.5rem;
+        }
+
+        /* Show dropdown content when class 'show' is added */
+        .dropdown-content.show {
+            display: block;
+        }
+
+        /* Style for dropdown links */
+        .dropdown-content a {
+            color: #333;
+            padding: 12px;
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Style for the hamburger icon */
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            /* Text color */
+            background-color: #3f0071;
+            /* Dark purple background */
+            border: 1px solid #3f0071;
+            /* Match border with background */
+            border-radius: 50%;
+            /* Circular button */
+            padding: 8px;
+            /* Increase padding for better click area */
+            font-size: 1.5rem;
+            /* Adjust font size */
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for the hamburger icon */
+        .dropdown-toggle:hover {
+            background-color: #5e0c9b;
+            /* Lighter purple on hover */
+            border-color: #5e0c9b;
+            /* Match border color on hover */
+            color: #fff;
+            /* White text color on hover */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-left {
+                display: none;
+                /* Hide left navigation links on small screens */
+            }
+
+            .nav-right {
+                display: none;
+                /* Hide right navigation links on small screens */
+            }
+
+            .user-icon {
+                display: none;
+                /* Hide user icon on small screens */
+            }
+
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                /* Show dropdown on small screens */
+            }
+
+            .logo {
+                text-align: center;
+                /* Center logo image */
+            }
+
+            .dropdown-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                /* Text color */
+                background-color: #3f0071;
+                /* Dark purple background */
+                border: 1px solid #3f0071;
+                /* Match border with background */
+                border-radius: 50%;
+                /* Circular button */
+                padding: 8px;
+                /* Increase padding for better click area */
+                font-size: 1.5rem;
+                /* Adjust font size */
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .dropdown-toggle:hover {
+                background-color: #5e0c9b;
+                /* Lighter purple on hover */
+                border-color: #5e0c9b;
+                /* Match border color on hover */
+                color: #fff;
+                /* White text color on hover */
+            }
+
+            .dropdown-content {
+                min-width: 100%;
+                /* Make dropdown take full width */
+                box-shadow: none;
+                /* Remove box-shadow on small screens */
+            }
+
+            .dropdown-content a {
+                padding: 12px;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .dropdown {
+                display: none;
+                /* Hide dropdown on larger screens */
+            }
+        }
+
+        /* General Styles for Footer */
+        footer {
+            margin-top: 15px;
+        }
+
+        .footer2 {
+            color: #cccccc;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .footersection {
+            flex: 1 1 200px;
+            /* Flex-grow, flex-shrink, flex-basis */
+            margin: 10px;
+            text-align: center;
+            /* Center-align text for better appearance on smaller screens */
+        }
+
+        .footersection p {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .footersection a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+            text-decoration: none;
+        }
+
+        .footersection a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footersection div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: row;
+            /* Ensure horizontal alignment */
+            margin-top: 10px;
+        }
+
+        .footersection div a img {
+            width: 25px;
+            height: auto;
+        }
+
+        /* Logo Image */
+        .logoimg {
+            background-image: url(images/M\ logo.jpeg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footersection {
+                flex: 1 1 auto;
+                margin-top: 20px;
+            }
+
+            .footersection div {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .footersection div a img {
+                width: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer2 {
+                padding: 10px;
+            }
+
+            .footersection a {
+                font-size: 0.75rem;
+            }
+
+            .logoimg {
+                height: 120px;
+                width: 120px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: 50vw;
+                /* Increase width to 40% of viewport width */
+                height: 50vw;
+                /* Increase height to 40% of viewport width */
+                padding: 1.5rem;
+                /* Reduce padding slightly */
+                box-shadow: 1rem 1rem 2.5rem rgba(53, 48, 48, 0.5);
+                /* Slightly smaller box shadow */
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 480px) {
+            .portfolio-item {
+                width: 80vw;
+                /* Increase width to 80% of viewport width */
+                height: 80vw;
+                /* Increase height to 80% of viewport width */
+                padding: 1rem;
+                /* Further reduce padding */
+                box-shadow: 0.75rem 0.75rem 2rem rgba(53, 48, 48, 0.5);
+                /* Smaller box shadow */
+            }
+        }
+
+        /* Adjustments for larger screens */
+        @media (min-width: 1024px) {
+            h4 {
+                font-size: 3rem;
+                /* Larger font size on bigger screens */
+                margin-top: 3rem;
+                /* Larger margin-top on bigger screens */
+            }
+        }
+
+        /* Adjustments for medium screens */
+        @media (max-width: 768px) {
+            h4 {
+                font-size: 6vw;
+                /* Slightly larger font size for medium screens */
+                margin-top: 6vw;
+                /* Slightly larger margin-top for medium screens */
+            }
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 480px) {
+            h4 {
+                font-size: 7vw;
+                /* Larger font size for small screens */
+                margin-top: 7vw;
+                /* Larger margin-top for small screens */
+            }
+        }
+    </style>
 </head>
 
 <header id="main-header">
-    <nav>
+    <nav id="navbar">
         <div class="nav-left">
-            <a href="./#services">Services</a>
-            <a href="./#events">Events</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#events">Events</a>
             <a href="portfolio.html">Portfolio</a>
-
         </div>
         <div class="logo">
             <a href="index.html">
@@ -39,8 +355,22 @@
             </div>
             <a id="logout" href="#" style="display:none;">Logout</a>
         </div>
+        <!-- Dropdown for mobile view -->
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" aria-label="Toggle menu">&#9776;</a> <!-- Hamburger Icon -->
+            <div class="dropdown-content">
+                <a href="./#services">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="./team.html">Our Team</a>
+                <a href="contact.html">Contact Us</a>
+                <a id="dropdown-login-link" href="login.html">Login</a>
+                <a id="dropdown-signup-link" href="signup.html">Signup</a>
+                <a id="dropdown-logout" href="#" style="display:none;">Logout</a>
+            </div>
+        </div>
     </nav>
 </header>
+
 
 <section id="portfolio">
     <h4>Explore the Projects</h4>
@@ -130,9 +460,28 @@
             <p>Policy</p>
             <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
                 target="_blank">Terms And Conditions</a>
-            </ul>
         </div>
+    </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownToggle.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            dropdownContent.classList.toggle('show'); // Toggle visibility
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', function (e) {
+            if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+    });
+
+</script>
 
 <script src="contact.js"></script>
 <script src="config.js"></script>

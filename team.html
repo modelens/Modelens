@@ -11,11 +11,270 @@
         type="image/svg+xml">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            /* Ensure dropdown content is positioned relative to this container */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            right: 0;
+            top: 100%;
+            min-width: 100%;
+            /* Make dropdown take full width */
+            padding: 0.5rem;
+        }
+
+        /* Show dropdown content when class 'show' is added */
+        .dropdown-content.show {
+            display: block;
+        }
+
+        /* Style for dropdown links */
+        .dropdown-content a {
+            color: #333;
+            padding: 12px;
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Style for the hamburger icon */
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            /* Text color */
+            background-color: #3f0071;
+            /* Dark purple background */
+            border: 1px solid #3f0071;
+            /* Match border with background */
+            border-radius: 50%;
+            /* Circular button */
+            padding: 8px;
+            /* Increase padding for better click area */
+            font-size: 1.5rem;
+            /* Adjust font size */
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover effect for the hamburger icon */
+        .dropdown-toggle:hover {
+            background-color: #5e0c9b;
+            /* Lighter purple on hover */
+            border-color: #5e0c9b;
+            /* Match border color on hover */
+            color: #fff;
+            /* White text color on hover */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-left {
+                display: none;
+                /* Hide left navigation links on small screens */
+            }
+
+            .nav-right {
+                display: none;
+                /* Hide right navigation links on small screens */
+            }
+
+            .user-icon {
+                display: none;
+                /* Hide user icon on small screens */
+            }
+
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                /* Show dropdown on small screens */
+            }
+
+            .logo {
+                text-align: center;
+                /* Center logo image */
+            }
+
+            .dropdown-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                /* Text color */
+                background-color: #3f0071;
+                /* Dark purple background */
+                border: 1px solid #3f0071;
+                /* Match border with background */
+                border-radius: 50%;
+                /* Circular button */
+                padding: 8px;
+                /* Increase padding for better click area */
+                font-size: 1.5rem;
+                /* Adjust font size */
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .dropdown-toggle:hover {
+                background-color: #5e0c9b;
+                /* Lighter purple on hover */
+                border-color: #5e0c9b;
+                /* Match border color on hover */
+                color: #fff;
+                /* White text color on hover */
+            }
+
+            .dropdown-content {
+                min-width: 100%;
+                /* Make dropdown take full width */
+                box-shadow: none;
+                /* Remove box-shadow on small screens */
+            }
+
+            .dropdown-content a {
+                padding: 12px;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .dropdown {
+                display: none;
+                /* Hide dropdown on larger screens */
+            }
+        }
+
+        footer {
+            margin-top: 15px;
+        }
+
+        .footer2 {
+            color: #cccccc;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .footersection {
+            flex: 1 1 200px;
+            /* Flex-grow, flex-shrink, flex-basis */
+            margin: 10px;
+            text-align: center;
+            /* Center-align text for better appearance on smaller screens */
+        }
+
+        .footersection p {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .footersection a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+            text-decoration: none;
+        }
+
+        .footersection a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footersection div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: row;
+            /* Ensure horizontal alignment */
+            margin-top: 10px;
+        }
+
+        .footersection div a img {
+            width: 25px;
+            height: auto;
+        }
+
+        /* Logo Image */
+        .logoimg {
+            background-image: url(images/M\ logo.jpeg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footersection {
+                flex: 1 1 auto;
+                margin-top: 20px;
+            }
+
+            .footersection div {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .footersection div a img {
+                width: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer2 {
+                padding: 10px;
+            }
+
+            .footersection a {
+                font-size: 0.75rem;
+            }
+
+            .logoimg {
+                height: 120px;
+                width: 120px;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header id="main-header">
-        <nav>
+        <nav id="navbar">
             <div class="nav-left">
                 <a href="index.html#services">Services</a>
                 <a href="index.html#events">Events</a>
@@ -38,8 +297,23 @@
                 </div>
                 <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
+            <!-- Dropdown for mobile view -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" aria-label="Toggle menu">&#9776;</a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="./#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="./team.html">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a id="dropdown-login-link" href="login.html">Login</a>
+                    <a id="dropdown-signup-link" href="signup.html">Signup</a>
+                    <a id="dropdown-logout" href="#" style="display:none;">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
+
+
     <div class="heading">
         <h2>Hi, We Are The Team Behind</h2>
         <h1> Modelens!</h1>
@@ -219,50 +493,62 @@
             <div class="footlogo">
                 <div class="logoimg"></div>
             </div>
-            <ul>
+            <div class="footersection">
                 <p><a href="services.html">Services</a></p>
                 <a href="models.html">Models</a>
                 <a href="photographer.html">Photographer</a>
                 <a href="makeup-artists.html">Makeup Artists</a>
-            </ul>
+            </div>
 
-            <ul>
+            <div class="footersection">
                 <p>Contact</p>
-                <a>New Delhi,Delhi</a>
+                <a>New Delhi, Delhi</a>
                 <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
-
                 <div>
-                    </a>
-                    <a href="https://www.instagram.com/modelens.in/" target="_blank"> <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
                             alt="Instagram">
                     </a>
-                    <a href="https://www.linkedin.com/company/modelens/" target="_blank"> <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
                             alt="LinkedIn">
                     </a>
                     <a href="mailto:modelensofficial@gmail.com" target="_blank"><img
                             src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail"></a>
                 </div>
-
-            </ul>
+            </div>
 
             <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
             <div id="notification" class="notification">
                 Copied the mobile number!
             </div>
 
-            <ul>
+            <div class="footersection">
                 <p>Policy</p>
                 <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
-                    target="_blank">Terms And
-                    Conditions</a>
-
-
-            </ul>
+                    target="_blank">Terms And Conditions</a>
+            </div>
         </div>
-
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            dropdownToggle.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                dropdownContent.classList.toggle('show'); // Toggle visibility
+            });
+
+            // Close dropdown if clicked outside
+            window.addEventListener('click', function (e) {
+                if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+
+    </script>
     <script src="contact.js"></script>
     <script src="config.js"></script>
     <script src="login-signup.js "></script>

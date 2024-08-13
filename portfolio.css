@@ -1,23 +1,23 @@
 h4 {
-    font-size: 50px;
-    margin-top: 50px;
-}
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    margin-top: 5vw; /* Responsive margin-top based on viewport width */
+}   
 
 .portfolio-container {
     height: fit-content;
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
-    margin: 50px auto 0 auto;
+    margin: 5vw auto 0 auto;
     justify-content: space-evenly;
 }
 
 .portfolio-item {
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 25vw;
     padding: 30px;
-    box-shadow: 20px 20px 50px rgba(53, 48, 48, 0.5);
-    border-radius: 15px;
+    padding: 2rem; /* Padding is set to a responsive rem unit */
+    box-shadow: 1.25rem 1.25rem 3.125rem rgba(53, 48, 48, 0.5); /* Adjusted box shadow */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     flex-wrap: wrap;

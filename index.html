@@ -228,9 +228,10 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            #event-header h2{
+            #event-header h2 {
                 margin-bottom: 0px;
             }
+
             .about-modelens {
                 padding: 10px;
                 /* Reduce padding on smaller screens */
@@ -261,65 +262,144 @@
                 /* Reduce font size */
             }
         }
-        .footer {
-    margin-top: 15px;
-}
 
-.footer2 {
-    height: auto;
-    color: #cccccc;
-    background-color: black;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-}
+        /* General Styles for Footer */
+        footer {
+            margin-top: 15px;
+        }
 
-.footersection {
-    margin-top: 50px;
-}
+        .footer2 {
+            color: #cccccc;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-.footersection p {
-    font-weight: 600;
-}
+        .footersection {
+            flex: 1 1 200px;
+            /* Flex-grow, flex-shrink, flex-basis */
+            margin: 10px;
+            text-align: center;
+            /* Center-align text for better appearance on smaller screens */
+        }
 
-.footersection a {
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
-    text-decoration: none;
-}
+        .footersection p {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-.footersection a:hover {
-    color: white;
-    text-decoration: underline;
-}
+        .footersection a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+            text-decoration: none;
+        }
 
-.footersection div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: auto;
-    flex-direction: row; /* Ensure horizontal alignment */
-}
+        .footersection a:hover {
+            color: white;
+            text-decoration: underline;
+        }
 
-.footersection div a img {
-    height: auto;
-    width: 25px;
-    margin-top: 0; /* Adjust as needed */
-}
+        .footersection div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: row;
+            /* Ensure horizontal alignment */
+            margin-top: 10px;
+        }
 
-.logoimg {
-    background-image: url(images/M\ logo.jpeg);
-    background-size: contain;
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 40px;
-}
+        .footersection div a img {
+            width: 25px;
+            height: auto;
+        }
 
+        /* Logo Image */
+        .logoimg {
+            background-image: url(images/M\ logo.jpeg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footersection {
+                flex: 1 1 auto;
+                margin-top: 20px;
+            }
+
+            .footersection div {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .footersection div a img {
+                width: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer2 {
+                padding: 10px;
+            }
+
+            .footersection a {
+                font-size: 0.75rem;
+            }
+
+            .logoimg {
+                height: 120px;
+                width: 120px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .circle-container {
+                display: none;
+                /* Hide the circles on small screens */
+            }
+
+            .step {
+                width: 100%;
+                /* Make each step take full width on small screens */
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .process-title {
+                font-size: 1.5rem;
+            }
+
+            .step-title {
+                font-size: 1.2rem;
+            }
+
+            .step-description {
+                font-size: 1rem;
+            }
+        }
+
+
+        body {
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
@@ -354,7 +434,7 @@
                 <a href="#" class="dropdown-toggle" aria-label="Toggle menu">&#9776;</a> <!-- Hamburger Icon -->
                 <div class="dropdown-content">
                     <a href="./#services">Services</a>
-                    <a href="./#work-gallery">Work Gallery</a>
+                    <a href="portfolio.html">Portfolio</a>
                     <a href="./team.html">Our Team</a>
                     <a href="contact.html">Contact Us</a>
                     <a id="dropdown-login-link" href="login.html">Login</a>
@@ -371,7 +451,7 @@
         <div class="overlay">
             <h1>Welcome to Modelens</h1>
             <p>Your One-Stop Destination for Ad Shoots</p>
-            <a href="#get-started" class="hero-button">Get Started</a>
+            <a href="#services" class="hero-button">Get Started</a>
         </div>
     </section>
 
