@@ -27,13 +27,13 @@
 
     .portfolio-image {
         background-image: url(images/portfolio/cubecon1.jpg);
-        background-size: cover;
+        background-size: contain;
         background-position: top 70%;
         position: absolute;
         top: 10px;
         left: 15%;
         width: 70%;
-        height: 27%;
+        height: 26%;
         border-radius: 30px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         transform: rotateX(5deg) translateZ(50px);
@@ -217,6 +217,26 @@
         .client-container {
             width: 90%;
             margin-top: 30%;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .portfolio-image {
+            width: 94%;
+            height: 350px;
+            left: 1%;
+            background-position: center;
+        }
+
+        .client-container {
+            width: 98%;
+            margin-top: 200px;
+
+        }
+
+        .section-container {
+            width: 98%;
         }
     }
 </style>
