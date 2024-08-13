@@ -70,7 +70,7 @@ main {
 }
 
 .contact-container {
-
+    width: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +81,6 @@ main {
 }
 
 .contact-container form {
-    width: 700px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -194,7 +193,6 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .messagecont {
-    width: 700px;
     padding: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
