@@ -365,13 +365,21 @@ ul div a img {
         width: 45%;
         margin-left: 0;
         margin-top: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutfounder,
     .foundername {
         width: 100%;
-        margin: 0 auto;
         margin-top: 15px;
+        margin-right: 60px;
+    }
+
+    .foundername {
+        align-items: center;
+        text-align: center;
+        margin-right: 100px;
     }
 
     .containerblock {
