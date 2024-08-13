@@ -17,7 +17,7 @@ body {
 }
 
 .heading {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 h2 {
@@ -25,7 +25,6 @@ h2 {
     width: 700px;
     margin: 0 auto;
     display: table;
-    margin-top: 70px;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -59,13 +58,13 @@ h1 {
 }
 
 .founder-section {
-    width: 800px;
     /* Keeps the width of the container constant */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    width: 100%;
     /* Ensures that the container doesn't expand with the image */
     position: relative;
 }
@@ -75,6 +74,7 @@ h1 {
     background-size: cover;
     background-position: center;
     height: 350px;
+    width: 100%;
     /* Larger width for the image */
     border-radius: 10px;
     transform: translateX(-50px);
@@ -304,7 +304,7 @@ ul div a img {
     }
 
     .founder {
-        width: 30%;
+        width: 70%;
         margin-left: 100px;
         margin-top: 20px;
     }
