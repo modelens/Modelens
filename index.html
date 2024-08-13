@@ -261,6 +261,65 @@
                 /* Reduce font size */
             }
         }
+        .footer {
+    margin-top: 15px;
+}
+
+.footer2 {
+    height: auto;
+    color: #cccccc;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.footersection {
+    margin-top: 50px;
+}
+
+.footersection p {
+    font-weight: 600;
+}
+
+.footersection a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.footersection a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footersection div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    flex-direction: row; /* Ensure horizontal alignment */
+}
+
+.footersection div a img {
+    height: auto;
+    width: 25px;
+    margin-top: 0; /* Adjust as needed */
+}
+
+.logoimg {
+    background-image: url(images/M\ logo.jpeg);
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
     </style>
 </head>
 
@@ -606,6 +665,48 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    <footer>
+        <div class="footer2">
+            <div class="footlogo">
+                <div class="logoimg"></div>
+            </div>
+            <div class="footersection">
+                <p><a href="services.html">Services</a></p>
+                <a href="models.html">Models</a>
+                <a href="photographer.html">Photographer</a>
+                <a href="makeup-artists.html">Makeup Artists</a>
+            </div>
+
+            <div class="footersection">
+                <p>Contact</p>
+                <a>New Delhi, Delhi</a>
+                <a href="#" onclick="copyToClipboard()">+91 8178517101</a>
+                <div>
+                    <a href="https://www.instagram.com/modelens.in/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/modelens/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="mailto:modelensofficial@gmail.com" target="_blank"><img
+                            src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt="Gmail"></a>
+                </div>
+            </div>
+
+            <input type="text" value="+91 8178517101" id="mobileNumber" style="position: absolute; left: -9999px;">
+            <div id="notification" class="notification">
+                Copied the mobile number!
+            </div>
+
+            <div class="footersection">
+                <p>Policy</p>
+                <a href="https://drive.google.com/file/d/1V6d0rccG1SIHewm3YGgiBmJxO__a5cJB/view?usp=sharing"
+                    target="_blank">Terms And Conditions</a>
+            </div>
+        </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
     <script src="script.js"></script>

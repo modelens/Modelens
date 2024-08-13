@@ -841,8 +841,8 @@ footer {
     align-items: center;
     gap: 20px;
     height: 30px;
-
-}
+    flex-direction: row;
+}   
 
 .footersection div a img {
     height: auto;
