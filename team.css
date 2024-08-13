@@ -88,7 +88,7 @@ h1 {
 .foundername {
     margin-top: 20px;
     width: 100%;
-    margin-right: 100px;
+    margin-right: 140px;
 }
 
 .foundername h5 {
@@ -425,6 +425,7 @@ ul div a img {
     .aboutfounder,
     .foundername {
         width: calc(50% - 20px);
+        margin-right: 70px;
     }
 
     .containerblock {
