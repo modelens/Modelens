@@ -6,23 +6,27 @@
     overflow: hidden;
     width: 90%;
     margin: 20px auto; /* Centering the container */
+    flex-direction: column; /* Stack items vertically by default */
+}
+
+.image-section, .main-image-container, .details-section {
+    width: 100%; /* Full width by default */
 }
 
 .image-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Display images in a row */
+    justify-content: center; /* Center the images */
     padding: 10px;
     background: #1a1a1a;
-    width: 20%;
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 400px; /* Example max height, adjust as needed */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-height: 200px; /* Example max height, adjust as needed */
 }
 
 .image-section img {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    margin: 5px;
     border: 1px solid #d24ff6;
     border-radius: 5px;
     object-fit: cover;
@@ -34,14 +38,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Center content vertically */
-    width: 40%;
     padding: 20px;
 }
 
 .main-image {
     width: 100%;
     max-width: 500px;
-    height: 600px;
+    height: auto; /* Adjust height for responsiveness */
     margin-bottom: 20px;
     border: 1px solid #d24ff6;
     border-radius: 5px;
@@ -49,8 +52,7 @@
 }
 
 .details-section {
-    padding: 0px;
-    width: 40%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -59,7 +61,7 @@
 
 .details-section h2 {
     margin-top: 0;
-    font-size: 32px;
+    font-size: 24px;
     color: #d24ff6;
 }
 
@@ -171,55 +173,55 @@
     border-radius: 4px;
     font-size: 14px; /* Font size for buttons */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+} 
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Side by side layout */
+    }
+
+    .image-section {
+        flex-direction: column;
+        width: 20%; /* Adjust width */
+    }
+
+    .main-image-container {
+        width: 40%; /* Adjust width */
+    }
+
+    .details-section {
+        width: 40%; /* Adjust width */
+    }
 }
 
-
-/* Style for cancel button */
+/* Style for the cancel button */
 .modal-buttons .cancel-btn {
-    background-color: #f44336;
+    background-color: #d9534f; /* Red background for cancel */
     color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 10px; /* Space between buttons */
 }
-
-.modal-buttons .cancel-btn {
-    margin-right: 1.5vw; /* Adjust as needed */
-}
-
 
 .modal-buttons .cancel-btn:hover {
-    background-color: #d32f2f; /* Darker shade on hover */
+    background-color: #c9302c; /* Darker red on hover */
 }
 
-/* Style for confirm button */
+/* Style for the confirm button */
 .modal-buttons .confirm-btn {
-    background-color: #6a1b9a;
+    background-color: #5cb85c; /* Green background for confirm */
     color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .modal-buttons .confirm-btn:hover {
-    background-color: #4a148c; /* Darker shade on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    .modal {
-        width: 90%; /* Make modal take up more width on small screens */
-        bottom: 10px; /* Adjust bottom position */
-        right: 10px; /* Adjust right position */
-    }
-
-    .modal-content {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .modal-content h2 {
-        font-size: 16px; /* Adjust font size for heading */
-    }
-
-    .modal-content p {
-        font-size: 12px; /* Adjust font size for details */
-    }
-
-    .modal-buttons button {
-        font-size: 12px; /* Adjust font size for buttons */
-    }
+    background-color: #4cae4c; /* Darker green on hover */
 }

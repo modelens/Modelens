@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +13,16 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="models.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
         type="image/svg+xml">
 </head>
+
 <body>
 
     <header id="main-header">
-        <nav>
+        <nav id="navbar">
             <div class="nav-left">
                 <a href="index.html#services">Services</a>
                 <a href="index.html#events">Events</a>
@@ -42,16 +45,34 @@
                 </div>
                 <a id="logout" href="#" style="display:none;">Logout</a>
             </div>
+            <!-- Dropdown for mobile view -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" aria-label="Toggle menu">&#9776;</a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="./#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="./team.html">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a id="dropdown-login-link" href="login.html">Login</a>
+                    <a id="dropdown-signup-link" href="signup.html">Signup</a>
+                    <a id="dropdown-logout" href="#" style="display:none;">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="container">
         <div class="image-section">
-            <img src="images/karan1.JPG" alt="Person Image 1" class="thumbnail" onclick="changeImage('images/karan1.JPG', 'Karan')">
-            <img src="images/karan2.JPG" alt="Person Image 2" class="thumbnail" onclick="changeImage('images/karan2.JPG', 'Karan')">
-            <img src="images/karan3.jpg" alt="Person Image 3" class="thumbnail" onclick="changeImage('images/karan3.jpg', 'Karan')">
-            <img src="images/karan4.jpg" alt="Person Image 4" class="thumbnail" onclick="changeImage('images/karan4.jpg', 'Karan')">
-            <img src="images/karan5.jpg" alt="Person Image 5" class="thumbnail" onclick="changeImage('images/karan5.jpg', 'Karan')">
+            <img src="images/karan1.JPG" alt="Person Image 1" class="thumbnail"
+                onclick="changeImage('images/karan1.JPG', 'Karan')">
+            <img src="images/karan2.JPG" alt="Person Image 2" class="thumbnail"
+                onclick="changeImage('images/karan2.JPG', 'Karan')">
+            <img src="images/karan3.jpg" alt="Person Image 3" class="thumbnail"
+                onclick="changeImage('images/karan3.jpg', 'Karan')">
+            <img src="images/karan4.jpg" alt="Person Image 4" class="thumbnail"
+                onclick="changeImage('images/karan4.jpg', 'Karan')">
+            <img src="images/karan5.jpg" alt="Person Image 5" class="thumbnail"
+                onclick="changeImage('images/karan5.jpg', 'Karan')">
         </div>
         <div class="main-image-container">
             <img src="images/karan1.JPG" alt="Main Image" class="main-image" id="mainImage">
@@ -65,7 +86,9 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star empty-star"></i>
             </div>
-            <p>He is a highly skilled and passionate photographer with [number] years of experience capturing life's most precious moments. Known for their unique style and keen eye for detail,he  has a talent for turning ordinary scenes into extraordinary memories.</p>
+            <p>He is a highly skilled and passionate photographer with  years of experience capturing life's
+                most precious moments. Known for their unique style and keen eye for detail,he has a talent for turning
+                ordinary scenes into extraordinary memories.</p>
             <button class="book-now-btn" id="bookNowBtn" onclick="checkLoggedIn()">Book Now</button>
         </div>
     </div>
@@ -105,8 +128,8 @@
             </div>
         </div>
     </footer>
-     <!-- The Modal -->
-     <div id="bookingModal" class="modal">
+    <!-- The Modal -->
+    <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Booking Confirmation</h2>
@@ -117,6 +140,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            dropdownToggle.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                dropdownContent.classList.toggle('show'); // Toggle visibility
+            });
+
+            // Close dropdown if clicked outside
+            window.addEventListener('click', function (e) {
+                if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+    </script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="contact.js"></script>
@@ -141,4 +183,5 @@
     </script>
     <script src="models.js"></script>
 </body>
+
 </html>

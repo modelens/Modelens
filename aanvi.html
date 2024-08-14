@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Models Booking Page</title>
+    <title>Photographers Booking Page</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for star icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="models.css">
     <link rel="stylesheet" href="navbar.css">
@@ -13,10 +17,8 @@
     <link rel="icon"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjUwMTggMkgxMy4wMDM5TDEyLjc2IDExLjY0QzEyLjc0NDQgMTIuMTgzNiAxMi43MzA0IDEyLjgzMTMgMTIuNzI1OCAxM0g4LjYyMDRMMi42MzMgM0gxLjYwMDk3TDIuMTUgMTMuMDEzTDcuMjYwMyAxM0w3LjUwMDggM2gxLjc4MDRMOC41OTk0IDEwLjIxMkwxMS41MDMgM2gxLjUwMTlaIiBmaWxsPSIjODA0N0VGIi8+Cjwvc3ZnPgo="
         type="image/svg+xml">
-
-    <!-- Font Awesome for star icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
 
     <header id="main-header">
@@ -61,28 +63,30 @@
 
     <div class="container">
         <div class="image-section">
-            <img src="images/harshita1.jpg" alt="Person Image 1" class="thumbnail"
-                onclick="changeImage('images/harshita1.jpg', ' Harshita')">
-            <img src="images/harshita2.jpg" alt="Person Image 1" class="thumbnail"
-                onclick="changeImage('images/harshita2.jpg', ' Harshita')">
-          <img src="images/harshita3.jpg" alt="Person Image 1" class="thumbnail"
-                onclick="changeImage('images/harshita3.jpg', ' Harshita')">
-          <img src="images/harshita4.jpg" alt="Person Image 1" class="thumbnail"
-                onclick="changeImage('images/harshita4.jpg', ' Harshita')">
+            <img src="images/aanvi1.jpg" alt="Person Image 1" class="thumbnail"
+                onclick="changeImage('images/aanvi1.jpg', 'Aanvi')">
+            <img src="images/aanvi2.jpg" alt="Person Image 2" class="thumbnail"
+                onclick="changeImage('images/aanvi2.jpg', 'Aanvi')">
+            <img src="images/aanvi3.jpg" alt="Person Image 3" class="thumbnail"
+                onclick="changeImage('images/aanvi3.jpg', 'Aanvi')">
+            <img src="images/aanvi4.jpg" alt="Person Image 4" class="thumbnail"
+                onclick="changeImage('images/aanvi4.jpg', 'Aanvi')">
+            
         </div>
         <div class="main-image-container">
-            <img src="images/harshita1.jpg" alt="Main Image" class="main-image" id="mainImage">
+            <img src="images/aanvi1.jpg" alt="Main Image" class="main-image" id="mainImage">
         </div>
         <div class="details-section">
-            <h2> Harshita </h2>
+            <h2>Aanvi</h2>
             <div class="rating">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-                <i class="fas fa-star empty-star"></i>
+                <i class="fas fa-star"></i>
                 <i class="fas fa-star empty-star"></i>
             </div>
-            <p>She is a highly experienced and driven model with success in the fashion industry. Renowned for her elegant grace and innate ability to connect with the camera, she transforms every project into a work of art with her exceptional talent and distinctive style.</p>
+            <p>SHe is a  skilled and passionate photographer with  years of experience capturing life's
+                most precious moments. She's known for her unique style and keen eye for detail.</p>
             <button class="book-now-btn" id="bookNowBtn" onclick="checkLoggedIn()">Book Now</button>
         </div>
     </div>
@@ -122,7 +126,6 @@
             </div>
         </div>
     </footer>
-
     <!-- The Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
@@ -137,22 +140,22 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownContent = document.querySelector('.dropdown-content');
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content');
 
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        dropdownContent.classList.toggle('show'); // Toggle visibility
-    });
+            dropdownToggle.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                dropdownContent.classList.toggle('show'); // Toggle visibility
+            });
 
-    // Close dropdown if clicked outside
-    window.addEventListener('click', function(e) {
-        if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
-            dropdownContent.classList.remove('show');
-        }
-    });
-});
+            // Close dropdown if clicked outside
+            window.addEventListener('click', function (e) {
+                if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
     </script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -162,14 +165,21 @@
     <script src="login-signup.js"></script>
 
     <script>
-        function changeImage(imageUrl, modelName) {
+        function changeImage(imageSrc, modelName) {
             var mainImage = document.getElementById('mainImage');
-            mainImage.src = imageUrl;
+            mainImage.src = imageSrc;
+            mainImage.alt = modelName;
+
+            // Update details section
             var detailsSection = document.querySelector('.details-section');
-            var modelNameElement = detailsSection.querySelector('h2');
-            modelNameElement.textContent = modelName;
+            detailsSection.querySelector('h2').textContent = modelName;
+
+            // Example: Update description based on image clicked
+            var description = "He is a highly skilled and passionate photographer with [number] years of experience capturing life's most precious moments. Known for their unique style and keen eye for detail,he  has a talent for turning ordinary scenes into extraordinary memories.";
+            detailsSection.querySelector('p').textContent = description;
         }
     </script>
     <script src="models.js"></script>
 </body>
+
 </html>

@@ -153,11 +153,12 @@
 
     </style>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
     <header id="main-header">
-        <nav>
+        <nav id="navbar">
             <div class="nav-left">
                 <a href="index.html#services">Services</a>
                 <a href="index.html#events">Events</a>
@@ -179,6 +180,19 @@
                     </div>
                 </div>
                 <a id="logout" href="#" style="display:none;">Logout</a>
+            </div>
+            <!-- Dropdown for mobile view -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" aria-label="Toggle menu">&#9776;</a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="./#services">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="./team.html">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a id="dropdown-login-link" href="login.html">Login</a>
+                    <a id="dropdown-signup-link" href="signup.html">Signup</a>
+                    <a id="dropdown-logout" href="#" style="display:none;">Logout</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -736,6 +750,24 @@
         </div>
     </footer>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownContent.classList.toggle('show'); // Toggle visibility
+    });
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', function(e) {
+        if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+});
+    </script>
 
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-jLKHWMQEP0SYy4W/YSnb39sNmOT8Gs0PAm7VNfi8jCwo79TevXl3tj5kh1nI4OqU"
